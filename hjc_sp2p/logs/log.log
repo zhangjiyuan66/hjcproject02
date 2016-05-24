@@ -111,3 +111,15 @@ Exception Details:
 2016-05-24 15:12:42,721 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 56824
 2016-05-24 15:12:45,786 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 59889
 2016-05-24 15:12:47,230 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 61333
+2016-05-24 15:17:46,622 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 360725
+2016-05-24 15:17:46,631 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 360734
+2016-05-24 15:17:46,688 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 360791
+2016-05-24 15:17:46,691 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 360794
+2016-05-24 15:22:46,709 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 660812
+2016-05-24 15:22:46,713 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 660816
+2016-05-24 15:22:46,854 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 660957
+2016-05-24 15:22:46,855 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 660958
+2016-05-24 15:27:46,781 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 960884
+2016-05-24 15:27:46,785 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 960888
+2016-05-24 15:27:46,940 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 961043
+2016-05-24 15:27:46,941 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 961044
