@@ -1,0 +1,83 @@
+2016-05-18 09:45:17,384 ERROR ~ Deadlock found when trying to get lock; try restarting transaction  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 2017128
+2016-05-18 09:45:18,675 ERROR ~ 解除冻结用户资金:org.hibernate.exception.LockAcquisitionException: could not execute update query  ~ play.Logger.error(Logger.java:399) ~ play ~ 2018419
+2016-05-18 10:43:17,196 ERROR ~ line 1:8: unexpected token: *  ~ org.hibernate.hql.ast.ErrorCounter.reportError(ErrorCounter.java:56) ~ org.hibernate.hql.PARSER ~ 272540
+2016-05-18 10:43:17,347 ERROR ~ 
+
+@705h7ac79
+Internal Server Error (500) for request GET /front/account/home
+
+Execution exception (In /app/business/Bbin.java around line 124)
+IllegalArgumentException occured : org.hibernate.hql.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [select * from models.t_bbin]
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 272691
+play.exceptions.JavaExecutionException: org.hibernate.hql.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [select * from models.t_bbin]
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalArgumentException: org.hibernate.hql.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [select * from models.t_bbin]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1376)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1317)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:280)
+	at business.Bbin.queryid(Bbin.java:124)
+	at controllers.front.account.AccountHome.home(AccountHome.java:142)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+Caused by: org.hibernate.hql.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [select * from models.t_bbin]
+	at org.hibernate.hql.ast.QuerySyntaxException.convert(QuerySyntaxException.java:54)
+	at org.hibernate.hql.ast.QuerySyntaxException.convert(QuerySyntaxException.java:47)
+	at org.hibernate.hql.ast.ErrorCounter.throwQueryException(ErrorCounter.java:82)
+	at org.hibernate.hql.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:286)
+	at org.hibernate.hql.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:184)
+	at org.hibernate.hql.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:138)
+	at org.hibernate.engine.query.HQLQueryPlan.<init>(HQLQueryPlan.java:101)
+	at org.hibernate.engine.query.HQLQueryPlan.<init>(HQLQueryPlan.java:80)
+	at org.hibernate.engine.query.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:124)
+	at org.hibernate.impl.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:156)
+	at org.hibernate.impl.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:135)
+	at org.hibernate.impl.SessionImpl.createQuery(SessionImpl.java:1770)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:277)
+	... 8 more
+2016-05-18 13:50:56,825 ERROR ~ Lock wait timeout exceeded; try restarting transaction  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 2003048
+2016-05-18 13:50:56,827 ERROR ~ update t_cps_info exception  ~ play.Logger.error(Logger.java:399) ~ play ~ 2003050
+2016-05-18 14:01:47,117 ERROR ~ Lock wait timeout exceeded; try restarting transaction  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 2653340
+2016-05-18 14:01:47,117 ERROR ~ update t_cps_info exception  ~ play.Logger.error(Logger.java:399) ~ play ~ 2653340
+2016-05-18 16:19:02,749 ERROR ~ 
+
+@705ipch8f
+Internal Server Error (500) for request GET /front/invest/invest?bidId=26
+
+Execution exception (In /app/controllers/front/invest/InvestAction.java around line 483)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 227557
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.front.invest.InvestAction.invest(InvestAction.java:483)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+2016-05-18 17:27:10,887 ERROR ~ 
+
+@705j8b6l7
+Internal Server Error (500) for request GET /front/invest/invest?bidId=26
+
+Execution exception (In /app/controllers/front/invest/InvestAction.java around line 483)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 457589
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.front.invest.InvestAction.invest(InvestAction.java:483)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more

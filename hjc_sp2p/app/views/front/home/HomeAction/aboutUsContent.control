@@ -1,0 +1,26 @@
+ %{
+  business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+  <div class="p_right_wordbox">
+            <div class="p_hp_rtbox">
+                <h4 class="p_hp_title clr"><strong>
+                ${news?.name}
+            </strong></h4>
+                <div class="p_hp_word">
+                   #{if contentList != null && contentList.size > 0}
+				        #{list contentList}
+				            <p>${_?.raw()}</p>
+				        #{/list}
+		           #{/if}            
+                </div>
+            </div>
+        </div>
+ 
+<!-- 清除浮动 -->
+<div class="clear"></div>
+	
+ <script>
+	$(function(){
+			$("#companyDescription").addClass("xf_con_wyjk_leftliisshow");
+	})
+</script>			

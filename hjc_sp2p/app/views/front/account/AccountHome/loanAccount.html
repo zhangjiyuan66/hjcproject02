@@ -1,0 +1,47 @@
+ %{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{extends 'common/frontMain.html' /} 
+#{set title:currBackstageSet.seoTitle + ' | 我的账户 | 借款子账户 | 借款子账户首页' /}
+
+<!-- 内容区域 start -->
+<div class="p_bgf1_box pb30 pt30">
+  <div class="p_main clr">
+	<!-- 左边导航区域 -->
+	#{include "front/account/AccountHome/homeLeft.control"/}
+	<!-- 右侧内容区域 -->
+	 <div class="p_right_wordbox">
+     <div class="p_zh_rtword">
+      <h4 class="p_hp_title clr"><strong>借款子账户</strong></h4>
+		<div class="p_zh_rtbox01 clr">
+			#{include "front/account/AccountHome/homePhoto.control"/}
+			#{include "front/account/AccountHome/homeInfo.control"/}
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- 财富工具箱 -->
+	#{include "front/account/AccountHome/loanAccountTools.control"/}
+	<!-- 理财秘书 -->
+	#{include "front/account/AccountHome/loanAccountSecretary.control"/}
+	<!-- 借款小助手 -->
+	<!-- <div class="p_right_wordbox">
+    <div class="p_zh_rtword">
+	#{include "front/account/AccountHome/homeAssistant.control"/}
+	</div></div> -->
+	<!-- 清除浮动 -->
+	<div class="clear"></div>
+	  </div>
+	</div>
+</div>
+<!-- 内容区域 end -->
+<!-- vip弹出层  -->
+#{include "front/account/AccountHome/homeVipApply.control"/}
+#{include "front/account/AccountHome/homeVipContent.control"/}
+<script type="text/javascript" src="@{'/public/javascripts/tab/tab_usr.js'}"></script>
+<script type="text/javascript">
+$(function() {
+	/* 高亮显示 */
+	showHighLightFront(7);
+	showHighLightFront2(7, 3);
+});
+</script>

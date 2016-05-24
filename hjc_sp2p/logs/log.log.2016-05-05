@@ -1,0 +1,1339 @@
+2016-05-05 10:06:20,881 INFO  ~ Starting D:\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-05 10:06:41,043 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 20162
+2016-05-05 10:06:41,945 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 21064
+2016-05-05 10:10:49,319 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 268438
+2016-05-05 10:21:58,877 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 937996
+2016-05-05 10:22:20,941 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 960060
+2016-05-05 10:22:29,277 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 968396
+2016-05-05 10:27:26,929 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1266048
+2016-05-05 10:27:26,983 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1266102
+2016-05-05 10:27:27,629 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1266748
+2016-05-05 10:27:32,524 INFO  ~ 自动流标事务正常关闭，id = 25   ~ play.Logger.info(Logger.java:289) ~ play ~ 1271643
+2016-05-05 10:27:32,541 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1271660
+2016-05-05 10:31:37,920 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1517039
+2016-05-05 10:31:44,721 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1523840
+2016-05-05 10:31:46,175 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1525294
+2016-05-05 10:31:55,072 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1534191
+2016-05-05 10:31:55,177 INFO  ~ supervisor_[id:65602961-9a09-443c-8032-e19c9db2999c][random:AFXJ]  ~ play.Logger.info(Logger.java:289) ~ play ~ 1534296
+2016-05-05 10:31:56,664 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1535783
+2016-05-05 10:31:58,213 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1537332
+2016-05-05 10:31:59,259 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1538378
+2016-05-05 10:32:27,600 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1566719
+2016-05-05 10:32:27,603 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1566722
+2016-05-05 10:32:33,527 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1572646
+2016-05-05 10:32:33,542 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1572661
+2016-05-05 10:32:34,079 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1573198
+2016-05-05 10:32:34,248 INFO  ~ supervisor_[id:2acb4fc0-e185-4130-8b3f-a6f9d1098108][random:m879]  ~ play.Logger.info(Logger.java:289) ~ play ~ 1573367
+2016-05-05 10:32:35,106 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1574225
+2016-05-05 10:32:36,594 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1575713
+2016-05-05 10:32:37,801 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1576920
+2016-05-05 10:33:43,741 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1642860
+2016-05-05 10:33:44,996 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1644115
+2016-05-05 10:33:45,752 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1644871
+2016-05-05 10:33:53,410 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1652529
+2016-05-05 10:33:53,460 INFO  ~ supervisor_[id:cfcebbf7-f6d8-455d-a91e-ad4024dfa710][random:BjYx]  ~ play.Logger.info(Logger.java:289) ~ play ~ 1652579
+2016-05-05 10:33:54,159 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1653278
+2016-05-05 10:33:55,589 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1654708
+2016-05-05 10:33:56,267 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1655386
+2016-05-05 10:34:13,883 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1673002
+2016-05-05 10:34:14,056 INFO  ~ supervisor_[id:6da71b34-a188-47a5-ba5b-0d79612a2c37][random:Lv52]  ~ play.Logger.info(Logger.java:289) ~ play ~ 1673175
+2016-05-05 10:34:14,591 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1673710
+2016-05-05 10:34:15,805 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1674924
+2016-05-05 10:34:16,992 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1676111
+2016-05-05 10:37:27,993 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1867112
+2016-05-05 10:37:27,996 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1867115
+2016-05-05 10:37:33,903 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1873022
+2016-05-05 10:37:33,912 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1873031
+2016-05-05 10:37:57,148 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1896267
+2016-05-05 10:37:57,207 INFO  ~ supervisor_[id:cbeea180-1b36-4fa5-871b-36ff247e570f][random:77vF]  ~ play.Logger.info(Logger.java:289) ~ play ~ 1896326
+2016-05-05 10:37:58,911 DEBUG ~ 正在执行ation请求命令:supervisor.account.AccountAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1898030
+2016-05-05 10:37:58,914 DEBUG ~ 正在执行ation请求命令:supervisor.account.AccountAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1898033
+2016-05-05 10:37:58,916 DEBUG ~ 正在执行ation请求命令:supervisor.account.AccountAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1898035
+2016-05-05 10:38:11,798 DEBUG ~ 正在执行ation请求命令:supervisor.account.AccountAction.editSupervisor  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1910917
+2016-05-05 10:38:11,802 DEBUG ~ 正在执行ation请求命令:supervisor.account.AccountAction.editSupervisor  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1910921
+2016-05-05 10:38:11,804 DEBUG ~ 正在执行ation请求命令:supervisor.account.AccountAction.editSupervisor  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1910923
+2016-05-05 10:38:20,651 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SecuritySettingAction.UKeyList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1919770
+2016-05-05 10:38:20,654 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SecuritySettingAction.UKeyList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1919773
+2016-05-05 10:38:20,656 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SecuritySettingAction.UKeyList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1919775
+2016-05-05 10:39:05,680 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.basicInfo  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1964799
+2016-05-05 10:39:05,687 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.basicInfo  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1964806
+2016-05-05 10:39:05,690 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.basicInfo  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1964809
+2016-05-05 10:39:26,460 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadImageReturnType  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1985579
+2016-05-05 10:39:30,158 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.saveSystemData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1989277
+2016-05-05 10:39:30,165 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.saveSystemData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1989284
+2016-05-05 10:39:30,171 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.saveSystemData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1989290
+2016-05-05 10:39:31,448 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.basicInfo  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1990567
+2016-05-05 10:39:31,457 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.basicInfo  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1990576
+2016-05-05 10:39:31,460 DEBUG ~ 正在执行ation请求命令:supervisor.systemSettings.SoftwareLicensAction.basicInfo  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1990579
+2016-05-05 10:41:08,627 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2087746
+2016-05-05 10:41:08,630 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2087749
+2016-05-05 10:41:08,632 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2087751
+2016-05-05 10:41:21,807 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2100926
+2016-05-05 10:41:21,811 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2100930
+2016-05-05 10:41:21,813 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2100932
+2016-05-05 10:41:29,195 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2108314
+2016-05-05 10:41:29,199 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2108318
+2016-05-05 10:41:29,201 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2108320
+2016-05-05 10:41:39,989 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadImage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2119108
+2016-05-05 10:41:52,777 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2131896
+2016-05-05 10:41:52,781 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2131900
+2016-05-05 10:41:52,784 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2131903
+2016-05-05 10:41:53,411 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2132530
+2016-05-05 10:41:53,414 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2132533
+2016-05-05 10:41:53,416 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2132535
+2016-05-05 10:41:58,885 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2138004
+2016-05-05 10:41:58,889 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2138008
+2016-05-05 10:41:58,891 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2138010
+2016-05-05 10:42:04,711 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2143830
+2016-05-05 10:42:04,715 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2143834
+2016-05-05 10:42:04,719 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2143838
+2016-05-05 10:42:05,464 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2144583
+2016-05-05 10:42:05,471 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2144590
+2016-05-05 10:42:05,473 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2144592
+2016-05-05 10:42:09,259 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2148378
+2016-05-05 10:42:09,263 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2148382
+2016-05-05 10:42:09,266 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2148385
+2016-05-05 10:42:18,948 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadImage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2158067
+2016-05-05 10:42:28,414 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2167533
+2016-05-05 10:42:28,423 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2167542
+2016-05-05 10:42:28,425 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2167544
+2016-05-05 10:42:28,864 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2167983
+2016-05-05 10:42:28,866 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2167985
+2016-05-05 10:42:29,393 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2168512
+2016-05-05 10:42:29,396 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2168515
+2016-05-05 10:42:29,399 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2168518
+2016-05-05 10:42:33,177 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2172296
+2016-05-05 10:42:33,184 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2172303
+2016-05-05 10:42:33,186 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.queryAds  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2172305
+2016-05-05 10:42:34,324 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2173443
+2016-05-05 10:42:34,345 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2173464
+2016-05-05 10:42:39,058 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadImage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2178177
+2016-05-05 10:42:51,066 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2190185
+2016-05-05 10:42:51,073 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2190192
+2016-05-05 10:42:51,075 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.editBanner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2190194
+2016-05-05 10:42:51,689 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2190808
+2016-05-05 10:42:51,693 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2190812
+2016-05-05 10:42:51,695 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.AdManageAction.bannermanagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2190814
+2016-05-05 10:42:59,778 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2198897
+2016-05-05 10:47:29,589 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2468708
+2016-05-05 10:47:29,592 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2468711
+2016-05-05 10:47:30,662 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2469781
+2016-05-05 10:47:35,520 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2474639
+2016-05-05 10:47:35,584 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2474703
+2016-05-05 10:47:51,889 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2491008
+2016-05-05 10:47:51,907 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2491026
+2016-05-05 10:47:51,910 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2491029
+2016-05-05 10:48:11,529 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2510648
+2016-05-05 10:48:11,532 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2510651
+2016-05-05 10:48:11,539 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2510658
+2016-05-05 10:48:16,536 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2515655
+2016-05-05 10:48:16,540 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2515659
+2016-05-05 10:48:16,541 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2515660
+2016-05-05 10:48:27,913 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2527032
+2016-05-05 10:48:27,921 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2527040
+2016-05-05 10:48:27,923 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2527042
+2016-05-05 10:48:40,395 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2539514
+2016-05-05 10:48:40,399 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2539518
+2016-05-05 10:48:40,402 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2539521
+2016-05-05 10:48:49,215 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2548334
+2016-05-05 10:48:49,220 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2548339
+2016-05-05 10:48:49,223 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2548342
+2016-05-05 10:49:00,735 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.typeList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2559854
+2016-05-05 10:49:00,739 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.typeList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2559858
+2016-05-05 10:49:00,741 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.typeList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2559860
+2016-05-05 10:49:04,386 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.typeList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2563505
+2016-05-05 10:49:04,390 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.typeList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2563509
+2016-05-05 10:49:04,392 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.typeList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2563511
+2016-05-05 10:49:05,344 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2564463
+2016-05-05 10:49:05,348 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2564467
+2016-05-05 10:49:05,351 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2564470
+2016-05-05 10:49:12,879 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2571998
+2016-05-05 10:49:12,884 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2572003
+2016-05-05 10:49:12,887 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.contentManagement  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2572006
+2016-05-05 10:49:17,841 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.editContentInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2576960
+2016-05-05 10:49:17,845 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.editContentInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2576964
+2016-05-05 10:49:17,847 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.NewsManageAction.editContentInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2576966
+2016-05-05 10:50:08,898 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2628017
+2016-05-05 10:50:08,902 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2628021
+2016-05-05 10:50:08,904 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2628023
+2016-05-05 10:50:12,593 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2631712
+2016-05-05 10:50:12,596 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2631715
+2016-05-05 10:50:12,598 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2631717
+2016-05-05 10:51:06,945 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2686064
+2016-05-05 10:51:06,948 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2686067
+2016-05-05 10:51:06,950 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2686069
+2016-05-05 10:51:19,489 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2698608
+2016-05-05 10:51:19,494 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2698613
+2016-05-05 10:51:19,496 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2698615
+2016-05-05 10:51:23,539 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2702658
+2016-05-05 10:51:23,542 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2702661
+2016-05-05 10:51:23,543 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2702662
+2016-05-05 10:51:28,430 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2707549
+2016-05-05 10:51:28,433 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2707552
+2016-05-05 10:51:28,435 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2707554
+2016-05-05 10:51:46,332 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2725451
+2016-05-05 10:51:46,338 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2725457
+2016-05-05 10:51:46,340 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2725459
+2016-05-05 10:51:52,748 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2731867
+2016-05-05 10:51:52,752 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2731871
+2016-05-05 10:51:52,756 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2731875
+2016-05-05 10:51:55,592 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.enableAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2734711
+2016-05-05 10:51:55,594 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.enableAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2734713
+2016-05-05 10:51:55,596 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.enableAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2734715
+2016-05-05 10:51:56,280 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2735399
+2016-05-05 10:51:56,283 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2735402
+2016-05-05 10:51:56,286 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2735405
+2016-05-05 10:51:58,790 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.enableAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2737909
+2016-05-05 10:51:58,793 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.enableAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2737912
+2016-05-05 10:51:58,795 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.enableAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2737914
+2016-05-05 10:51:59,472 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2738591
+2016-05-05 10:51:59,475 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2738594
+2016-05-05 10:51:59,476 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.audtiItemList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2738595
+2016-05-05 10:52:03,750 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2742869
+2016-05-05 10:52:03,758 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2742877
+2016-05-05 10:52:03,760 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2742879
+2016-05-05 10:52:07,058 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2746177
+2016-05-05 10:52:07,061 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2746180
+2016-05-05 10:52:07,064 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2746183
+2016-05-05 10:52:22,959 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadImage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2762078
+2016-05-05 10:52:30,220 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2769339
+2016-05-05 10:52:30,223 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2769342
+2016-05-05 10:52:33,327 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadImage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2772446
+2016-05-05 10:52:36,054 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editingProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2775173
+2016-05-05 10:52:36,065 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editingProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2775184
+2016-05-05 10:52:36,080 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.editingProduct  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2775199
+2016-05-05 10:52:36,680 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2775799
+2016-05-05 10:52:36,712 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2775831
+2016-05-05 10:52:37,225 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2776344
+2016-05-05 10:52:37,229 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2776348
+2016-05-05 10:52:37,230 DEBUG ~ 正在执行ation请求命令:supervisor.webContentManager.ProductAction.productList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2776349
+2016-05-05 10:52:59,620 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2798739
+2016-05-05 10:53:36,825 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2835944
+2016-05-05 10:53:36,831 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2835950
+2016-05-05 10:53:36,832 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2835951
+2016-05-05 10:53:42,727 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2841846
+2016-05-05 10:53:42,730 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2841849
+2016-05-05 10:53:42,741 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2841860
+2016-05-05 10:53:52,825 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2851944
+2016-05-05 10:53:52,828 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2851947
+2016-05-05 10:53:52,830 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2851949
+2016-05-05 10:54:06,816 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2865935
+2016-05-05 10:54:06,819 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2865938
+2016-05-05 10:54:06,821 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2865940
+2016-05-05 10:54:34,020 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2893139
+2016-05-05 10:54:34,023 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2893142
+2016-05-05 10:54:35,528 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2894647
+2016-05-05 10:54:35,536 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2894655
+2016-05-05 10:54:36,123 WARN  ~ SQL Error: 1146, SQLState: 42S02  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:233) ~ org.hibernate.util.JDBCExceptionReporter ~ 2895242
+2016-05-05 10:54:36,124 ERROR ~ Table 'homebackup123.t_bbin' doesn't exist  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 2895243
+2016-05-05 10:54:50,848 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2909967
+2016-05-05 10:54:50,855 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2909974
+2016-05-05 10:54:52,795 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2911914
+2016-05-05 10:56:07,962 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2987081
+2016-05-05 10:56:07,975 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2987094
+2016-05-05 10:56:16,255 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2995374
+2016-05-05 10:56:26,726 DEBUG ~ 正在执行ation请求命令:Application.getCity  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3005845
+2016-05-05 10:56:32,931 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3012050
+2016-05-05 10:56:32,940 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3012059
+2016-05-05 10:56:33,841 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3012960
+2016-05-05 10:56:33,848 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3012967
+2016-05-05 10:56:37,271 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3016390
+2016-05-05 10:56:43,093 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3022212
+2016-05-05 10:56:43,099 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3022218
+2016-05-05 10:56:43,103 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3022222
+2016-05-05 10:56:48,708 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3027827
+2016-05-05 10:56:48,713 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3027832
+2016-05-05 10:56:48,718 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3027837
+2016-05-05 10:57:19,972 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadFile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3059091
+2016-05-05 10:57:24,039 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addingAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3063158
+2016-05-05 10:57:24,045 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addingAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3063164
+2016-05-05 10:57:24,056 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addingAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3063175
+2016-05-05 10:57:24,248 INFO  ~ ---------------------根据用户上传资料判断显示为提前借款还是借款中------------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3063367
+2016-05-05 10:57:26,174 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3065293
+2016-05-05 10:57:26,181 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3065300
+2016-05-05 10:57:26,189 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3065308
+2016-05-05 10:57:30,792 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3069911
+2016-05-05 10:57:30,795 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3069914
+2016-05-05 10:57:37,344 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3076463
+2016-05-05 10:57:37,377 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3076496
+2016-05-05 10:57:39,840 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3078959
+2016-05-05 10:57:44,918 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3084037
+2016-05-05 10:57:48,710 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3087829
+2016-05-05 10:57:48,719 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3087838
+2016-05-05 10:57:48,723 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3087842
+2016-05-05 11:01:38,640 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3317759
+2016-05-05 11:01:45,809 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3324928
+2016-05-05 11:01:51,368 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3330487
+2016-05-05 11:02:07,510 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3346629
+2016-05-05 11:02:31,424 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3370543
+2016-05-05 11:02:31,429 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3370548
+2016-05-05 11:02:37,746 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3376865
+2016-05-05 11:02:37,764 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3376883
+2016-05-05 11:04:15,120 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3474239
+2016-05-05 11:04:18,578 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3477697
+2016-05-05 11:04:27,442 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3486561
+2016-05-05 11:04:35,896 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3495015
+2016-05-05 11:04:42,212 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3501331
+2016-05-05 11:04:42,225 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3501344
+2016-05-05 11:04:51,160 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3510279
+2016-05-05 11:07:31,872 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3670991
+2016-05-05 11:07:31,875 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3670994
+2016-05-05 11:07:38,119 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3677238
+2016-05-05 11:07:38,128 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3677247
+2016-05-05 11:08:03,009 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3702128
+2016-05-05 11:08:05,594 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3704713
+2016-05-05 11:08:05,603 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3704722
+2016-05-05 11:08:10,327 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3709446
+2016-05-05 11:08:18,601 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3717720
+2016-05-05 11:08:25,784 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investRegular  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3724903
+2016-05-05 11:08:35,391 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3734510
+2016-05-05 11:09:27,786 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3786905
+2016-05-05 11:09:32,407 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3791526
+2016-05-05 11:12:32,302 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3971421
+2016-05-05 11:12:32,305 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3971424
+2016-05-05 11:12:38,822 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3977941
+2016-05-05 11:12:38,831 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3977950
+2016-05-05 11:17:50,855 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 4289974
+2016-05-05 11:18:26,480 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4325599
+2016-05-05 11:18:26,492 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4325611
+2016-05-05 11:18:26,746 ERROR ~ models.t_statistic_cps cannot be cast to models.t_statistic_cps  ~ play.Logger.error(Logger.java:399) ~ play ~ 4325865
+2016-05-05 11:18:26,749 ERROR ~ org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.t_statistic_cps.bid_amount  ~ play.Logger.error(Logger.java:399) ~ play ~ 4325868
+2016-05-05 11:18:27,423 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4326542
+2016-05-05 11:18:27,551 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4326670
+2016-05-05 11:18:28,056 ERROR ~ 
+
+@7020iooeg
+Error during job execution (jobs.SmsSend)
+
+Execution exception (In /app/business/BackstageSet.java around line 191)
+ClassCastException occured : business.BackstageSet cannot be cast to business.BackstageSet
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 4327175
+play.exceptions.JavaExecutionException: business.BackstageSet cannot be cast to business.BackstageSet
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassCastException: business.BackstageSet cannot be cast to business.BackstageSet
+	at business.BackstageSet.getCurrentBackstageSet(BackstageSet.java:191)
+	at business.TemplateSms.dealSmsTask(TemplateSms.java:322)
+	at jobs.SmsSend.doJob(SmsSend.java:35)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 11:18:28,831 ERROR ~ 
+
+@7020iooeh
+Error during job execution (jobs.EmailSend)
+
+Execution exception (In /app/business/BackstageSet.java around line 191)
+ClassCastException occured : business.BackstageSet cannot be cast to business.BackstageSet
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 4327950
+play.exceptions.JavaExecutionException: business.BackstageSet cannot be cast to business.BackstageSet
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassCastException: business.BackstageSet cannot be cast to business.BackstageSet
+	at business.BackstageSet.getCurrentBackstageSet(BackstageSet.java:191)
+	at business.TemplateEmail.dealEmailTask(TemplateEmail.java:479)
+	at jobs.EmailSend.doJob(EmailSend.java:21)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 11:31:07,266 INFO  ~ Starting D:\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-05 11:31:13,125 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 5859
+2016-05-05 11:31:13,607 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 6341
+2016-05-05 11:31:38,296 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 31030
+2016-05-05 11:33:05,511 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 118245
+2016-05-05 11:33:40,898 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 153632
+2016-05-05 11:33:51,658 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 164392
+2016-05-05 11:34:26,097 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investRegular  ~ play.Logger.debug(Logger.java:232) ~ play ~ 198831
+2016-05-05 11:34:55,991 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 228725
+2016-05-05 11:35:07,726 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investRegular  ~ play.Logger.debug(Logger.java:232) ~ play ~ 240460
+2016-05-05 11:35:20,916 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investRegular  ~ play.Logger.debug(Logger.java:232) ~ play ~ 253650
+2016-05-05 11:35:49,618 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 282352
+2016-05-05 11:37:52,216 INFO  ~ Starting D:\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-05 11:38:00,293 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 8077
+2016-05-05 11:38:00,915 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 8699
+2016-05-05 11:38:38,787 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 46571
+2016-05-05 11:40:08,510 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 136294
+2016-05-05 11:40:48,892 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 176676
+2016-05-05 11:41:04,383 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 192167
+2016-05-05 11:42:02,581 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 250365
+2016-05-05 11:42:22,966 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 270750
+2016-05-05 11:42:32,843 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 280627
+2016-05-05 11:42:47,446 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.auditmaticInvest  ~ play.Logger.debug(Logger.java:232) ~ play ~ 295230
+2016-05-05 11:42:47,452 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.auditmaticInvest  ~ play.Logger.debug(Logger.java:232) ~ play ~ 295236
+2016-05-05 11:42:47,458 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.auditmaticInvest  ~ play.Logger.debug(Logger.java:232) ~ play ~ 295242
+2016-05-05 11:42:48,693 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 296477
+2016-05-05 11:44:26,901 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 394685
+2016-05-05 11:44:37,591 ERROR ~ 
+
+@70211dp6b
+Internal Server Error (500) for request GET /front/invest/investBbin?bidId=26
+
+Execution exception (In /app/controllers/front/invest/InvestAction.java around line 413)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 405375
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.front.invest.InvestAction.investBbin(InvestAction.java:413)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+2016-05-05 11:44:51,065 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 418849
+2016-05-05 11:44:51,070 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 418854
+2016-05-05 11:45:59,163 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 486947
+2016-05-05 11:45:59,227 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 487011
+2016-05-05 11:46:00,179 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 487963
+2016-05-05 11:46:00,340 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 488124
+2016-05-05 11:48:34,354 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 642138
+2016-05-05 11:48:34,359 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 642143
+2016-05-05 11:48:44,326 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 652110
+2016-05-05 11:51:00,244 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 788028
+2016-05-05 11:51:00,247 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 788031
+2016-05-05 11:51:01,529 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 789313
+2016-05-05 11:51:01,552 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 789336
+2016-05-05 11:56:01,995 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1089779
+2016-05-05 11:56:02,003 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1089787
+2016-05-05 11:56:02,676 ERROR ~ 
+
+@70211dp6c
+Error during job execution (jobs.EveryHourJob)
+
+Execution exception (In /app/business/Invest.java around line 3843)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 1090460
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at business.Invest.queryAllBider(Invest.java:3843)
+	at business.Invest.automaticInvest(Invest.java:3977)
+	at jobs.EveryHourJob.doJob(EveryHourJob.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 11:56:03,487 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1091271
+2016-05-05 11:56:03,520 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1091304
+2016-05-05 11:58:38,104 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1245888
+2016-05-05 12:01:02,605 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1390389
+2016-05-05 12:01:02,608 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1390392
+2016-05-05 12:01:03,921 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1391705
+2016-05-05 12:01:03,932 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1391716
+2016-05-05 12:02:52,394 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1500178
+2016-05-05 12:06:03,740 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1691524
+2016-05-05 12:06:03,743 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1691527
+2016-05-05 12:06:05,895 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1693679
+2016-05-05 12:06:05,933 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1693717
+2016-05-05 12:08:01,307 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1809091
+2016-05-05 12:09:53,543 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1921327
+2016-05-05 12:10:47,585 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1975369
+2016-05-05 12:11:03,470 ERROR ~ 
+
+@70211dp6d
+Error during job execution (jobs.EveryHourJob)
+
+Execution exception (In /app/business/Invest.java around line 3843)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 1991254
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at business.Invest.queryAllBider(Invest.java:3843)
+	at business.Invest.automaticInvest(Invest.java:3977)
+	at jobs.EveryHourJob.doJob(EveryHourJob.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 12:11:04,425 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1992209
+2016-05-05 12:11:04,427 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1992211
+2016-05-05 12:11:06,660 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1994444
+2016-05-05 12:11:06,672 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1994456
+2016-05-05 12:16:05,276 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2293060
+2016-05-05 12:16:05,279 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2293063
+2016-05-05 12:16:07,887 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2295671
+2016-05-05 12:16:07,900 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2295684
+2016-05-05 12:21:05,812 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2593596
+2016-05-05 12:21:05,818 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2593602
+2016-05-05 12:21:09,266 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2597050
+2016-05-05 12:21:09,303 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2597087
+2016-05-05 12:21:37,443 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2625227
+2016-05-05 14:02:19,859 INFO  ~ Starting D:\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-05 14:02:29,677 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 9818
+2016-05-05 14:02:30,519 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 10660
+2016-05-05 14:03:04,573 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 44714
+2016-05-05 14:04:32,121 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 132262
+2016-05-05 14:05:11,439 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 171580
+2016-05-05 14:05:24,883 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 185024
+2016-05-05 14:10:20,645 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 480786
+2016-05-05 14:10:20,721 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 480862
+2016-05-05 14:10:21,194 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 481335
+2016-05-05 14:10:21,208 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 481349
+2016-05-05 14:11:05,067 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 525208
+2016-05-05 14:11:05,075 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 525216
+2016-05-05 14:11:06,817 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 526958
+2016-05-05 14:11:06,855 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 526996
+2016-05-05 14:11:11,190 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasMobileExists  ~ play.Logger.debug(Logger.java:232) ~ play ~ 531331
+2016-05-05 14:11:11,209 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasMobileExists  ~ play.Logger.debug(Logger.java:232) ~ play ~ 531350
+2016-05-05 14:13:32,725 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 672866
+2016-05-05 14:13:32,729 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 672870
+2016-05-05 14:13:45,943 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyEmailForReg  ~ play.Logger.debug(Logger.java:232) ~ play ~ 686084
+2016-05-05 14:13:45,948 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyEmailForReg  ~ play.Logger.debug(Logger.java:232) ~ play ~ 686089
+2016-05-05 14:13:46,975 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.registering  ~ play.Logger.debug(Logger.java:232) ~ play ~ 687116
+2016-05-05 14:13:47,071 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.registering  ~ play.Logger.debug(Logger.java:232) ~ play ~ 687212
+2016-05-05 14:13:49,490 INFO  ~ form email admin@haojiecun.com  ~ play.Logger.info(Logger.java:289) ~ play ~ 689631
+2016-05-05 14:13:52,495 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 692636
+2016-05-05 14:13:52,543 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 692684
+2016-05-05 14:13:53,527 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 693668
+2016-05-05 14:13:53,546 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 693687
+2016-05-05 14:14:04,690 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 704831
+2016-05-05 14:14:06,724 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.bindMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 706865
+2016-05-05 14:14:06,744 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.bindMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 706885
+2016-05-05 14:14:12,427 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 712568
+2016-05-05 14:14:14,360 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 714501
+2016-05-05 14:14:27,175 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 727316
+2016-05-05 14:14:27,241 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 727382
+2016-05-05 14:14:27,289 INFO  ~ 2795(动态验证码)。工作人员不会向您索要，请勿向任何人泄露  ~ play.Logger.info(Logger.java:289) ~ play ~ 727430
+2016-05-05 14:14:30,336 INFO  ~ =========九维返回=========:1,20160505141428363953  ~ play.Logger.info(Logger.java:289) ~ play ~ 730477
+2016-05-05 14:14:50,705 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 750846
+2016-05-05 14:14:50,714 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 750855
+2016-05-05 14:14:53,478 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 753619
+2016-05-05 14:14:53,489 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 753630
+2016-05-05 14:15:01,921 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 762062
+2016-05-05 14:15:21,366 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 781507
+2016-05-05 14:15:21,413 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 781554
+2016-05-05 14:15:22,621 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 782762
+2016-05-05 14:15:22,625 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 782766
+2016-05-05 14:20:22,168 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1082309
+2016-05-05 14:20:22,188 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1082329
+2016-05-05 14:20:23,420 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1083561
+2016-05-05 14:20:23,423 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1083564
+2016-05-05 14:20:24,377 ERROR ~ 
+
+@7021m08k0
+Error during job execution (jobs.EveryHourJob)
+
+Execution exception (In /app/business/Invest.java around line 3843)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 1084518
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at business.Invest.queryAllBider(Invest.java:3843)
+	at business.Invest.automaticInvest(Invest.java:3977)
+	at jobs.EveryHourJob.doJob(EveryHourJob.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 14:25:22,575 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1382716
+2016-05-05 14:25:22,588 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1382729
+2016-05-05 14:25:24,030 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1384171
+2016-05-05 14:25:24,035 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1384176
+2016-05-05 14:31:00,796 INFO  ~ Starting D:\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 1
+2016-05-05 14:31:19,071 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 18276
+2016-05-05 14:31:20,062 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 19267
+2016-05-05 14:32:17,940 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 77145
+2016-05-05 14:34:44,827 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 224032
+2016-05-05 14:35:30,705 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 269910
+2016-05-05 14:35:43,475 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 282680
+2016-05-05 14:40:18,945 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 558150
+2016-05-05 14:40:18,965 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 558170
+2016-05-05 14:40:29,389 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyEmailForReg  ~ play.Logger.debug(Logger.java:232) ~ play ~ 568594
+2016-05-05 14:40:29,494 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyEmailForReg  ~ play.Logger.debug(Logger.java:232) ~ play ~ 568699
+2016-05-05 14:40:30,912 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.registering  ~ play.Logger.debug(Logger.java:232) ~ play ~ 570117
+2016-05-05 14:40:30,928 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.registering  ~ play.Logger.debug(Logger.java:232) ~ play ~ 570133
+2016-05-05 14:40:33,028 INFO  ~ form email admin@haojiecun.com  ~ play.Logger.info(Logger.java:289) ~ play ~ 572233
+2016-05-05 14:40:35,804 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 575009
+2016-05-05 14:40:35,822 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 575027
+2016-05-05 14:40:37,642 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 576847
+2016-05-05 14:40:37,666 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 576871
+2016-05-05 14:40:40,757 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 579962
+2016-05-05 14:40:40,898 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 580103
+2016-05-05 14:40:42,962 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 582167
+2016-05-05 14:40:43,077 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 582282
+2016-05-05 14:40:46,061 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 585266
+2016-05-05 14:40:48,022 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.bindMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 587227
+2016-05-05 14:40:48,028 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.bindMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 587233
+2016-05-05 14:40:50,368 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 589573
+2016-05-05 14:40:52,621 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 591826
+2016-05-05 14:41:09,991 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 609196
+2016-05-05 14:41:09,997 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 609202
+2016-05-05 14:41:10,046 INFO  ~ 4373(动态验证码)。工作人员不会向您索要，请勿向任何人泄露  ~ play.Logger.info(Logger.java:289) ~ play ~ 609251
+2016-05-05 14:41:11,486 INFO  ~ =========九维返回=========:1,20160505144109398408  ~ play.Logger.info(Logger.java:289) ~ play ~ 610691
+2016-05-05 14:42:07,534 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 666739
+2016-05-05 14:42:07,545 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 666750
+2016-05-05 14:42:09,668 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 668873
+2016-05-05 14:42:09,673 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 668878
+2016-05-05 14:42:13,513 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 672718
+2016-05-05 14:42:27,757 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.doCertification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 686962
+2016-05-05 14:42:27,788 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.doCertification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 686993
+2016-05-05 14:42:28,837 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 688042
+2016-05-05 14:42:28,843 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 688048
+2016-05-05 14:42:40,701 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 699906
+2016-05-05 14:42:44,277 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 703482
+2016-05-05 14:42:44,287 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 703492
+2016-05-05 14:42:57,987 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 717192
+2016-05-05 14:42:57,992 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 717197
+2016-05-05 14:42:58,941 ERROR ~ 
+
+@7021op9h7
+Internal Server Error (500) for request POST /front/account/queryQualityBids
+
+Execution exception (In /app/business/CreditLevel.java around line 431)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 718146
+play.exceptions.JavaExecutionException
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:90)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:272)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.front.account.AccountHome.queryQualityBids(AccountHome.java:282)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at business.CreditLevel.queryUserCreditLevel(CreditLevel.java:431)
+	at bean.QualityBid.getCreditLevel(QualityBid.java:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:247)
+	... 13 more
+2016-05-05 14:43:01,012 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 720217
+2016-05-05 14:45:41,777 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 880982
+2016-05-05 14:45:41,780 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 880985
+2016-05-05 14:45:43,508 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 882713
+2016-05-05 14:45:43,521 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 882726
+2016-05-05 14:51:32,735 ERROR ~ 
+
+@7021op9h8
+Error during job execution (jobs.EveryHourJob)
+
+Execution exception (In /app/business/Invest.java around line 3843)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 1231940
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at business.Invest.queryAllBider(Invest.java:3843)
+	at business.Invest.automaticInvest(Invest.java:3977)
+	at jobs.EveryHourJob.doJob(EveryHourJob.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 14:51:34,681 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1233886
+2016-05-05 14:51:34,700 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1233905
+2016-05-05 14:51:35,188 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1234393
+2016-05-05 14:51:35,191 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1234396
+2016-05-05 14:55:36,014 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1475219
+2016-05-05 14:55:36,016 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1475221
+2016-05-05 14:55:36,815 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1476020
+2016-05-05 14:55:58,664 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1497869
+2016-05-05 14:55:58,667 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1497872
+2016-05-05 14:55:59,703 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1498908
+2016-05-05 14:55:59,712 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1498917
+2016-05-05 14:56:04,165 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1503370
+2016-05-05 14:56:04,180 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1503385
+2016-05-05 14:56:08,205 ERROR ~ 
+
+@7021op9h9
+Internal Server Error (500) for request POST /front/account/queryQualityBids
+
+Execution exception (In /app/business/CreditLevel.java around line 431)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 1507410
+play.exceptions.JavaExecutionException
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:90)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:272)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.front.account.AccountHome.queryQualityBids(AccountHome.java:282)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at business.CreditLevel.queryUserCreditLevel(CreditLevel.java:431)
+	at bean.QualityBid.getCreditLevel(QualityBid.java:40)
+	at /app/views/front/account/AccountHome/queryQualityBids.html.(line:27)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:247)
+	... 13 more
+2016-05-05 14:56:09,392 DEBUG ~ 正在执行ation请求命令:front.account.Message.systemMsgs  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1508597
+2016-05-05 14:56:18,289 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1517494
+2016-05-05 14:56:21,686 DEBUG ~ 正在执行ation请求命令:front.account.Message.markMsgsReaded  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1520891
+2016-05-05 14:56:23,121 DEBUG ~ 正在执行ation请求命令:front.account.Message.systemMsgs  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1522326
+2016-05-05 14:56:29,115 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1528320
+2016-05-05 14:56:37,810 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1537015
+2016-05-05 14:56:37,821 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1537026
+2016-05-05 14:56:39,409 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1538614
+2016-05-05 14:56:39,461 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1538666
+2016-05-05 14:56:44,576 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investRegular  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1543781
+2016-05-05 14:56:52,996 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1552201
+2016-05-05 14:57:14,973 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1574178
+2016-05-05 14:57:24,809 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1584014
+2016-05-05 14:57:41,198 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1600403
+2016-05-05 14:57:41,967 ERROR ~ 
+
+@7021op9ha
+Internal Server Error (500) for request GET /front/invest/investBbin?bidId=26
+
+Execution exception (In /app/controllers/front/invest/InvestAction.java around line 413)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 1601172
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.front.invest.InvestAction.investBbin(InvestAction.java:413)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+2016-05-05 14:57:48,822 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1608027
+2016-05-05 14:57:50,776 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investRegular  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1609981
+2016-05-05 14:57:55,398 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1614603
+2016-05-05 14:58:05,226 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1624431
+2016-05-05 14:58:35,279 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1654484
+2016-05-05 14:58:35,292 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1654497
+2016-05-05 14:58:47,418 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1666623
+2016-05-05 14:58:56,747 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1675952
+2016-05-05 14:59:33,590 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investRegular  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1712795
+2016-05-05 14:59:38,691 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1717896
+2016-05-05 14:59:45,681 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1724886
+2016-05-05 14:59:50,380 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 1729585
+2016-05-05 15:01:38,636 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1837841
+2016-05-05 15:01:38,642 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1837847
+2016-05-05 15:01:40,158 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1839363
+2016-05-05 15:01:40,175 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1839380
+2016-05-05 15:05:37,508 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2076713
+2016-05-05 15:05:37,515 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2076720
+2016-05-05 15:05:46,195 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2085400
+2016-05-05 15:06:33,299 ERROR ~ 
+
+@7021op9hb
+Error during job execution (jobs.EveryHourJob)
+
+Execution exception (In /app/business/Invest.java around line 3843)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 2132504
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at business.Invest.queryAllBider(Invest.java:3843)
+	at business.Invest.automaticInvest(Invest.java:3977)
+	at jobs.EveryHourJob.doJob(EveryHourJob.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 15:06:39,192 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2138397
+2016-05-05 15:06:39,197 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2138402
+2016-05-05 15:06:40,731 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2139936
+2016-05-05 15:06:40,754 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2139959
+2016-05-05 15:08:28,405 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2247610
+2016-05-05 15:08:28,415 DEBUG ~ 正在执行ation请求命令:front.debt.DebtAction.debtDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2247620
+2016-05-05 15:08:36,247 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2255452
+2016-05-05 15:08:39,742 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2258947
+2016-05-05 15:08:54,490 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2273695
+2016-05-05 15:11:25,667 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2424872
+2016-05-05 15:11:25,671 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2424876
+2016-05-05 15:11:33,253 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2432458
+2016-05-05 15:11:33,258 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2432463
+2016-05-05 15:11:38,208 ERROR ~ 
+
+@7021op9hc
+Internal Server Error (500) for request POST /front/account/queryQualityBids
+
+Execution exception (In /app/business/CreditLevel.java around line 431)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 2437413
+play.exceptions.JavaExecutionException
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:90)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:272)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.front.account.AccountHome.queryQualityBids(AccountHome.java:282)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at business.CreditLevel.queryUserCreditLevel(CreditLevel.java:431)
+	at bean.QualityBid.getCreditLevel(QualityBid.java:40)
+	at /app/views/front/account/AccountHome/queryQualityBids.html.(line:27)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:247)
+	... 13 more
+2016-05-05 15:11:40,829 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2440034
+2016-05-05 15:11:40,833 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2440038
+2016-05-05 15:11:41,506 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2440711
+2016-05-05 15:11:41,534 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2440739
+2016-05-05 15:11:43,266 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2442471
+2016-05-05 15:14:05,290 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2584495
+2016-05-05 15:14:11,621 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2590826
+2016-05-05 15:16:42,070 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2741275
+2016-05-05 15:16:42,073 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2741278
+2016-05-05 15:16:42,914 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2742119
+2016-05-05 15:16:42,975 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2742180
+2016-05-05 15:16:46,793 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2745998
+2016-05-05 15:16:46,805 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2746010
+2016-05-05 15:16:50,913 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2750118
+2016-05-05 15:16:50,961 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2750166
+2016-05-05 15:16:55,378 ERROR ~ 
+
+@7021op9hd
+Internal Server Error (500) for request POST /front/account/queryQualityBids
+
+Execution exception (In /app/business/CreditLevel.java around line 431)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 2754583
+play.exceptions.JavaExecutionException
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:90)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:272)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.front.account.AccountHome.queryQualityBids(AccountHome.java:282)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at business.CreditLevel.queryUserCreditLevel(CreditLevel.java:431)
+	at bean.QualityBid.getCreditLevel(QualityBid.java:40)
+	at /app/views/front/account/AccountHome/queryQualityBids.html.(line:27)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:247)
+	... 13 more
+2016-05-05 15:16:58,136 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2757341
+2016-05-05 15:17:01,113 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2760318
+2016-05-05 15:17:01,118 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2760323
+2016-05-05 15:17:07,862 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2767067
+2016-05-05 15:17:32,684 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2791889
+2016-05-05 15:17:32,695 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2791900
+2016-05-05 15:17:37,182 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2796387
+2016-05-05 15:17:43,730 DEBUG ~ 正在执行ation请求命令:Application.getCity  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2802935
+2016-05-05 15:17:50,191 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2809396
+2016-05-05 15:17:50,195 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2809400
+2016-05-05 15:17:51,596 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2810801
+2016-05-05 15:17:51,607 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2810812
+2016-05-05 15:17:56,590 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2815795
+2016-05-05 15:18:23,628 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2842833
+2016-05-05 15:18:25,172 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2844377
+2016-05-05 15:18:26,686 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2845891
+2016-05-05 15:18:37,011 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2856216
+2016-05-05 15:18:37,071 INFO  ~ supervisor_[id:16457f40-d51d-44fe-800e-244850b8a463][random:Qxi6]  ~ play.Logger.info(Logger.java:289) ~ play ~ 2856276
+2016-05-05 15:18:38,769 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2857974
+2016-05-05 15:18:38,774 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2857979
+2016-05-05 15:18:38,782 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2857987
+2016-05-05 15:18:49,293 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2868498
+2016-05-05 15:18:49,298 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2868503
+2016-05-05 15:18:49,308 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2868513
+2016-05-05 15:18:50,796 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2870001
+2016-05-05 15:18:50,832 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2870037
+2016-05-05 15:18:50,842 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2870047
+2016-05-05 15:19:05,611 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2884816
+2016-05-05 15:19:05,618 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2884823
+2016-05-05 15:19:05,623 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2884828
+2016-05-05 15:19:13,252 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2892457
+2016-05-05 15:19:13,258 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2892463
+2016-05-05 15:19:13,262 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2892467
+2016-05-05 15:19:18,673 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2897878
+2016-05-05 15:19:18,678 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2897883
+2016-05-05 15:19:18,682 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2897887
+2016-05-05 15:19:30,231 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2909436
+2016-05-05 15:19:30,239 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2909444
+2016-05-05 15:19:30,243 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2909448
+2016-05-05 15:19:37,571 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2916776
+2016-05-05 15:19:37,576 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2916781
+2016-05-05 15:19:37,580 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2916785
+2016-05-05 15:19:46,624 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2925829
+2016-05-05 15:19:46,633 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2925838
+2016-05-05 15:19:46,637 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2925842
+2016-05-05 15:19:47,561 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2926766
+2016-05-05 15:19:47,566 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2926771
+2016-05-05 15:19:47,572 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.selectUsersInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2926777
+2016-05-05 15:20:12,094 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadFile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2951299
+2016-05-05 15:20:19,283 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addingAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2958488
+2016-05-05 15:20:19,293 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addingAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2958498
+2016-05-05 15:20:19,322 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.addingAgencyBid  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2958527
+2016-05-05 15:20:19,713 INFO  ~ ---------------------根据用户上传资料判断显示为提前借款还是借款中------------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 2958918
+2016-05-05 15:20:21,214 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2960419
+2016-05-05 15:20:21,225 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2960430
+2016-05-05 15:20:21,229 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2960434
+2016-05-05 15:20:31,211 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2970416
+2016-05-05 15:20:31,217 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2970422
+2016-05-05 15:20:31,225 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2970430
+2016-05-05 15:20:35,273 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2974478
+2016-05-05 15:20:35,279 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2974484
+2016-05-05 15:20:35,283 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidAgencyAction.agencyBidList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2974488
+2016-05-05 15:20:43,480 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2982685
+2016-05-05 15:20:43,492 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2982697
+2016-05-05 15:20:43,495 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 2982700
+2016-05-05 15:21:10,964 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.logout  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3010169
+2016-05-05 15:21:10,983 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.logout  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3010188
+2016-05-05 15:21:12,013 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3011218
+2016-05-05 15:21:24,945 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasMobileExists  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3024150
+2016-05-05 15:21:24,947 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasMobileExists  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3024152
+2016-05-05 15:21:34,318 ERROR ~ 
+
+@7021op9i6
+Error during job execution (jobs.EveryHourJob)
+
+Execution exception (In /app/business/Invest.java around line 3843)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 3033523
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at business.Invest.queryAllBider(Invest.java:3843)
+	at business.Invest.automaticInvest(Invest.java:3977)
+	at jobs.EveryHourJob.doJob(EveryHourJob.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 15:21:35,198 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3034403
+2016-05-05 15:21:35,206 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasEmailExist  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3034411
+2016-05-05 15:21:42,998 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3042203
+2016-05-05 15:21:43,134 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3042339
+2016-05-05 15:21:44,410 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3043615
+2016-05-05 15:21:44,440 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3043645
+2016-05-05 15:21:45,265 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyEmailForReg  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3044470
+2016-05-05 15:21:45,272 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyEmailForReg  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3044477
+2016-05-05 15:21:47,840 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.registering  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3047045
+2016-05-05 15:21:47,855 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.registering  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3047060
+2016-05-05 15:21:48,409 INFO  ~ form email admin@haojiecun.com  ~ play.Logger.info(Logger.java:289) ~ play ~ 3047614
+2016-05-05 15:21:51,544 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3050749
+2016-05-05 15:21:51,558 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3050763
+2016-05-05 15:21:52,544 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3051749
+2016-05-05 15:21:52,558 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3051763
+2016-05-05 15:21:56,879 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3056084
+2016-05-05 15:21:59,554 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.bindMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3058759
+2016-05-05 15:21:59,560 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.bindMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3058765
+2016-05-05 15:22:02,017 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3061222
+2016-05-05 15:22:03,756 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3062961
+2016-05-05 15:22:35,949 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3095154
+2016-05-05 15:22:35,956 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.verifyMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3095161
+2016-05-05 15:22:35,982 INFO  ~ 6729(动态验证码)。工作人员不会向您索要，请勿向任何人泄露  ~ play.Logger.info(Logger.java:289) ~ play ~ 3095187
+2016-05-05 15:22:36,129 INFO  ~ =========九维返回=========:1,20160505152233456318  ~ play.Logger.info(Logger.java:289) ~ play ~ 3095334
+2016-05-05 15:22:49,114 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3108319
+2016-05-05 15:22:49,118 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.saveMobile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3108323
+2016-05-05 15:22:51,707 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3110912
+2016-05-05 15:22:51,712 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3110917
+2016-05-05 15:22:55,510 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3114715
+2016-05-05 15:23:55,214 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.doCertification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3174419
+2016-05-05 15:23:55,227 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.doCertification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3174432
+2016-05-05 15:23:56,058 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3175263
+2016-05-05 15:23:56,064 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.certification  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3175269
+2016-05-05 15:24:01,226 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3180431
+2016-05-05 15:24:05,444 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3184649
+2016-05-05 15:24:10,172 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3189377
+2016-05-05 15:24:13,658 DEBUG ~ 正在执行ation请求命令:front.account.Message.systemMsgs  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3192863
+2016-05-05 15:24:17,831 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3197036
+2016-05-05 15:24:21,162 DEBUG ~ 正在执行ation请求命令:front.account.Message.systemMsgDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3200367
+2016-05-05 15:24:25,365 DEBUG ~ 正在执行ation请求命令:front.account.Message.systemMsgs  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3204570
+2016-05-05 15:24:31,993 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3211198
+2016-05-05 15:24:38,147 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3217352
+2016-05-05 15:24:45,983 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3225188
+2016-05-05 15:24:53,909 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 3233114
+2016-05-05 15:26:43,886 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3343091
+2016-05-05 15:26:43,889 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3343094
+2016-05-05 15:26:44,936 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3344141
+2016-05-05 15:26:44,946 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3344151
+2016-05-05 15:32:10,415 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 3669620
+2016-05-05 15:32:48,761 ERROR ~ 
+
+@7021op9i7
+Error during job execution (jobs.EmailSend)
+
+Execution exception (In /app/business/BackstageSet.java around line 191)
+ClassCastException occured : business.BackstageSet cannot be cast to business.BackstageSet
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 3707966
+play.exceptions.JavaExecutionException: business.BackstageSet cannot be cast to business.BackstageSet
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassCastException: business.BackstageSet cannot be cast to business.BackstageSet
+	at business.BackstageSet.getCurrentBackstageSet(BackstageSet.java:191)
+	at business.TemplateEmail.dealEmailTask(TemplateEmail.java:479)
+	at jobs.EmailSend.doJob(EmailSend.java:21)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 15:32:49,872 ERROR ~ 
+
+@7021op9i8
+Error during job execution (jobs.SmsSend)
+
+Execution exception (In /app/business/BackstageSet.java around line 191)
+ClassCastException occured : business.BackstageSet cannot be cast to business.BackstageSet
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 3709077
+play.exceptions.JavaExecutionException: business.BackstageSet cannot be cast to business.BackstageSet
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassCastException: business.BackstageSet cannot be cast to business.BackstageSet
+	at business.BackstageSet.getCurrentBackstageSet(BackstageSet.java:191)
+	at business.TemplateSms.dealSmsTask(TemplateSms.java:322)
+	at jobs.SmsSend.doJob(SmsSend.java:35)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-05 15:32:51,111 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3710316
+2016-05-05 15:32:51,284 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3710489
+2016-05-05 15:32:52,010 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3711215
+2016-05-05 15:32:52,022 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 3711227
+2016-05-05 15:32:52,229 ERROR ~ models.t_statistic_cps cannot be cast to models.t_statistic_cps  ~ play.Logger.error(Logger.java:399) ~ play ~ 3711434
+2016-05-05 15:32:52,231 ERROR ~ org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.t_statistic_cps.bid_amount  ~ play.Logger.error(Logger.java:399) ~ play ~ 3711436
+2016-05-05 15:37:45,494 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4004699
+2016-05-05 15:37:45,510 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4004715
+2016-05-05 15:37:45,991 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4005196
+2016-05-05 15:37:46,070 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4005275
+2016-05-05 15:42:46,705 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4305910
+2016-05-05 15:42:46,729 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4305934
+2016-05-05 15:42:47,690 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4306895
+2016-05-05 15:42:47,693 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4306898
+2016-05-05 15:47:47,263 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4606468
+2016-05-05 15:47:47,283 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4606488
+2016-05-05 15:47:48,709 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4607914
+2016-05-05 15:47:48,731 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4607936
+2016-05-05 15:52:48,875 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4908080
+2016-05-05 15:52:48,890 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4908095
+2016-05-05 15:52:49,628 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4908833
+2016-05-05 15:52:49,631 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 4908836
+2016-05-05 15:55:21,296 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5060501
+2016-05-05 15:55:21,305 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5060510
+2016-05-05 15:55:22,162 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5061367
+2016-05-05 15:55:47,702 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5086907
+2016-05-05 15:55:47,708 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5086913
+2016-05-05 15:55:49,034 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5088239
+2016-05-05 15:55:49,048 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5088253
+2016-05-05 15:55:56,964 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5096169
+2016-05-05 15:55:56,979 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5096184
+2016-05-05 15:56:00,564 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5099769
+2016-05-05 15:56:06,409 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5105614
+2016-05-05 15:56:15,733 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5114938
+2016-05-05 15:56:39,987 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5139192
+2016-05-05 15:56:44,081 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5143286
+2016-05-05 15:56:44,086 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.modifyPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5143291
+2016-05-05 15:56:56,896 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5156101
+2016-05-05 15:56:59,787 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5158992
+2016-05-05 15:57:01,936 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5161141
+2016-05-05 15:57:06,414 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5165619
+2016-05-05 15:57:13,326 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.login  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5172531
+2016-05-05 15:57:13,382 INFO  ~ supervisor_[id:aa4555b8-636c-4360-a252-01211db347da][random:L5ym]  ~ play.Logger.info(Logger.java:289) ~ play ~ 5172587
+2016-05-05 15:57:15,246 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5174451
+2016-05-05 15:57:15,251 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5174456
+2016-05-05 15:57:15,267 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showHome  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5174472
+2016-05-05 15:57:20,225 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5179430
+2016-05-05 15:57:20,230 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5179435
+2016-05-05 15:57:20,239 DEBUG ~ 正在执行ation请求命令:supervisor.managementHome.HomeAction.showEchartsData  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5179444
+2016-05-05 15:57:23,550 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5182755
+2016-05-05 15:57:23,556 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5182761
+2016-05-05 15:57:23,560 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5182765
+2016-05-05 15:57:29,633 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5188838
+2016-05-05 15:57:29,640 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5188845
+2016-05-05 15:57:29,644 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5188849
+2016-05-05 15:57:52,869 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5212074
+2016-05-05 15:57:52,885 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5212090
+2016-05-05 15:57:56,630 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5215835
+2016-05-05 15:57:56,633 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5215838
+2016-05-05 15:58:01,862 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.savePayPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5221067
+2016-05-05 15:58:01,867 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.savePayPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5221072
+2016-05-05 15:58:02,914 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.savePayPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5222119
+2016-05-05 15:58:02,918 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.savePayPassword  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5222123
+2016-05-05 15:58:05,254 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5224459
+2016-05-05 15:58:05,267 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5224472
+2016-05-05 15:58:05,276 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5224481
+2016-05-05 15:58:18,493 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5237698
+2016-05-05 15:58:18,508 DEBUG ~ 正在执行ation请求命令:front.account.BasicInformation.basicInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5237713
+2016-05-05 15:58:25,805 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5245010
+2016-05-05 15:58:35,613 DEBUG ~ 正在执行ation请求命令:FileUpload.uploadFile  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5254818
+2016-05-05 15:58:38,123 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.createUserAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5257328
+2016-05-05 15:58:38,129 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.createUserAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5257334
+2016-05-05 15:58:38,133 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.createUserAuditItem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5257338
+2016-05-05 15:58:38,868 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5258073
+2016-05-05 15:58:38,877 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5258082
+2016-05-05 15:58:38,881 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5258086
+2016-05-05 15:58:41,684 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5260889
+2016-05-05 15:58:41,696 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5260901
+2016-05-05 15:58:41,700 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5260905
+2016-05-05 15:58:45,543 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.UserAuditItemAction.audititem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5264748
+2016-05-05 15:58:45,551 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.UserAuditItemAction.audititem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5264756
+2016-05-05 15:58:45,557 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.UserAuditItemAction.audititem  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5264762
+2016-05-05 15:58:51,935 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.UserAuditItemAction.audit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5271140
+2016-05-05 15:58:51,943 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.UserAuditItemAction.audit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5271148
+2016-05-05 15:58:51,947 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.UserAuditItemAction.audit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5271152
+2016-05-05 15:58:53,094 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5272299
+2016-05-05 15:58:53,102 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5272307
+2016-05-05 15:58:53,108 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingDetail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5272313
+2016-05-05 15:58:55,783 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5274988
+2016-05-05 15:58:55,900 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5275105
+2016-05-05 15:58:55,916 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.userItemsList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5275121
+2016-05-05 15:59:00,258 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.advanceLoanToFundraise  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5279463
+2016-05-05 15:59:00,268 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.advanceLoanToFundraise  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5279473
+2016-05-05 15:59:00,274 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.advanceLoanToFundraise  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5279479
+2016-05-05 15:59:01,142 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5280347
+2016-05-05 15:59:01,148 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5280353
+2016-05-05 15:59:01,152 DEBUG ~ 正在执行ation请求命令:supervisor.bidManager.BidPlatformAction.fundraiseingList  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5280357
+2016-05-05 15:59:10,416 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5289621
+2016-05-05 15:59:20,509 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5299714
+2016-05-05 15:59:26,164 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5305369
+2016-05-05 15:59:41,536 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.confirmInvestBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 5320741
+2016-05-05 16:02:29,457 INFO  ~ id237blackUserId238  ~ play.Logger.info(Logger.java:289) ~ play ~ 5488662
+2016-05-05 16:02:54,082 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5513287
+2016-05-05 16:02:54,131 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5513336
+2016-05-05 16:02:57,591 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5516796
+2016-05-05 16:02:57,599 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5516804
+2016-05-05 16:03:41,010 INFO  ~ sms content:亲爱哒18500025116: 恭喜您投资借款标成功！投资金额500.00元，投资期限2 日，年化收益率2.00%，还款方式:按天返息，到期还本（金刚小鹦鹉）  ~ play.Logger.info(Logger.java:289) ~ play ~ 5560215
+2016-05-05 16:07:55,693 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5814898
+2016-05-05 16:07:56,158 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5815363
+2016-05-05 16:07:59,180 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5818385
+2016-05-05 16:07:59,183 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 5818388
+2016-05-05 16:11:20,896 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6020101
+2016-05-05 16:11:36,792 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6035997
+2016-05-05 16:11:36,798 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6036003
+2016-05-05 16:11:36,801 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6036006
+2016-05-05 16:11:37,738 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6036943
+2016-05-05 16:12:02,548 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6061753
+2016-05-05 16:12:02,550 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.loginNow  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6061755
+2016-05-05 16:12:03,706 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6062911
+2016-05-05 16:12:03,729 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6062934
+2016-05-05 16:12:08,735 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6067940
+2016-05-05 16:12:08,748 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6067953
+2016-05-05 16:12:11,443 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6070648
+2016-05-05 16:12:16,262 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6075467
+2016-05-05 16:12:23,475 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6082680
+2016-05-05 16:12:33,371 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6092576
+2016-05-05 16:12:40,973 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6100178
+2016-05-05 16:12:49,487 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.confirmInvestBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6108692
+2016-05-05 16:12:49,741 INFO  ~ id237blackUserId238  ~ play.Logger.info(Logger.java:289) ~ play ~ 6108946
+2016-05-05 16:12:50,221 INFO  ~ sms content:亲爱哒18500025116: 恭喜您投资借款标成功！投资金额500.00元，投资期限2 日，年化收益率2.00%，还款方式:按天反息,到期收本!（金刚小鹦鹉）  ~ play.Logger.info(Logger.java:289) ~ play ~ 6109426
+2016-05-05 16:12:52,652 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6111857
+2016-05-05 16:12:59,799 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6119004
+2016-05-05 16:12:59,921 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6119126
+2016-05-05 16:13:00,914 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6120119
+2016-05-05 16:13:00,917 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6120122
+2016-05-05 16:13:04,880 INFO  ~ =========九维返回=========:1,20160505161302528500  ~ play.Logger.info(Logger.java:289) ~ play ~ 6124085
+2016-05-05 16:13:04,990 INFO  ~ =========九维返回=========:1,20160505161302528505  ~ play.Logger.info(Logger.java:289) ~ play ~ 6124195
+2016-05-05 16:13:06,682 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6125887
+2016-05-05 16:13:16,278 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.investBbin  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6135483
+2016-05-05 16:13:22,407 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6141612
+2016-05-05 16:17:57,627 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6416832
+2016-05-05 16:18:04,025 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6423230
+2016-05-05 16:18:04,495 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6423700
+2016-05-05 16:18:07,574 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 6426779
+2016-05-05 16:18:09,251 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6428456
+2016-05-05 16:18:09,254 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6428459
+2016-05-05 16:23:05,247 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6724452
+2016-05-05 16:23:05,319 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6724524
+2016-05-05 16:23:10,416 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6729621
+2016-05-05 16:23:10,419 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 6729624
+2016-05-05 16:28:06,010 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7025215
+2016-05-05 16:28:06,027 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7025232
+2016-05-05 16:28:11,527 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7030732
+2016-05-05 16:28:11,530 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7030735
+2016-05-05 16:33:06,698 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7325903
+2016-05-05 16:33:06,711 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7325916
+2016-05-05 16:33:13,355 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7332560
+2016-05-05 16:33:13,365 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7332570
+2016-05-05 16:38:08,353 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7627558
+2016-05-05 16:38:08,370 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7627575
+2016-05-05 16:38:14,945 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7634150
+2016-05-05 16:38:14,949 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7634154
+2016-05-05 16:42:54,699 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 7913904
+2016-05-05 16:43:09,758 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7928963
+2016-05-05 16:43:09,772 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7928977
+2016-05-05 16:43:12,644 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 7931849
+2016-05-05 16:43:16,307 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7935512
+2016-05-05 16:43:16,310 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 7935515
+2016-05-05 16:43:26,110 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 7945315
+2016-05-05 16:43:44,758 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 7963963
+2016-05-05 16:48:11,732 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8230937
+2016-05-05 16:48:17,176 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8236381
+2016-05-05 16:48:17,292 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8236497
+2016-05-05 16:48:19,962 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8239167
+2016-05-05 16:48:19,966 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8239171
+2016-05-05 16:48:32,870 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8252075
+2016-05-05 16:51:21,516 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8420721
+2016-05-05 16:51:33,700 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8432905
+2016-05-05 16:53:20,550 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8539755
+2016-05-05 16:53:20,559 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8539764
+2016-05-05 16:53:23,654 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8542859
+2016-05-05 16:53:23,663 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8542868
+2016-05-05 16:56:04,170 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8703375
+2016-05-05 16:56:22,440 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8721645
+2016-05-05 16:56:40,510 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8739715
+2016-05-05 16:56:55,567 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 8754772
+2016-05-05 16:58:21,433 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8840638
+2016-05-05 16:58:21,448 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8840653
+2016-05-05 16:58:27,416 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8846621
+2016-05-05 16:58:27,419 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 8846624
+2016-05-05 17:02:18,602 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9077807
+2016-05-05 17:02:27,256 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9086461
+2016-05-05 17:03:22,229 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9141434
+2016-05-05 17:03:22,249 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9141454
+2016-05-05 17:03:28,463 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9147668
+2016-05-05 17:03:28,472 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9147677
+2016-05-05 17:05:52,183 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9291388
+2016-05-05 17:06:02,523 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9301728
+2016-05-05 17:07:49,000 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.invest  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9408205
+2016-05-05 17:08:21,100 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9440305
+2016-05-05 17:08:23,320 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9442525
+2016-05-05 17:08:23,397 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9442602
+2016-05-05 17:08:29,607 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9448812
+2016-05-05 17:08:29,619 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9448824
+2016-05-05 17:08:41,116 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9460321
+2016-05-05 17:08:48,783 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9467988
+2016-05-05 17:10:18,935 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9558140
+2016-05-05 17:10:30,105 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9569310
+2016-05-05 17:10:38,511 DEBUG ~ 正在执行ation请求命令:front.help.HelpCenterAction.partner  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9577716
+2016-05-05 17:10:46,882 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9586087
+2016-05-05 17:11:26,156 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9625361
+2016-05-05 17:11:34,587 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 9633792
+2016-05-05 17:13:24,152 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9743357
+2016-05-05 17:13:24,191 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9743396
+2016-05-05 17:13:30,507 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9749712
+2016-05-05 17:13:30,512 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 9749717
+2016-05-05 17:18:05,066 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10024271
+2016-05-05 17:18:11,652 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10030857
+2016-05-05 17:18:24,910 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10044115
+2016-05-05 17:18:24,928 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10044133
+2016-05-05 17:18:31,369 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10050574
+2016-05-05 17:18:31,383 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10050588
+2016-05-05 17:19:00,098 DEBUG ~ 正在执行ation请求命令:front.wealthinfomation.WealthInfomationAction.newDetails  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10079303
+2016-05-05 17:23:25,564 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10344769
+2016-05-05 17:23:25,587 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10344792
+2016-05-05 17:23:32,096 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10351301
+2016-05-05 17:23:32,099 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10351304
+2016-05-05 17:25:11,054 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.invest  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10450259
+2016-05-05 17:25:22,172 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10461377
+2016-05-05 17:25:29,422 DEBUG ~ 正在执行ation请求命令:front.help.HelpCenterAction.index  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10468627
+2016-05-05 17:25:36,122 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10475327
+2016-05-05 17:25:40,534 DEBUG ~ 正在执行ation请求命令:front.help.HelpCenterAction.detail  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10479739
+2016-05-05 17:25:47,901 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10487106
+2016-05-05 17:25:55,623 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10494828
+2016-05-05 17:25:58,948 DEBUG ~ 正在执行ation请求命令:front.help.HelpCenterAction.index  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10498153
+2016-05-05 17:26:02,897 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10502102
+2016-05-05 17:26:07,633 DEBUG ~ 正在执行ation请求命令:front.help.HelpCenterAction.index  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10506838
+2016-05-05 17:26:11,583 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10510788
+2016-05-05 17:26:37,402 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10536607
+2016-05-05 17:26:37,488 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10536693
+2016-05-05 17:26:42,067 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10541272
+2016-05-05 17:26:42,072 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10541277
+2016-05-05 17:26:43,147 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10542352
+2016-05-05 17:26:48,119 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityDebts  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10547324
+2016-05-05 17:26:48,126 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityDebts  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10547331
+2016-05-05 17:26:50,741 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10549946
+2016-05-05 17:26:50,747 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10549952
+2016-05-05 17:26:51,824 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityDebts  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10551029
+2016-05-05 17:26:51,837 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityDebts  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10551042
+2016-05-05 17:26:52,689 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10551894
+2016-05-05 17:26:52,697 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10551902
+2016-05-05 17:26:53,368 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityDebts  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10552573
+2016-05-05 17:26:53,375 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityDebts  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10552580
+2016-05-05 17:26:54,491 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10553696
+2016-05-05 17:26:54,569 DEBUG ~ 正在执行ation请求命令:front.account.AccountHome.queryQualityBids  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10553774
+2016-05-05 17:27:01,134 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.accountInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10560339
+2016-05-05 17:27:01,139 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.accountInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10560344
+2016-05-05 17:27:01,451 DEBUG ~ 初始化银行code-name数据  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10560656
+2016-05-05 17:27:01,590 DEBUG ~ 初始化省份code-name数据  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10560795
+2016-05-05 17:27:01,718 DEBUG ~ unsupport init normalBank arrays.please TODO.  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10560923
+2016-05-05 17:27:13,069 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10572274
+2016-05-05 17:28:24,689 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.accountInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10643894
+2016-05-05 17:28:24,699 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.accountInformation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10643904
+2016-05-05 17:28:28,374 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10647579
+2016-05-05 17:28:28,400 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10647605
+2016-05-05 17:28:30,744 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10649949
+2016-05-05 17:28:33,162 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10652367
+2016-05-05 17:28:33,166 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10652371
+2016-05-05 17:28:51,092 INFO  ~ 重复提交生成的校验码:16a11372-b9bc-4a61-b7d8-566885c213c4  ~ play.Logger.info(Logger.java:289) ~ play ~ 10670297
+2016-05-05 17:28:51,101 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.recharge  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10670306
+2016-05-05 17:28:51,106 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.recharge  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10670311
+2016-05-05 17:29:05,708 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10684913
+2016-05-05 17:30:31,421 INFO  ~ 重复提交生成的校验码:a4f18c22-0e3f-4eaf-a400-00ccb949bd97  ~ play.Logger.info(Logger.java:289) ~ play ~ 10770626
+2016-05-05 17:30:31,422 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.withdrawal  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10770627
+2016-05-05 17:30:31,431 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.withdrawal  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10770636
+2016-05-05 17:30:41,506 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10780711
+2016-05-05 17:31:30,168 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.dealRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10829373
+2016-05-05 17:31:30,192 DEBUG ~ 正在执行ation请求命令:front.account.FundsManage.dealRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10829397
+2016-05-05 17:31:37,462 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10836667
+2016-05-05 17:31:42,825 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investBills  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10842030
+2016-05-05 17:31:42,837 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investBills  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10842042
+2016-05-05 17:31:42,844 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investBills  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10842049
+2016-05-05 17:31:51,066 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10850271
+2016-05-05 17:31:56,289 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10855494
+2016-05-05 17:31:56,320 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10855525
+2016-05-05 17:31:56,325 DEBUG ~ 正在执行ation请求命令:front.account.InvestAccount.investRecord  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10855530
+2016-05-05 17:32:03,208 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10862413
+2016-05-05 17:32:18,588 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10877793
+2016-05-05 17:33:00,822 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 10920027
+2016-05-05 17:33:29,292 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10948497
+2016-05-05 17:33:29,308 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10948513
+2016-05-05 17:33:34,308 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10953513
+2016-05-05 17:33:34,312 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 10953517
+2016-05-05 17:38:10,429 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 11229634
+2016-05-05 17:38:20,963 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 11240168
+2016-05-05 17:38:30,664 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11249869
+2016-05-05 17:38:30,748 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11249953
+2016-05-05 17:38:35,213 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11254418
+2016-05-05 17:38:35,217 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11254422
+2016-05-05 17:39:47,135 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 11326340
+2016-05-05 17:39:54,865 DEBUG ~ 正在执行ation请求命令:front.account.Message.countMessage  ~ play.Logger.debug(Logger.java:232) ~ play ~ 11334070
+2016-05-05 17:43:31,466 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11550671
+2016-05-05 17:43:31,496 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11550701
+2016-05-05 17:43:35,925 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11555130
+2016-05-05 17:43:35,928 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 11555133
+2016-05-05 18:24:39,367 INFO  ~ Starting D:\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-05 18:24:45,979 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 6612
+2016-05-05 18:24:46,595 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 7228
+2016-05-05 18:25:14,355 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 34988
+2016-05-05 18:35:22,301 INFO  ~ Connected to jdbc:mysql://192.168.1.101/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 642934
+2016-05-05 18:35:52,646 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 673279
+2016-05-05 18:36:10,624 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.loginInit  ~ play.Logger.debug(Logger.java:232) ~ play ~ 691257
+2016-05-05 18:36:20,615 DEBUG ~ 正在执行ation请求命令:Application.captcha  ~ play.Logger.debug(Logger.java:232) ~ play ~ 701248
+2016-05-05 18:36:32,559 DEBUG ~ 正在执行ation请求命令:supervisor.login.LoginAction.ipLocation  ~ play.Logger.debug(Logger.java:232) ~ play ~ 713192
+2016-05-05 18:38:12,540 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 813173
+2016-05-05 18:39:12,904 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.invest  ~ play.Logger.debug(Logger.java:232) ~ play ~ 873537
+2016-05-05 18:39:57,757 DEBUG ~ 正在执行ation请求命令:front.invest.InvestAction.viewBidInvestRecords  ~ play.Logger.debug(Logger.java:232) ~ play ~ 918390
+2016-05-05 18:41:02,048 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 982681
+2016-05-05 18:41:02,098 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 982731
+2016-05-05 18:41:02,483 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 983116
+2016-05-05 18:41:02,497 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 983130
+2016-05-05 18:46:02,446 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1283079
+2016-05-05 18:46:02,476 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1283109
+2016-05-05 18:46:03,257 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1283890
+2016-05-05 18:46:03,263 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1283896
+2016-05-05 18:51:02,902 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1583535
+2016-05-05 18:51:02,992 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1583625
+2016-05-05 18:51:03,808 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1584441
+2016-05-05 18:51:03,816 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1584449
+2016-05-05 18:56:03,503 INFO  ~ --------------检查是否流标,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1884136
+2016-05-05 18:56:03,541 INFO  ~ --------------检查是否流标,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1884174
+2016-05-05 18:56:04,503 INFO  ~ --------------定时判断债权流拍,开始---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1885136
+2016-05-05 18:56:04,506 INFO  ~ --------------定时判断债权流拍,结束---------------------  ~ play.Logger.info(Logger.java:289) ~ play ~ 1885139

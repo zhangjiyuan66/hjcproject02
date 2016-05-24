@@ -1,0 +1,97 @@
+<!--活标项目-->
+        <div class="l_dbxm">
+        	<h2 class="l_dbxm_titlearea clr">
+            	<div class="l_dbxm_title">
+                	<span class="deepblue_font">活标</span><span>项目</span>
+                </div>
+                <a href="/front/invest/investRegular" target="" title="" class=" l_more_projects hover-opacity">更多活标项目<span class="font_songti">&gt;&gt;</span></a>
+            </h2>
+            <ul class="l_dbxm_detail clr">
+             #{list items:regularBids , as:'regularBid'}
+                 <li>
+                	<div class="l_border_rect">
+                	<div class="l_dbxm_detail_info clr">
+                          <div class="l_dbxm_detail_titlearea clr">
+                                <img src="${regularBid?.small_image_filename}" alt="" title="" width="23" height="21">
+                                <a href="@{front.invest.InvestAction.invest(regularBid?.id)}" title="" target="" class="l_dbxm_detail_title">${regularBid?.title}</a>
+                          </div>
+                        <!--1010新增-->
+                        <div class="l_year_lincome">
+                         
+                            <p>年化收益</p>
+                            <div class="pb4 clr">
+                                <div class="l_year_income_percent_grey l_year_income_percent_orange">${regularBid?.apr}</div>
+                                <div class="l_year_income_percentsign_grey  l_year_income_percent_orange">%</div>
+                            </div>
+                        </div>
+                        
+                        <!--1010新增end-->
+                        <div class="l_dbxm_detail_content">
+                        	<div class="l_dbxm_detail_titlearea clr">
+                               <!-- <img src="${regularBid?.small_image_filename}" alt="" title="" width="23" height="21">
+                                <a href="@{front.invest.InvestAction.invest(regularBid?.id)}" title="" target="" class="l_dbxm_detail_title">${regularBid?.title}</a>-->
+                            </div>
+                            <div class="l_dbxm_details">
+                            	<div class="mb20">
+                                	<span class="mr7">项目规模：<strong class="l_dbxm_sum ">${(regularBid?.amount/10000)?.format('###,##0.00')}</strong>万</span>
+                                    &nbsp; &nbsp; 
+                                    <span>期限：<strong class="l_dbxm_sum ">${regularBid?.period}</strong></span>
+                                      <span>
+                                        #{if regularBid?.period_unit ==-1}
+										年
+										#{/if}
+										#{if regularBid?.period_unit ==0}
+										个月
+										#{/if}
+										#{if regularBid?.period_unit ==1}
+										天
+										#{/if}                          
+                                    </span>
+                                </div>
+                                <div class="mb20">
+                                	<span>还款方式：</span>
+                                    <span>按<span style="color:#ff8839;font-size:15px">天</span>返息，到期还本</span>
+                                </div>
+                                #{if regularBid?.status == 4 || agencyBids?.status == 5}
+                                <div>
+                                	<span>投资人数：</span><span class="l_tzrs_num">${regularBid?.invest_num}</span><span>人投资此项目</span>
+                                </div>
+                                #{/if}  
+                                #{else}
+                                <div class="clr">
+                                	<div class="fl">投资进度：</div>
+                                    <span class="p_xq_qaprogres"><span style="width:${regularBid?.loan_schedule}%;"></span></span>
+                                    ${regularBid?.loan_schedule}%
+                                </div>
+                                #{/else}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l_year_income clr">
+                        #{if regularBid?.status > 0 && regularBid?.status < 3 && regularBid?.amount > regularBid?.has_invested_amount}
+							 <input type="button" class="l_ljtz hover-opacity" value="立即投资"  onclick="javascript:window.open('@{front.invest.InvestAction.invest(regularBid?.id)}', '_self')"/>
+						#{/if}
+					    #{else}
+                           <a onclick="javascript:window.open('@{front.invest.InvestAction.invest(regularBid?.id)}', '_self')" target="" title="" class="l_know_details hover-opacity">了解详情</a>
+                        #{/else}    
+                    </div>
+                    </div>
+                </li>
+                #{/list}
+            </ul>
+        </div>
+        <!--活标项目end-->
+
+
+		<script>
+			$(function(){
+			  $("#xf_c_idx_4_xydj xf_c_idx_4_inxydj").limit();
+			
+				#{list items:agencyBids , as:'agencybid'}
+				
+				 $('#agencyloanSchedule'+${agencybid_index}).css({"width":${agencybid?.loan_schedule}})
+				 
+				#{/list}
+			
+		   })	
+		</script>

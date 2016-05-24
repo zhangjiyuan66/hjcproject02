@@ -1,0 +1,152 @@
+%{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{extends 'common/frontMain.html' /}
+#{set title:currBackstageSet.seoTitle +'| 债权转让' /}
+<div class="p_bgf1_box pb30 pt30">
+    <div class="p_main">
+    	 <h6 class="p_sy_title mb10"><span>债权转让</span></h6>
+	  #{include 'front/debt/DebtAction/debtHomeCondition.control' /}
+	     <div class="p_lc_listbox l_zqzr_list" id = "debtList">
+            <ul class="p_lc_inlitul">
+            #{list items:page.page, as:'debt'}
+                <li class="clr">
+               <!--   <img src="${debt?.bid_image_filename}" alt="" class="p_lc_titimg" /> -->
+                    <div class="p_lc_bdbox">
+                        <h4 class="p_lc_bdtitle">
+                        <img class="p_lc_jkimg" src="/public/images/images2/zhuan.png"></img>
+                         <strong>${debt?.title}</strong>
+					     <span class="fr">债权编号：Z${debt?.id}</span>
+                        </h4>
+                        <table class="p_lc_bdtabl">
+                            <tr height="38">
+                                <td width="35%">待收本息：<strong class="f22"> ${debt?.debt_amount?.format('###,##0.00')}</strong>元</td>
+                                <td width="35%">拍卖底价：<strong class="f22">${debt?.transfer_price?.format('###,##0.00')}</strong>元</td>
+                                <td width="40%">目前竞价：<strong class="f22">
+                                    #{if debt?.max_price != null}
+									${debt?.max_price?.format('###,##0.00')}
+									#{/if}
+									#{else}
+									0
+									#{/else}
+                                    </strong>元</td>
+                            </tr>
+                            <tr height="34">
+                                <td>底价收益：<strong class="f22 p_cozhuse">${debt?.apr}</strong><span class="p_cozhuse">%</span></td>
+                                <td>还款日期：${debt?.repayment_time != null ? debt?.repayment_time?.format('yyyy-MM-dd') : '已还款'}</td>
+                                <td>
+                                	还款方式：   ${debt?.repay_name.substring(0,1)}<span style="color:#ff8839;font-size:15px">天</span>${debt?.repay_name.substring(2)}
+                               	</td>
+                            </tr>
+                            <tr height="38">
+
+                                <td>
+                                #{if debt?.status == 1 || debt?.status == 2}
+								<input id="hiddenTime${debt_index}" type="hidden" value="${debt?.end_time?.format('yyyy/MM/dd HH:mm:ss')}"></input>
+								<span >剩余时间：<span><span class="xf_wylc_l_memhyA"><span id="day${debt_index}"></span></span>天<span class="xf_wylc_l_memhyA"><span id="hours${debt_index}"></span></span>小时<span class="xf_wylc_l_memhyA"><span id="minutes${debt_index}"></span></span>分<span class="xf_wylc_l_memhyA"><span id="seconds${debt_index}"></span></span>秒</span></span><br /> 
+								#{/if}
+								#{else}
+								<span>剩余时间：<span class="xf_c_idx_4_hxje">已结束</span></span><br /> 
+								#{/else}
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td rowspan="4">
+                                
+                                    #{if debt?.status == 1 && new java.util.Date() < debt?.end_time}
+									<a href="@{debtDetails(debt.id)}" class="p_lc_tbtn p_op" target="_self">立即认购</a>
+									#{/if}
+									#{else}
+									 <img src="/public/images/icon_succ.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+									<a href="@{debtDetails(debt.id)}" class="p_lc_tbtn1 p_op" target="_self">了解详情</a>
+									#{/else}
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                #{/list}
+             </ul>
+
+	
+		<!-- 分页器 -->
+		<div class="xf_zjgl_tx_page">
+			#{page pageTitle:"个债权标",currPage:page.currPage,pageSize:page.pageSize,totalCount:page.totalCount,theme:2,style:3 /}
+	</div>
+	 </div>
+	</div></div>
+		<div class="clear"></div>
+
+<script type="text/javascript" src="@{'/public/javascripts/tab/tab_claim.js'}"></script>		
+<script>
+		
+		$(function(){
+			$('img.lazy').lazyload({ 
+			  //effect:'fadeIn' 
+			});
+			$("#debtDetails").click(function(){
+				$("#xf_wyjkfb_4_window").hide();
+			})
+		})
+	</script>
+	
+	
+	
+	<script type="text/javascript">
+  showTime();
+ function showTime(){
+ 	var listsize = ${page?.page.size};
+
+	 for(var i = 1; i <= listsize; i++){
+ 		var time = $("#hiddenTime"+i).val();
+
+ 		if(typeof(time) == 'undefined' || time == null || time == "")
+ 			continue;
+ 	 	
+ 		var date = new Date(time);
+		var tt = date.getTime();
+		var now = new Date().getTime();
+		var cha = tt-now;
+		var SysSecond=parseInt(cha);
+	  
+	    if (SysSecond > 0) { 
+   	        int_day=Math.floor(SysSecond/86400000);
+            SysSecond-=int_day*86400000;
+            int_hour=Math.floor(SysSecond/3600000);
+            SysSecond-=int_hour*3600000;
+            int_minute=Math.floor(SysSecond/60000);
+            SysSecond-=int_minute*60000;
+            int_second=Math.floor(SysSecond/1000);
+            
+            if(int_hour<10){
+             	 int_hour="0"+int_hour;
+			 }
+			 
+            if(int_minute<10){
+           		int_minute="0"+int_minute;
+		     }
+		     
+       		if (int_second<10){
+            	int_second="0"+int_second;
+            }
+             
+  			$("#day"+i).html(int_day);
+  			$("#hours"+i).html(int_hour);
+  			$("#minutes"+i).html(int_minute);
+  			$("#seconds"+i).html(int_second);
+  		}else{
+	        $("#day"+i).html("00");
+		    $("#hour"+i).html("00");
+		    $("#minutes"+i).html("00");
+		    $("#seconds"+i).html("00");
+        }
+	   }
+	    setTimeout('showTime()',1000);
+	 }
+</script>
+		
+	
+		
+		
+		

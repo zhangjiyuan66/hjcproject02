@@ -1,0 +1,115 @@
+%{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{extends 'common/frontMain.html' /} 
+#{set title:currBackstageSet.seoTitle +'| 新手指南 '/}
+<!-- <div class="p_bgf1_box pb30 pt30">
+    <div class="p_main">
+    <div><span style="font-size:18px">请致电：</span><span style="color:#ff8839;font-size:24px"> ${currBackstageSet.platformTelephone}</span></div>
+    <table>
+    <tr>
+       <td style="float:left;height:550px">
+    	 
+       </td>
+    </tr>
+    </table>
+    
+    </div>
+    
+</div> -->
+<div class="xinshou_box">
+<div class="xinshou_banner">
+<img src="/public/images/xinshou_banner.jpg" alt="" width="1583" height="341" />
+</div>
+<div class="xinshou_content">
+
+<div class="xinshou_item1">
+<div class="xinshou_item1_box">
+<div class="xinshou_item1_title"></div>
+<div class="xinshou_item1_content">
+<h2>什么是<span>标</span>？</h2>
+<p>　　标就是借款人向好借存平台申请借款，并给予平台抵押物后，经过平台严格信用审查，办理抵押手续后推出的产品，而且所有抵押信息平台都是可见的、完全透明化的。</p>
+</div>
+<div class="xinshou_item1_content tyb_tyb">
+<h2>什么是<span>体验标</span>？</h2>
+<p>　　体验标是好借存平台针对投资经验值为0的新用户开发的标种，利率高、标期短、回款快，无风险。主要是让新手体验注册、投资等环节，也是平台对新手投资的一种鼓励。新用户注册并通过实名认证后，每人赠送1000元体验金。<span><a href="##">体验金只可投体验标</a>，标的完成后，产生的利息将存入用户余额并可提现，体验金本金被平台收回。</span></p>
+</div>
+</div>
+</div>
+
+<div class="xinshou_item2">
+<div class="xinshou_item2_box">
+<div class="xinshou_item2_content">
+<h2>为什么选择<span>好借存</span>的标？</h2>
+<ul>
+<li>
+<p><em>100</em></p>
+<p>元起投</p>
+</li>
+<li>
+<p><em>15%</em></p>
+<p>预期年化</p>
+</li>
+<li>
+<p><em>100%</em></p>
+<p>按天返息</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="xinshou_item3">
+<div class="xinshou_item3_box">
+<div class="xinshou_item3_content">
+<h2>有哪些<span>产品</span>可投？</h2>
+<div class="xinshou_item3_content_tab tab_menu">
+<ul>
+<li class="on"><span>散</span>标投资</li>
+<li><span>转</span>让债券</li>
+</ul>
+</div>
+<div class="tab_content">
+<div class="xinshou_item3_content_tab_box">
+<p><span style="font-size:24px;">散标</span>：满标后生息，类似于银行的定期或理财，但是它的利息更高，灵活性更强。比如您想临时用钱，可以进行债权转让，我们承诺您15天内转出。</p>
+<p style="text-align: center;"><img src="/public/images/xinshou_item3_content_img.png" alt="" width="1000" height="532" /></p>
+</div>
+<div class="xinshou_item3_content_tab_box" style="display:none;">
+<p><span style="font-size:24px;">转让标</span>：投资的您 急用钱，即可转让债权，不再担心周期长，想投资的您 购买债权，即刻生息。</p>
+<p style="text-align: center;"><img src="/public/images/abc.png" alt="" width="1000" height="532" /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="xinshou_item4">
+<div class="xinshou_item4_box">
+<div class="xinshou_item4_content">
+<h2>投资<span>流程</span>是什么？</h2>
+<div class="xinshou_item4_content_lc">
+<img src="/public/images/xinshou_item4_content.png" alt="" width="925" height="145" />
+</div>
+<div class="xinshou_bnt"><a href="javascript:void(0)" title="" class="l_top_reg">立即注册</a></div>
+</div>
+</div>
+</div>
+
+<div class="xinshou_item5">
+<div class="xinshou_item5_box">
+<div class="xinshou_item5_title"></div>
+<div class="xinshou_item5_content">
+<dl>
+<dt><img src="/public/images/xinshou_item5_content.png" alt="" width="165" height="211" /></dt>
+<dd>
+<h2>如何借款？</h2>
+<p>请致电：<span>400-666-5616</span></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<script type="text/javascript" src="@{'/public/javascripts/tab/tab_bid.js'}"></script>

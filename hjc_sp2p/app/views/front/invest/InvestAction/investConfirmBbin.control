@@ -1,0 +1,303 @@
+
+#{form @front.invest.investAction.confirmInvestBbin(bid?.sign, uuid), method:'POST', id:'confirmInvest'}
+		 <div class="p_xq_qabtop">
+		 #{if bid?.loanSchedule == 100 && bid?.status==2 || bid?.loanSchedule == 100 && bid?.status==1}
+	                   	      <img src="/public/images/icon_ymb.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+	                    #{/if}
+	                    #{if bid?.status== 3 }
+	                         #{if bid?.loanSchedule == 100}
+	                           <img src="/public/images/icon_mbdfx.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+		                     #{/if}
+		                     #{else}
+	                              <img src="/public/images/icon_dfx.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+		                     #{/else}
+	                    #{/if}
+	                     #{if bid?.status == 4 }
+	                      <img src="/public/images/icon_fxz.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+	                    #{/if}
+	                      #{if bid?.status == 5 }
+	                      <img src="/public/images/icon_succ.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+	                    #{/if}  
+            <h4 class="clr p_xq_qatitle">
+                  #{img src:"/public/images/images2/ty1.png"}#{/img} 
+                  <strong>${bid?.title}</strong>
+                  <span> 借款编号：${bid?.no}</span>
+            </h4>
+              
+            <div class="p_xq_qaword clr">
+                <div class="p_xq_qaleft">
+                   <!-- <img src="${bid?.imageFilename}" alt="" class="p_xq_qaimg" />-->
+                    <div class="p_xq_qlcenter">
+                        <table class="p_xq_qatab01">
+                            <tr height="32">
+                                <th width="120" align="left">年化收益：</th>
+                                <th width="190" align="left">项目规模：</th>
+                                <th width="146" align="left">项目期限：</th>
+                                 #{if !bid?.isRegular}
+                                  <th align="left">投标期限：</th>
+                                 #{/if}
+                                 #{else}
+                                  <th align="left">锁定期限：</th>
+                                 #{/else}
+                               
+                            </tr>
+                            <tr height="50">
+                                <td><em class="fz36 p_cozhuse" align="left">${bid?.apr}</em><span class="p_cozhuse">%</span></td>
+                                <td><em class="fz36">${(bid?.amount/10000)?.format('###,##0.00')}</em> 万</td>
+                                <td><em class="fz36">${bid?.period}</em> ${bid?.strPeriodUnit}</td>
+                                 <td><em class="fz36">${bid?.investPeriod}</em>天</td>
+                            </tr>
+                        </table>
+                        <table class="p_xq_qatab02" width="440">
+                       
+                            <tr height="48">
+                             
+                            <td width="192">起投金额：${bid?.minInvestAmount?.format('###,##0.00')}元</td>
+                            <td>还款日期：#{if rep_time == null}
+											---
+										#{/if}
+					                  ${rep_time}
+					        </td>
+                            </tr>
+                       
+                            <tr height="38">
+                                <td width="48%">已投金额：${bid?.hasInvestedAmount?.format('###,##0.00')}元</td>
+                                <td  colspan="2">还需金额： ${(bid?.amount - bid?.hasInvestedAmount)?.format('###,##0.00')}元</td>
+                            </tr>
+                            <tr height="38">
+                                #{if bid?.isRegular}
+                                <td>特点：即投即生息</td>
+                                #{/if}
+                                <td colspan="2"  width="300px">
+                                  		       还款方式：   #{if bid?.repayment?.id ==3 }
+			                                                                                                             按<span style="color:#ff8839;font-size:15px">天</span>返息，到期收本
+			                               #{/if}
+			                              
+                                </td>
+                            </tr>
+                             <tr style="line-height: 100px;">
+                      		      <td>我已投资：<span style="color:#ff8839;font-size:16px;border:1">${hasInvest?.format('###,##0.00')}</span>元</td>
+                      		      
+                            </tr>
+                         </table>
+                    </div>
+                </div>
+                  
+                <div class="p_xq_qaright">
+                    <div class="p_xq_qatzword">
+	                   <div class="p_xq_qatext">可投金额：${(bid?.amount - bid?.hasInvestedAmount)?.format('###,##0.00')}元</div>
+                       <div class="p_xq_qatext">投资进度：<span class="p_xq_qaprogres"><span style="width:${bid?.loanSchedule}%"></span></span>${bid?.loanSchedule}%</div>
+                       <div class="p_xq_qatext">
+                           #{if bid?.isRegular}
+                                 #{if new Date()<bid?.investExpireTime && bid?.status !=5 } 
+                                   <span>锁定时间：</span> <span class="xf_wylc_l_memhyA"><span id="day"></span></span>天<span class="xf_wylc_l_memhyA"><span id="hours"></span></span>小时<span class="xf_wylc_l_memhyA"><span id="minutes"></span></span>分<span class="xf_wylc_l_memhyA"><span id="seconds"></span></span>秒 
+                                 #{/if}
+                          #{/if}
+                          #{else}
+                            #{if bid?.status > 0 && bid?.status < 3 && bid?.amount > bid?.hasInvestedAmount}
+                             <span>投标时间：</span> <span class="xf_wylc_l_memhyA"><span id="day"></span></span>天<span class="xf_wylc_l_memhyA"><span id="hours"></span></span>小时<span class="xf_wylc_l_memhyA"><span id="minutes"></span></span>分<span class="xf_wylc_l_memhyA"><span id="seconds"></span></span>秒 
+						    #{/if}
+                          #{/else}
+						</div>
+                        #{if bid?.minInvestAmount > 0}
+                            #{if bid?.status > 0 && bid?.status < 3 && bid?.amount > bid?.hasInvestedAmount}
+                            <div class="p_xq_qainbox">
+	                           	   输入金额：<input type="text" id="investAmount" name="investAmount" class="p_text" value="0.00" /> 元
+							</div>
+							#{/if}
+						#{/if}
+						#{else}
+							最多可购买份数：${((bid?.amount-bid?.hasInvestedAmount)/bid?.averageInvestAmount)?.format('0')}份<br /> 
+							我要投标：
+							<input class="xf_wylc_tbje" type="button" style="width:24px;" value="-" id="plus"/>
+							<input type="text" class="xf_wylc_tbje" style="width:60px;" id="investAmount" name="investAmount" value="1">
+							<input class="xf_wylc_tbje" type="button" style="width:24px;" value="+"  id="add"/>份<br /> 
+						#{/else}
+						#{if !ipsEnable}
+							#{if bid?.product?.isDealPassword == true && bid?.status > 0 && bid?.status < 3 && bid?.amount > bid?.hasInvestedAmount}	
+						                交易密码：<input type="password" class="xf_wylc_tbje" style="height:30px;border: solid 1px #dcdcdc;padding-left: 10px;padding-bottom: 3px;" id="dealpwd" name="dealpwd" onMouseOver="checkPwdDel();">  
+							      #{if user != null && user.payPassword == null}
+							      <div style="height:26"><a href="@{front.account.BasicInformation.modifyPassword()}" class="xf_wylc_tbje2"><span style="color: red;">您未设置交易密码！请点击此处设置</span></a></div>
+							      #{/if}
+							      #{else}
+							       <br/>
+						           <br/>
+							      #{/else}
+							     
+					    #{/if}
+							  
+						#{/if}
+						  
+						#{if bid?.status > 0 && bid?.status < 3 && bid?.amount > bid?.hasInvestedAmount}
+						   <div class="p_xq_qatext">
+	                         <a onclick="investApplyNow();" class="p_xq_qabtn p_op" id="investnow">确认投资</a>
+	                       </div>
+	                    #{/if} 
+	                    #{if bid?.loanSchedule == 100 && bid?.status==2 || bid?.loanSchedule == 100 && bid?.status==1}
+	                     <div class="p_xq_qatext">
+	                         <a  class="p_xq_qabtn2 p_op" style="color:gray;" id="investnow">已满标</a>
+	                      </div>
+	                    #{/if}
+	                    #{if bid?.status== 3 }
+	                     <div class="p_xq_qatext">
+		                     #{if bid?.loanSchedule == 100}
+		                       <a  class="p_xq_qabtn2 p_op" style="color:gray;" id="investnow">满标待返息</a>
+		                     #{/if}
+		                     #{else}
+		                       <a  class="p_xq_qabtn2 p_op" style="color:gray;" id="investnow">待返息</a>
+		                     #{/else}
+	                     </div>
+	                    #{/if}
+	                     #{if bid?.status == 4 }
+	                      <div class="p_xq_qatext">
+	                          <a  class="p_xq_qabtn2 p_op" style="color:gray" id="investnow">返息中</a>
+	                      </div>
+	                    #{/if}
+	                      #{if bid?.status == 5 }
+	                       <div class="p_xq_qatext">
+	                          <a  class="p_xq_qabtn2 p_op" style="color:gray" id="investnow">已返息还本</a>
+	                       </div>
+	                    #{/if}
+	                      #{if bid?.status == -4 }
+	                       <div class="p_xq_qatext">
+	                          <a  class="p_xq_qabtn2 p_op" style="color:gray" id="investnow">流标</a>
+	                       /div>
+	                    #{/if}	
+                    </div>
+                
+                </div>
+	        </div>
+          
+        </div>
+	
+        #{/form}
+
+	<script>
+		$(function(){
+			
+			$("#add").click(function(){	
+				var investAmount = $("#investAmount").val();
+				var patrn=/^([1-9]\d*)$/; 
+				var patrn1=/^([0-9]\d*)$/; 
+			    var flag = patrn1.exec(investAmount);
+			    var copy = ${bid?.amount - bid?.hasInvestedAmount}/${bid?.averageInvestAmount};
+				if(!flag){
+					alert("对不起！请您输入正整数！");
+				 	return;
+		        }
+					
+			    $("#investAmount").val(parseInt($("#investAmount").val())+1);//加
+			    if($("#investAmount").val() > copy){
+			    	$("#investAmount").val(copy);
+			    }
+			    	
+			});
+			
+			$("#plus").click(function(){
+				var investAmount = $("#investAmount").val();
+				var patrn=/^([1-9]\d*)$/;
+			    var flag = patrn.exec(investAmount);
+				if(!flag){
+					alert("对不起！请您输入正整数！");
+				 	return;
+		         }		
+			    $("#investAmount").val(parseInt($("#investAmount").val())-1);//减
+			    if($("#investAmount").val() < 1){
+			    	$("#investAmount").val(1);
+			    }	
+			});
+		
+			$("#confirmInvest").keydown(function(e){
+			  if(e.keyCode == 13){
+			   	investApplyNow();
+			   	
+			   	return false;
+			  }
+			});
+		})
+	
+  	 function investApplyNow(){
+		 /** 检查用户是否激活, fronMain.html 中的拦截器*/
+	 	 var result = frontJSIntercepter();
+	  
+	    if(!result){
+      	   confirmInvest(); 
+	    }		  		
+	 }
+	
+	function confirmInvest(){
+	
+		var investAmount = $("#investAmount").val();
+		var minInvestAmount = ${bid?.minAllowInvestAmount};
+		var maxInvestAmount = ${bid?.amount - bid?.hasInvestedAmount};
+		var averageInvestAmount = ${bid?.averageInvestAmount};
+		
+		var patrn=/^([1-9]\d*)$/;
+		var flag = patrn.exec(investAmount);
+		
+		var isDealPassword = ${bid?.product?.isDealPassword};
+		
+		if(!${ipsEnable} && isDealPassword == true){
+			if($("#dealpwd").val().replace(/\s+/g,"") == "" || null ==$("#dealpwd").val().replace(/\s+/g,"")){
+				alert("对不起！请输入交易密码!");
+				return;
+			}
+		}
+		
+		
+		if(minInvestAmount > 0){
+			
+			if(investAmount.replace(/\s+/g,"") == "" || null == investAmount.replace(/\s+/g,"")){
+			    alert("对不起！投标金额不能为空！");
+			    return;
+		    }
+		    if(!flag){
+				alert("对不起！请您输入正整数！");
+			 	return;
+		   }
+			if(investAmount < minInvestAmount){
+				alert("对不起！您的投标金额少于最低投标金额！");
+				return;
+			}
+			if(investAmount > maxInvestAmount){
+				alert("对不起！您的投标金额超过了剩余投标金额！");
+				return;
+			}
+		}
+		
+		if(averageInvestAmount > 0){
+			var maxInvestcopys = ${bid?.amount - bid?.hasInvestedAmount}/${bid?.averageInvestAmount};
+			
+			if(investAmount.replace(/\s+/g,"")== "" || null == investAmount.replace(/\s+/g,"")){
+			    alert("对不起！投标份数不能为空！");
+			    return;
+		    }
+		    if(!flag){
+				alert("对不起！请您输入正整数！");
+				return;
+		    }
+			if(investAmount <= 0){
+				alert("对不起！您的投标份数不能小于0！");
+			    return;
+			}
+			if(investAmount > maxInvestcopys){
+				alert("对不起！您最多只能投"+maxInvestcopys+"份!");
+			    return;
+			}
+		}
+		
+		$("#confirmInvest").submit();
+	}
+	function checkPwdDel(){
+		var str = "请输入交易密码";
+		#{if bid?.product?.isDealPassword == true}	
+		
+			#{if user != null && user.payPassword == null}
+			 str = "您还未设置交易密码,请设置交易密码";
+        	#{/if}
+		#{/if}
+
+		$("#dealpwd").attr("title",str);
+	}
+	
+</script>

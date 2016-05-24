@@ -1,0 +1,23 @@
+<!--内容区-->
+        <div class="p_left_navbox">
+            <h1><i class="p_left_abtus"></i><span>${parent?.name}</span></h1>
+            <ul class="p_left_navul">
+            #{list types}
+			  #{if _?.name == '合作伙伴'}
+			      <li><a href="@{front.help.HelpCenterAction.partner(-1008)}" id = "aboutUs1008" onclick = "ff()" title=""  >${_?.name}</a></li>
+			  #{/if}
+			  #{else}
+			       <li><a href="@{front.home.HomeAction.aboutUs(_?.id)}"  id = "aboutUs${_?.id}" title="" >${_?.name}</a></li>
+			  #{/else}
+		    #{/list}
+            </ul>
+        </div>
+
+<script type="text/javascript">
+
+	$(function(){
+		$("#aboutUs" + ${id}).addClass("click");
+	});
+ 
+
+</script>

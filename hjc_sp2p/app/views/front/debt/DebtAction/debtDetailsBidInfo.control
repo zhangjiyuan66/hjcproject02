@@ -1,0 +1,67 @@
+<div class="p_xq_qabtop">
+    <img class="p_lc_jkimg" src="/public/images/images2/zhuan.png"></img>
+    <h4 class="clr p_xq_qatitle" style="margin-top:5px">
+     <strong>${debt?.title}</strong>
+	<span>债权编号：${debt?.no}</span>
+    </h4>
+    <div class="p_xq_qaword clr">
+        <div class="p_xq_qaleft">
+            <div class="p_xq_qlcenter">
+             #{if debt?.status==3}
+	                   	      <img src="/public/images/icon_succ.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+	         #{/if}
+                <table class="p_xq_qatab01">
+                    <tr height="34">
+                        <th width="120">年化收益：</th>
+                        <th width="190">项目规模：</th>
+                        <th width="146">项目期限：</th>
+                        <th>竞价期限：</th>
+                    </tr>
+                    <tr height="50">
+                        <td><em class="fz36 p_cozhuse">${debt?.invest?.bid?.apr}</em><span class="p_cozhuse">%</span></td>
+                        <td><em class="fz36">${(debt?.invest?.bid?.amount/10000)?.format("###,##0.00")}</em> 万</td>
+                        <td><em class="fz36">${debt?.invest?.bid?.period}</em>${debt?.invest?.bid?.strPeriodUnit} </td>
+                        <td><em class="fz36">${debt?.period}</em>天</td>
+                    </tr>
+                </table>
+                <table class="p_xq_qatab02">
+                    <tr height="48">
+                        <td width="160">投标本金：${debt?.invest?.amount?.format("###,##0.00")}元</td>
+                        <td>本息合计： ${Double.parseDouble(debt?.map?.receive_money)?.format("###,##0.00")}元</td>
+                    </tr>
+                    <tr height="48">
+                        <td width="160">已收金额：${Double.parseDouble(debt?.map?.has_receive_money).format("###,##0.00")}元</td>
+                        <td>剩余应收金额： ${Double.parseDouble(debt?.map?.remain_receive_money)?.format("###,##0.00")}元</td>
+                    </tr>
+                     <tr height="46">
+                   
+                        <td>还款日期：${debt?.map?.receive_time != "" ? debt?.map?.receive_time: '已还款'}</td>
+                        <td colspan="2">还款方式：
+                     
+                           ${debt?.invest?.bid?.repayment?.name?.substring(0,1)}<span style="color:#ff8839;font-size:15px">天</span>${debt?.invest?.bid?.repayment?.name?.substring(2)}
+                       
+                    </tr>
+                
+                </table>
+            </div>
+        </div>
+        <div class="p_xq_qaright">
+            <h4 class="clr">
+                <strong class="fl">竞拍</strong>
+                <strong class="fr">&nbsp;</strong>
+            </h4>
+            <div class="p_xq_qatzword">
+                <div class="p_xq_qatext">拍卖底价：#{format money:debt.transferPrice}#{/format}元</div>
+                <div class="p_xq_qatext">目前拍价：#{format money:debt?.maxOfferPrice}#{/format}元</div>
+                <div class="p_xq_qatext">  剩余时间：<span class="xf_wylc_l_memhyA"><span id="day"></span><span class="font_onetwo">天</span><span id="hour"></span><span class="font_onetwo">小时</span><span id="minutes"></span><span class="font_onetwo">分</span><span id="seconds"></span><span class="font_onetwo">秒</span></span><br /></div>
+                #{if debt?.status == 1 && new java.util.Date() < debt?.endTime}
+                <div class="p_xq_qatext"><a class="p_xq_qabtn p_op" onclick="showDivDebt();">确认认购</a></div>
+                #{/if}
+                #{else}
+                    <div class="p_xq_qatext"><a class="p_xq_qabtn3 p_op" >已结束</a></div>
+                #{/else}
+            </div>
+        </div>
+    </div>
+</div>
+				

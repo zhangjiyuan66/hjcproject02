@@ -1,0 +1,27 @@
+				
+				  <div class="p_left_navbox">
+					<h2 class="xf_con_wyjk_lefth2" style="background-color: #ff8839;width:167px" >借款产品列表</h2>
+					<ul class="p_left_navul" style="width:208px">
+						#{list products}
+							<li>
+								<a href="@{front.bid.bidAction.detail(_?.id)}" id="bzzx${_?.id}"><img src="${_?.smallImageFilename}" width="20" height="20" />${_?.name}
+								</a>
+							</li>
+							
+						#{/list}
+					</ul>
+					<!-- 财富工具箱 -->
+					<div class="xf_con_wyjk_cfgjx">
+						<div class="xf_con_wyjk_cfgjx_t" >
+							<b style="background: #2070c0">&nbsp;</b>
+							<span>财富工具箱</span>
+						</div>
+						<ul class="xf_con_wyjk_cfgjx_ul clr">
+							<li><a href="@{front.home.homeAction.wealthToolkit(1)}" class="xf_con_wyjk_cfgjx_aone">信用计算器</a></li>
+							<li><a href="@{front.home.homeAction.wealthToolkit(2)}" class="xf_con_wyjk_cfgjx_atwo">还款计算器</a></li>
+							<li><a href="@{front.home.homeAction.wealthToolkit(3)}" class="xf_con_wyjk_cfgjx_athree">净值计算器</a></li>
+							<li><a href="@{front.home.homeAction.wealthToolkit(4)}" class="xf_con_wyjk_cfgjx_afour">利率计算器</a></li>
+						</ul>
+					</div>
+					</div>
+			

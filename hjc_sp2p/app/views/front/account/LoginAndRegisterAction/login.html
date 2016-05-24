@@ -1,0 +1,95 @@
+#{extends 'common/frontMain.html' /}
+%{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{set title:currBackstageSet.seoTitle+'|登录' /}
+	<!--内容区-->
+	<div class="p_dl_maxmain">
+	    <div class="p_main clr">
+	        <div class="y_dlmain1">
+	            <h2 class="y_dlh2">
+	                <span class="fl">用户登录</span>
+	                <a href="@{front.account.loginAndRegisterAction.resetPasswordByEmail()}" title="" class="p_un2">忘记密码？</a>
+	            </h2>
+	            #{form @front.account.loginAndRegisterAction.logining(), id:'submit'}
+	            <div class="y_dldiv">
+	                <input type="text" class="p_pass" name="name" id="name" value="${flash?.name}" />
+	                #{if flash?.name==null}
+	                <label>用户名/邮箱/手机号</label>
+	                #{/if}
+	            </div>
+	            <div class="y_dldiv">
+	                <input type="password" name="password" id="password" class="p_pass" value="${flash?.password}"/>
+	             
+	                  #{if flash?.password==null || flash?.password==''}
+	                   <label>密码</label>
+	                  #{/if}
+	            </div>
+	           <!--  #{if flash?.loginCount > "2"}
+			    <div class="y_dldiv">
+					<span class="y_dldiv">
+						<span><img src="public/images/dl2.png" class="img2"></span>
+						<input type="text" id="code" name="code" #{if !constants.Constants.CHECK_CODE}value="1234" readonly="readonly"#{/if} />
+						<input type="hidden" name="randomID" id="randomID" />
+						<i>验证码</i>
+					</span>
+					<a href="#" class="y_yzm"><img src="" class="" id="img" onclick="change()" width="75px" height="32px"></a>
+					<a href="#" onclick="change()" class="y_dla1">刷新</a>
+				</div>
+
+				#{/if} -->
+	            <a onclick="login()" id="loginnow" class="y_dlbto p_op">登录</a>
+	            <div class="y_dlpp">还没有账户？<a href="@{front.account.LoginAndRegisterAction.register()}" title="" class="p_un2">注册</a></div>
+	            #{/form}
+	        </div>
+	    </div>
+	</div>
+<script type="text/javascript">
+		if('${flash.error}' !='') {
+		    alert('${flash?.error}');
+		}
+		$(function(){
+		    var setCode = #{jsAction @front.account.loginAndRegisterAction.setCode()/}
+			$.post(setCode({}),function(data){
+				var arr=eval(data);
+				var img = arr.img;
+				$("#img").attr("src","@{front.account.loginAndRegisterAction.getImg()}?id="+img);	
+				$("#randomID").val(img);
+			});
+			
+		});
+		
+	   function keyLogin(ev){  
+      	   if (ev.keyCode)                         
+	      	   //按Enter键的键值为13  
+	      	   if(ev.keyCode==13){
+	      		  login();
+      	   }else{
+      		   if(ev.which==13){
+      			   login();
+      		   }
+      	   }
+      	 
+        }  
+	   
+		function login(){
+
+		    var name = $("#name").val();
+		           
+		    if(name == ''){
+		      alert("请输入用户名或邮箱");
+		      return;
+		    }
+
+		    if($("#password").val() == ''){
+		      alert("请输入密码");
+		      return;
+		    }
+
+		    /* if($("#code").val() == ''){
+		      alert("请输入验证码");
+		      return;
+		    } */
+		    $("#submit").submit();
+		  };
+</script>

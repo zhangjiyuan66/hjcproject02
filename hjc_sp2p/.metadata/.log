@@ -1,0 +1,83 @@
+!SESSION 2016-05-09 19:03:57.406 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2016-05-09 19:04:53.304
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-05-09 19:04:53.304
+!MESSAGE A conflict occurred for CTRL+F9:
+Binding(CTRL+F9,
+	ParameterizedCommand(Command(org.eclipse.mylyn.tasks.ui.command.activateTask,Activate Task,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c30377e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F9,
+	ParameterizedCommand(Command(RunSQLAction,Run SQL,
+		Run SQL,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@118b47dc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.460
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\css_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.482
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\forms_lists_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.498
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\htmlform_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.513
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.560
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\javascript_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.582
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\jsf_f_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.614
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\jsf_h_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.629
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_bean_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.645
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.685
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_logic_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-05-09 19:04:58.713
+!MESSAGE Installed snippet library: G:\Program Files\Myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_tiles_snippets.xml
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 0 0 2016-05-09 19:04:59.276
+!MESSAGE Result of converting legacy STS 2.x workspace preferences to 3.x
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2016-05-09 19:04:59.276
+!MESSAGE Converted legacy STS plugin preferences
+!SUBENTRY 1 unknown 0 0 2016-05-09 19:04:59.276
+!MESSAGE OK
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2016-05-09 19:04:59.276
+!MESSAGE Converted legacy Roo plugin state locations
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2016-05-09 19:04:59.276
+!MESSAGE Converted legacy STS plugin state locations
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-05-09 19:05:09.138
+!MESSAGE An internal error occurred during: "Importing MyEclipse dependencies to Local Maven Repository".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.maven.core.RepositoryUtil.importJarToLocalRepository(RepositoryUtil.java:81)
+	at com.genuitec.eclipse.maven.core.RepositoryUtil.addDependency(RepositoryUtil.java:31)
+	at com.genuitec.eclipse.maven.core.LocalMavenRepositoryImportsJob.run(LocalMavenRepositoryImportsJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 2 2 2016-05-09 19:05:11.261
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob

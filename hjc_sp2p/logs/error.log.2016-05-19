@@ -1,0 +1,2 @@
+2016-05-19 11:04:48,602 ERROR ~ Lock wait timeout exceeded; try restarting transaction  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 795035
+2016-05-19 11:04:48,605 ERROR ~ update t_cps_info exception  ~ play.Logger.error(Logger.java:399) ~ play ~ 795038

@@ -1,0 +1,360 @@
+	<div class="p_xq_xxkbox" id="xf_wyjkview_xxk">
+            <ul class="p_xq_xxkul clr">
+                <li id="bidsDetail">借款标详情</li>
+                <li id="investRecords">投标记录</li>
+                <li id="rateRecords">返息记录</li>
+                #{if bid?.isRegular}
+                   <li id="description">产品描述</li>
+                #{/if}
+            </ul>
+        </div>
+        <div class="p_xq_tabox">
+            <div class="p_bd_tbox01">
+                <table class="p_bd_table01">
+                    <tr>
+                        <td width="64" class="p_bd_td01">借款人资料</td>
+                        <td>
+                            <table class="p_bd_table02" width="852">
+                                <tbody><tr>
+                                    <td width="10.8%">真实姓名：</td>
+                                    <td width="24.6%">${realityName}</td>
+                                    <td width="11.7%">性别：</td>
+                                    <td width="22.5%">${bid?.user?.sex}</td>
+                                    <td width="10%">年龄：</td>
+                                    <td>${bid?.user?.age}岁</td>
+                                </tr>
+                                <tr>
+                                    <td>身份证号：</td>
+                                    <td>${bid?.user?.idNumber?.asterisk()}</td>
+                                    <td>户口所在地：</td>
+                                    <td>${bid?.user?.provinceName}${bid?.user?.cityName}</td>
+                                    <td>文化程度：</td>
+                                    <td>${bid?.user?.educationName}</td>
+                                </tr>
+                                <tr>
+                                    <td>婚姻状况：</td>
+                                    <td>${bid?.user?.maritalName}</td>
+                                    <td>购房情况：</td>
+                                    <td>${bid?.user?.houseName}</td>
+                                    <td>购车情况：</td>
+                                    <td>${bid?.user?.carName}</td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td class="p_bd_td01">借款详情对借款用途还款能力的详细说明</td>
+                        <td>${bid?.description}</td>
+                    </tr>
+                    <tr>
+                        <td class="p_bd_td01">必须资料审核科目</td>
+                        <td>
+                            <table class="p_bd_table03" width="856">
+                                <tbody><tr>
+                                    <th width="7.2%">序号</th>
+                                    <th width="14.6%">审核科目</th>
+                                    <th width="14.5%">状态</th>
+                                    <th width="10.5%">操作</th>
+                                    <th>CBO风控体系审核</th>
+                                </tr>
+                               #{list uItems}	
+								#{if _?.status == 2}
+									<tr>
+										<td align="center">
+											${_index}
+										</td>
+										<td align="center">
+											${_?.auditItem?.name}
+										</td>
+										<td align="center">
+											${_?.strStatus}
+										</td>
+										<td align="center" width="90">
+											#{if _?.isVisible}
+												<a onclick="showitemNow('${_?.mark}','${bid?.signUserId}');">查看</a>
+											#{/if}
+											#{else}
+												不可见
+											#{/else}
+										</td>
+										#{if _index == 1}
+										<td valign="top" rowspan="${uItems?.size}" class="xf_wylc_l_memhyA_zh">
+											${bid?.auditSuggest}
+										</td>
+										#{/if}
+									</tr>
+								#{/if}
+						    	#{/list}
+                            </tbody></table>
+                        </td>
+                    </tr>
+                    -->
+                    <!--<tr>
+                        <td class="p_bd_td01">借款人历史数据</td>
+                        <td>
+                            <table class="p_bd_table02" width="100%">
+                                <tbody><tr>
+                                    <td>注册时间：${bid?.user?.time?.format('yyyy-MM-dd HH:mm:ss')}</td>
+                                    <td>成功借款次数：${historySituationMap?.successBidCount} 次</td>
+                                    <td>正常还款次数：${historySituationMap?.normalRepaymentCount} 次</td>
+                                     <td>待付款金额：${ Double.parseDouble(historySituationMap?.pendingRepaymentAmount)?.format('###,##0.00')}元</td>
+                                    <td>共计借入金额：${ Double.parseDouble(historySituationMap?.loanAmount)?.format('###,##0.00')}元</td>
+                                    <td>逾期还清次数：${historySituationMap?.overdueRepaymentCount} 次</td>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>-->
+                   <!--2015-11-25新增-->
+                    <tr>
+                        <td class="p_bd_td01">相关资料</td>
+                        <td>
+                            <div class="l-upload-picarea">
+                                <ul>
+                                 #{list items:images, as : 'image'}
+                                   <li>
+                                        <a class="fancybox-buttons"  data-fancybox-group="button" href="${image?.image_file_name}">
+                                            <img src="${image?.image_file_name}" alt="" title="" width="118" height="102" />
+                                            <span class="l-upload-bg"></span>
+                                            <span class="l-upload-txt">点击图片放大</span>
+                                        </a>
+                                    </li>
+                                 
+                                 #{/list}
+                                   
+                                </ul>
+                            </div>
+                            <div class="l-upload-picbtn">
+                                <a class="l-upload-btns l-upload-prevbtn"></a>
+                                <a class="l-upload-btns l-upload-nextbtn"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!--2015-11-25新增end-->
+					#{if bid?.status > 0 && bid?.status < 3 && bid?.amount > bid?.hasInvestedAmount}
+			    	 #{form @front.invest.investAction.confirmInvestBottomBbin(bid?.sign,uuid), method:'POST', id:'confirmInvestBottom'}
+                    <tr height="84">
+                   
+                        <td colspan="2">
+                              <strong class="p_xq_str01" style="width:170px">借款标状态：${bid?.strStatus} </strong>
+                            #{if  bid?.minInvestAmount > 0}
+                              <strong class="p_xq_str02" style="width:210">最低投标金额：${bid?.minAllowInvestAmount?.format('###,##0.00')}元</strong>
+                               <strong class="p_xq_str04">我要投标<input type="text" class="p_xq_in01"  id="investAmountBottom" name="investAmountBottom" />元</strong>
+                            #{/if}
+                            #{else}
+                                <strong class="p_xq_str02">最多可购买份数：${((bid?.amount-bid?.hasInvestedAmount)/bid?.averageInvestAmount)?.format('0')}份</strong>
+					                        我要投标：
+								<input class="p_xq_str04" type="button" style="width:24px;" value="-" id="plusBottom"/>
+								<input type="text" class="p_xq_str04" style="width:60px;" id="investAmountBottom" name="investAmountBottom" value="1">
+								<input class="p_xq_str04" type="button" style="width:24px;" value="+"  id="addBottom"/>份<br /> </li>
+                            #{/else}
+                            
+                            #{if bid?.status > 0 && bid?.status < 3 && bid?.amount > bid?.hasInvestedAmount}
+								<span style="padding-right:34px;float:right"><a class="p_xq_btn p_op" onclick="investNow();">确认投资</a></span>
+							#{/if}
+                             #{if !ipsEnable}
+                        
+								#{if bid?.product?.isDealPassword == true}	
+							          <strong class="p_xq_str05"> 交易密码：<input type="password" style="width:95px" id="dealpwdBottom" name="dealpwdBottom" onMouseOver="checkPwdDel();"> </strong>
+								      #{if user != null && user.payPassword == null}
+								       <strong class="p_xq_str03"><a href="@{front.account.BasicInformation.modifyPassword()}" >您未设置交易密码!请点击此处设置</a></strong>
+								      #{/if}
+								    #{/if}
+								  
+							#{/if}
+                           
+                        </td>
+                       
+                    </tr>
+                     #{/form}
+                     #{/if}
+			     
+                </table>
+            </div>
+        </div>
+          <div class="p_xq_tabox none" id="descriptions">
+            <div class="l_bd_tbox02">
+                <div class="l_hbcpms">
+                    <p>“活期理财”投资计划是上好借存投资管理有限公司推出的、以投资你我贷P2P平台（www.haojiecun.com）特定优质标的、简化用户挑选、并提供安全稳定收益的智能投标产品。好借存平台通过严格的标的筛选、挑选出优质标的给购买“活期理财”投资计划产品的用户优先投标，通过分散投标，降低投资风险，将每期回款资金进行循环复投，最大化用户的资金使用效率，保障用户达成预期收益率。</p>
+                    <p>购买“活期理财”投资计划产品之后，资金无闲置立即开始投标，标的投满审核通过后，即进入投资锁定期，在投资锁定期间内，用户不能退出“活期理财”投资计划；投资锁定期90天后，可以申请债权转让，好借存平台通过投标的优先机制设计来提供转让债权的成交优先权，使得债权转让能在短时间内顺利成交。</p>
+                </div>
+                <table width="830" border="0" cellpadding="0" cellspacing="0" class="l_hbcpms_table">
+                    <tr height="44">
+                        <th width="24.1%"><span>名称</span></th>
+                        <td><span>活期理财</span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>加入条件</span></th>
+                        <td><span>${bid?.minInvestAmount?.format('###,##0.00')}元即可理财</span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>加入上限</span></th>
+                        <td><span>不封顶</span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>收益处理方式</span></th>
+                        <td><span>不封顶</span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>合约期限</span></th>
+                        <td><span>${bid?.period}${bid?.strPeriodUnit}</span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>退出方式</span></th>
+                        <td><span>锁定期过后可申请退出</span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>退出所需时间</span></th>
+                        <td><span>${bid?.investPeriod}天</span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>费率说明</span></th>
+                        <td><span>投资管理费：参见<a onclick="showHjc()" title="" target="">《好借存协议》</a></span></td>
+                    </tr>
+                    <tr height="44">
+                        <th><span>产品说明书</span></th>
+                        <td><span>查看<a onclick="showInvestHjc()" title="" target="">“好借存”投资计划说明书</a></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <input type="hidden" id="hiddenbidvalue" name="hiddenbidvalue" value=${bid?.sign} />
+		<input type="hidden" id="hiddenUserId" name="hiddenbidvalue" value=${bid?.signUserId} />
+		<!--借款投标记录 -->
+		 <div class="class="p_xq_tabox none" id="bidInvestRecords">
+		
+		
+		 </div>	
+		 
+		 <!--返息记录 -->
+		 <div class="class="p_xq_tabox none" id="rateRecord">
+		
+		
+		 </div>	
+
+
+		<!--2015-11-25新增js-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox-buttons').fancybox({
+            openEffect  : 'none',
+            closeEffect : 'none',
+            prevEffect : 'none',
+            nextEffect : 'none',
+            closeBtn  : false,
+            helpers : {
+                title : {
+                    type : 'inside'
+                },
+                buttons : {}
+            },
+            beforeShow : function() {
+                var alt = this.element.find('img').attr('alt');
+                
+                this.inner.find('img').attr('alt', alt);
+                
+                this.title = alt;
+            }
+        });
+    });
+</script>
+<!--2015-11-25新增js end-->	
+	
+<script>
+	function showitemNow(mark,signUserId){
+	   /** 检查用户是否激活, fronMain.html 中的拦截器*/
+	   var result = frontJSIntercepter();
+	  
+	   if(!result){
+      	  showitem(mark,signUserId);  
+	   }		
+	}
+	      
+	/* 查看弹出层 */
+	function showitem(mark,signUserId){
+		var listAction = #{jsAction @front.invest.InvestAction.showitem(':mark',':signUserId') /};
+		$.post(listAction({mark:mark,signUserId:signUserId}), function(data) {
+			
+			//拦截器，拦截判断。frontMain.html
+			if(checkIntercepterResult(data)){
+				return;
+			}
+			
+			showDiv($("#showitem").html(data));
+		});		
+	}
+   
+	      $(function(){
+	      
+	      	$("#investRecords").click(function(){
+	             $("#descriptions").hide();
+	             $("#bidInvestRecords").show();
+	              $("#rateRecord").hide();
+	      		 var bidId = $("#hiddenbidvalue").val();
+	      		 var pageSize = 10;
+	      		 var pageNum = 1;
+	      		 showBidRecords(pageNum, pageSize,bidId);
+	      	})
+	      	
+      		$("#bidsDetail").click(function(){
+      	         $("#bidInvestRecords").hide();
+      	          $("#rateRecord").hide();
+      	    })
+      	    
+      	    $("#description").click(function(){
+      	         $("#bidInvestRecords").hide();
+      	         $("#descriptions").show();
+      	         $("#rateRecord").hide();
+      	         
+      	    })
+      	    
+  	        $("#rateRecords").click(function(){
+	  	         $("#bidInvestRecords").hide();
+	  	         $("#descriptions").hide();
+	  	         $("#rateRecord").show();
+	  	         
+	  	         var bidId = $("#hiddenbidvalue").val();
+	      		 var pageSize = 10;
+	      		 var pageNum = 1;
+	      		 showRateRecords(pageNum, pageSize,bidId);
+  	       })
+	     })
+	      
+	      function showBidRecords(pageNum, pageSize,bidId) {
+	      	 var bidId = $("#hiddenbidvalue").val();
+		   $.ajax({
+		     	url : "@{viewBidInvestRecords()}",
+			    type : "POST",
+			    data : {
+			     	"pageNum" : pageNum, "pageSize":pageSize, "bidIdSign":bidId
+			     },
+			    success : function(data) {
+				     $("#bidInvestRecords").html(data);
+			     },
+			   error : function() {
+				alert("对不起，出现错误!");
+			 }
+		  });
+	  }
+	  function showRateRecords(pageNum, pageSize,bidId) {
+   			 var bidId = $("#hiddenbidvalue").val();
+		   $.ajax({
+		     	url : "@{viewRateRecords()}",
+			    type : "POST",
+			    data : {
+			     	"pageNum" : pageNum, "pageSize":pageSize, "bidIdSign":bidId
+			     },
+			    success : function(data) {
+				     $("#rateRecord").html(data);
+			     },
+			   error : function() {
+				alert("对不起，出现错误!");
+			}
+		});
+	  }     
+	  
+	
+	
+</script>
+	      

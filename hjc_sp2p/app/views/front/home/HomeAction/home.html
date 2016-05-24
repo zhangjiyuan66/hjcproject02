@@ -1,0 +1,243 @@
+%{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{extends 'common/frontMain.html' /} 
+#{set title:currBackstageSet.seoTitle /}
+
+<!-- 大广告 -->
+#{include "front/home/HomeAction/banner.html"/}
+<!--   content    -->
+<div class="l_main_content p_bgf047">
+<!--PART 1-->
+  <div class="l_circles">
+    <div class="p_main">
+    <div class="xf_c_idx_4_news xf_c_idx_4_newstwo" id="FontScroll" style="top: 5px;">
+	<ul>
+		#{if marquee != null}
+		#{list items:marquee}
+		<li>
+			<a href="##" class="lb"></a>
+			<a target="_blank" href="@{front.wealthinfomation.WealthInfomationAction.newDetails(_?.id)}">
+				<span class="xf_c_idx_4_mebersNews">官方公告：</span>
+				<span class="xf_c_idx_4_mebersNews1">${_?.title}</span>
+			</a>
+				<a title="" target="" href="/front/wealthinfomation/newsList?typeId=7" style="float:right;">更多公告&gt;&gt;</a>
+			
+		</li>
+		#{/list}
+		#{/if}
+	</ul>
+</div>
+     	<div class="l_xs_liucbox clr">
+            <ul class="l_company_info clr">
+            	<li class="w248" style="border-left: 0px solid #bfbfbf;">
+            		<i></i>
+                    <p class="l_company_text">已撮合借款：<span  class="l_company_num" >#{format money:(sumInvest)}#{/format}</span>（元）</p>
+                     
+                </li>
+                <li class="w170" >
+                	<i></i>
+                    <p class="l_company_text">为客户盈利：<span  class="l_company_num" l_xs_liucbox>#{format money:(sumIncome)}#{/format}</span>（元）</p>
+                </li>  
+                
+            </ul>
+        </div>
+	</div>
+	</div>
+	    <!--保障-->
+      <div class="service clearFix">
+	<a href="http://www.haojiecun.com/front/wealthinfomation/newDetails?id=181" target="_blank">
+        <div class="service_l fl">
+            <img class="fl" src="public/images/images2/tc-24.png"/>
+            <div class="service_lR fl">
+                <h4>信息保障</h4>
+                <p>信息真实，公开透明</p>
+            </div>
+        </div>
+    </a>
+    <a href="http://www.haojiecun.com/front/wealthinfomation/newDetails?id=179" target="_blank">
+        <div class="service_l fl">
+            <img class="fl" src="public/images/images2/tc-16.png"/>
+            <div class="service_lR fl">
+                <h4>项目保障</h4>
+                <p>优质债权，层层审核</p>
+            </div>
+        </div>
+    </a>
+    <a href="http://www.haojiecun.com/front/wealthinfomation/newDetails?id=178" target="_blank">
+        <div class="service_l fl">
+            <img class="fl" src="public/images/images2/tc-17.png"/>
+            <div class="service_lR fl">
+                <h4>技术保障</h4>
+                <p>系统检测，规范操作</p>
+            </div>
+        </div>
+    </a>
+    <a href="http://www.haojiecun.com/front/wealthinfomation/newDetails?id=182" target="_blank">
+        <div class="service_l service_r fl">
+            <img class="fl" src="public/images/images2/tc-18.png"/>
+            <div class="service_lR fl">
+                <h4>法律保障</h4>
+                <p>四倍以下，合法收益</p>
+            </div>
+        </div>
+    </a>
+</div>
+          
+
+	
+    <!--PART 1 end-->
+	<!--活期借款标  -->
+	<div class="p_main">
+	<!-- 体验标 -->
+	#{include "front/home/HomeAction/bbids.control"/}
+	<!--借款中的标  体验标和散标-->
+	#{include "front/home/HomeAction/bids.control"/}
+	
+ </div>
+    
+
+    
+	 
+       <!--合作伙伴  --> 
+	<div class="hz">
+    <div class="tyb sb hz_t">
+        <div class="tyb_hd tyb_hd2 tyb_hd3 clearFix">
+            <div class="tyb_hd_l tyb_hd_l2 tyb_hd_l3 tyb_hd_l4 fl">
+                <i class="fl"></i>
+                <p class="fl">合作<span>伙伴</span></p>
+            </div>
+            <a class="fr" href="/front/help/partner?currPage=-1008">更多>></a>
+        </div>
+    </div>
+    <ul class="hz_img">
+    	<li class="fl">
+        	<a href="http://www.spdb.com.cn/chpage/c1/" target="_blank">
+            	<img src="public/images/images2/pf.png"/>
+            </a>
+        </li>
+        <li class="fl">
+        	<a href="http://www.wdzx.com/" target="_blank">
+            	<img src="public/images/images2/wd.png"/>
+            </a>
+        </li>
+        <li class="fl">
+        	<a href="https://www.reapal.com/" target="_blank">
+            	<img src="public/images/images2/rb.png"/>
+            </a>
+        </li>
+        <li class="fl">
+        	<a href="http://www.wdzj.com/" target="_blank">
+            	<img src="public/images/images2/wd2.png"/>
+            </a>
+        </li>
+        <li class="fl last">
+        	<a href="http://www.gmta.com.cn/" target="_blank">
+            	<img src="public/images/images2/ys.png"/>
+            </a>
+        </li>
+    </ul>
+</div>
+  </div> 
+
+<script type="text/javascript">
+	$(function() {   
+		showbids();
+		/**tab切换 start */
+		$("#xf_c_idx_8_tabsColName li a").first().addClass(
+				"xf_c_idx_8_tabsColNameActive");
+		$("#xf_c_idx_8_tabsColName li").click(
+				function() {
+					$(this).children().addClass("xf_c_idx_8_tabsColNameActive")
+							.parent().siblings().children().removeClass(
+									"xf_c_idx_8_tabsColNameActive");
+					$("#xf_c_idx_8_content").children().eq(
+							$(".xf_c_idx_8_tabsColName li").index($(this)))
+							.show().siblings().hide();
+
+				});
+		/**tab切换 ends */
+
+		/***截取字数 append 链接 start***/
+		$(".xf_c_idx_5_gfggIntroduce p").limit();
+		$(".xf_c_idx_5_gfggIntroduce p").append(
+				"<a  class='xf_c_idx_5_gfggIntroduceMore'>[全文]</a>");
+		/***截取字数 append 链接 end***/
+		
+	});
+</script>
+<script>
+function showbids(){
+	$("#bids").show();
+	$("#agencybids").hide();
+}
+function showagencybids(){
+	$("#bids").hide();
+	$("#agencybids").show();
+}
+
+(function($){
+	    $.fn.FontScroll = function(options){
+	        var d = {time: 3000,s: 'fontColor',num: 1}
+	        var o = $.extend(d,options);
+	        
+
+	        this.children('ul').addClass('line');
+	        this.children('ul').attr("style",'margin-top:0');
+	        var _con = $('.line').eq(0);
+	        var _conH = _con.height(); //滚动总高度
+	        var _conChildH = _con.children().eq(0).height();//一次滚动高度
+	        var _temp = _conChildH;  //临时变量
+	        var _time = d.time;  //滚动间隔
+	        var _s = d.s;  //滚动间隔
+
+
+	        _con.clone().insertAfter(_con);//初始化克隆
+
+	        //样式控制
+	        var num = d.num;
+	        var _p = this.find('li');
+	        var allNum = _p.length;
+
+	        _p.eq(num).addClass(_s);
+
+
+	        var timeID = setInterval(Up,_time);
+			this.hover(function(){clearInterval(timeID)},function(){timeID = setInterval(Up,_time);});
+
+	        function Up(){
+	        
+	            _con.animate({marginTop: '-'+_conChildH});
+	            //样式控制
+	            _p.removeClass(_s);
+	            num += 1;
+	            _p.eq(num).addClass(_s);
+	            
+	            if(_conH == _conChildH){
+	                _con.animate({marginTop: '-'+_conChildH},"normal",over);
+	            } else {
+	                _conChildH += _temp;
+	            }
+	        }
+	        function over(){
+	       
+	            _con.attr("style",'margin-top:0');
+	            _conChildH = _temp;
+	            num = 1;
+	            _p.removeClass(_s);
+	            _p.eq(num).addClass(_s);
+	        }
+	        
+	        
+	    }
+	})(jQuery);
+	
+	$('#FontScroll2').FontScroll({time: 2000,num: 1});
+	$('#FontScroll3').FontScroll({time: 2000,num: 1});
+	$('#FontScroll').FontScroll({time: 2000,num: 1});
+	
+	
+</script>
+
+
+<script type="text/javascript" src="@{'/public/javascripts/tab/tab_index.js'}"></script>

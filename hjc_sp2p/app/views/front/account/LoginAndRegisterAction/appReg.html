@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/zhuce.css'}" />	
+
+<title>用户注册</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript">
+	window.onload=function(){
+	document.documentElement.style.fontSize = document.documentElement.clientWidth/375*20+'px';
+	window.onresize = function(){
+		document.documentElement.style.fontSize = document.documentElement.clientWidth/375*20+'px';
+	};
+};
+</script>
+</head>
+
+<body>
+	
+    
+	<div class="cont">
+		<img src="/public/images/img/logo.png" class="logo" />
+		<div class="phone1">
+			<input type="text" placeholder="请输入手机号码" class="phone_text" id="mobile" name="mobile"/>
+			<img src="/public/images/img/2.png" />
+		</div>
+		<div class="phone2">
+			<div class="fl">
+				<input type="text" placeholder="验证码" class="yzm"  name="smsCode"  id="smsCode">
+				<img src="/public/images/img/3.png" />
+			</div>
+			<div class="hx fl" id="sendSmsCode" onclick="sendCode()">获取验证码</div>
+		</div>
+		<div class="btn" id="reg" onclick="regnex()">下一步</div>
+	</div>
+	
+	<script type="text/javascript" src="@{'/public/javascripts/jquery-2.0.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/common.js'}"></script>
+</body>
+
+<script type="text/javascript">
+
+
+var remain = 60;
+
+function countDown() {
+  if (remain == 0) {
+    remain = 60;
+    $("#sendSmsCode").html("点击发送");
+    $("#sendSmsCode").attr("onclick", "sendCode();");
+    $("#sendSmsCode").attr("style", "cursor:pointer");
+
+    return;
+  }
+
+  $("#sendSmsCode").html("" + remain-- + "秒后重发");
+  setTimeout("countDown()",1000);
+}
+//发送手机短信
+function sendCode() {
+	  var mobile = $("#mobile").val();
+	    
+	  //发送短信验证码
+	  
+	  $.ajax({
+		  url : "@{front.account.LoginAndRegisterAction.sendSmsCode()}",
+		  type : "POST",
+		  data : {
+			  "mobile" : mobile,
+			  'send' : true
+		  },
+		  dataType:'json',
+		  success : function(data) {
+			  if(data.code < 0){
+				  alert(data.msg);
+			  }else{
+				  countDown();
+				  $("#sendSmsCode").attr("onclick", "void(0);");
+				  $("#sendSmsCode").attr("style", "cursor: default");
+			  }
+			},
+		  
+		 });
+	}
+
+//下一步
+
+	
+	function regnex(){
+		$.ajax({
+			  url : "@{front.account.LoginAndRegisterAction.verifyMobileForReg2()}",
+			  type : "POST",
+			  data : {
+				  "mobile":$("#mobile").val(),
+				  "smsCode":$("#smsCode").val()
+			  },
+			  dataType:'json',
+			  success : function(data) {
+				  if(data.code < 0){
+					  alert(data.msg);
+				  }else{
+					  location.href = "@{front.account.LoginAndRegisterAction.szmm()}?mobile="+$("#mobile").val();
+				  }
+				},
+			 
+			});
+		
+	}
+	
+
+
+</script>
+</html>

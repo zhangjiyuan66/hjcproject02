@@ -1,0 +1,152 @@
+%{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{extends 'common/frontMain.html' /} 
+#{set title:currBackstageSet.seoTitle+'| 我要理财 | 体验标' /}
+<div class="p_bgf1_box pb30 pt30">
+    <div class="p_main l_hblc">
+	<!--理财流程开始-->
+	 <h6 class="p_sy_title mb10"><span>体验投资</span></h6>
+	<!--投标搜索-->
+	#{include "front/invest/InvestAction/regularSearch.control"/}
+	<!--搜索结果  -->
+	 <div class="p_lc_listbox" id="bidList">
+            <ul class="p_lc_inlitul">
+            #{list items:pageBean.page, as:'bid'}
+                <li class="clr">
+                       #{if bid?.status ==2  && bid?.loan_schedule ==100 || bid?.status ==1 && bid?.loan_schedule ==100 }
+		                   <img src="/public/images/icon_ymb.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+		                #{/if}
+		                #{elseif bid?.status ==3 && bid?.loan_schedule ==100}
+		                   <img src="/public/images/icon_mbdfx.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+		                #{/elseif}
+		                #{elseif bid?.status ==4}
+		                   <img src="/public/images/icon_fxz.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+		                #{/elseif}
+		                #{elseif bid?.status ==5}
+		                   <img src="/public/images/icon_succ.png" class="l-stmap-icon" alt="" title="" width="105" height="89">
+		                #{/elseif}
+                    <div class="p_lc_bdbox">
+                        <h4 class="p_lc_bdtitle">
+                             <img src="/public/images/images2/ty1.png" alt="" width="23" height="26" class="p_lc_jkimg" />
+                           
+							   #{if bid?.is_hot ==true}
+								<b style="background: url(/public/images/index_bg.png) no-repeat  -1329px -351px;position: relative;border:0px solid #ddd;float: right; width: 29px;height: 17px;padding: 31px 0  0 21px;    border-left: none; "></b>
+								#{/if}
+							  <strong>${bid?.title}</strong>
+							  <span class="fr">借款编号：${bid?.no}</span>
+	                   </h4>
+                        <table class="p_lc_bdtabl">
+                            <tr height="38">
+                                <td width="270">项目规模：<strong class="f22">${(bid?.amount/10000).format('###,##0.00')}</strong>万</td>
+                                 <td width="295">投标期限：<strong class="f22">${bid?.invest_period}</strong>天</td>
+                                <td width="295">项目期限：
+                                #{if bid?.period_unit ==-1}
+								<strong class="f22">${bid?.period}</strong>年
+								#{/if}
+								#{if bid?.period_unit ==0}
+								<strong class="f22">${bid?.period}</strong>个月
+								#{/if}
+								#{if bid?.period_unit ==1}
+								<strong class="f22">${bid?.period}</strong>天
+								#{/if}</td>
+								<td>&nbsp;</td>
+                            </tr>
+                            
+                            <tr height="38">
+                                <td>年化收益：<strong class="f22 p_cozhuse">${bid?.apr}</strong><span class="p_cozhuse">%</span></td>
+                               <td>还款方式： #{if bid?.repayment_type_id ==3 }
+                                                                                                                                按<span style="color:#ff8839;font-size:15px">天</span>返息，到期还本
+                                      #{/if}
+                                </td>
+                            </tr>
+                            <tr height="38">
+                                <td>投资进度：<span class="p_lc_progres"><span style="width:${bid?.loan_schedule}%;"></span></span>${bid?.loan_schedule}%</td>
+                                <td>可投金额：#{format money:(bid?.amount-bid?.has_invested_amount)}#{/format}元</td>
+                                <td>起投金额：#{format money:bid?.min_invest_amount}#{/format}元</td>
+                                #{if bid?.title.contains('体验')}
+                                	#{if  bid?.amount > bid?.has_invested_amount}
+									
+	                                <td rowspan="4"><a href="@{investBbin(bid?.id)}" title="" target="" class="p_lc_tbtn p_op">立即投资</a></td>
+	                                #{/if}
+	                                #{else}
+	                                  <td rowspan="4"><a href="@{investBbin(bid?.id)}" title="" target="" class="p_lc_tbtn1 p_op" >了解详情</a></td>
+	                                #{/else}
+                                #{/if}
+                                #{else}
+	                                #{if  bid?.amount > bid?.has_invested_amount}
+									
+	                                <td rowspan="4"><a href="@{invest(bid?.id)}" title="" target="" class="p_lc_tbtn p_op">立即投资</a></td>
+	                                #{/if}
+	                                #{else}
+	                                  <td rowspan="4"><a href="@{invest(bid?.id)}" title="" target="" class="p_lc_tbtn1 p_op" >了解详情</a></td>
+	                                #{/else}
+                                #{/else}
+                            </tr>
+                            <!--#{if !(constants.Constants.IPS_ENABLE && bid?.is_agency)}
+							 <span class="xf_c_idx_4_hkfsWrap2">投标奖励：
+							#{if bid?.bonus_type == 0}
+							不设置奖励
+							#{/if}
+							#{if bid?.bonus_type == 1}
+							按固定奖金${bid?.bonus}元进行奖励
+							#{/if}
+							#{if bid?.bonus_type == 2}
+							按借款总额${bid?.award_scale}%进行奖励
+							#{/if}
+							</span>
+							#{/if} -->
+                        </table>
+                    </div>
+                </li> 
+           #{/list}    
+        </ul>
+        <div class="xf_zjgl_tx_page">
+        #{page pageTitle:"个标",currPage:pageBean.currPage,pageSize:pageBean.pageSize,totalCount:pageBean.totalCount,theme:2,style:3 /}
+        </div>
+  </div>
+</div></div>
+<!--2015-11-30 新增自动投标悬浮-->
+<!-- <a href="@{front.account.InvestAccount.auditmaticInvest()}" title="投标机器人" target="" class="l-zdtb"></a>
+ --><!--2015-11-30 新增自动投标悬浮end-->
+<!-- *{登录弹框层}* -->	
+#{include 'front/invest/InvestAction/login.control'/}		
+
+<script type="text/javascript" src="@{'/public/javascripts/tab/tab_invest.js'}"></script>
+
+<script>
+    $(function(){
+     
+	  #{list items:pageBean.page, as:'bid'}
+	    $('#loanSchedule'+${bid_index}).css({"width":${bid?.loan_schedule}})
+	  #{/list}
+    })
+
+    function checkLogin(bidId){
+    	
+  	  /** 检查用户是否激活, fronMain.html 中的拦截器*/
+  	  var result = frontJSIntercepter();
+  	  
+  	  if(!result){
+  		  collectCurrentBid(bidId);  
+  	  }			
+     }   
+  
+    function collectCurrentBid(bidId){
+    	var collectBid = #{jsAction @collectBid(':bidId')/}
+    	$.post(collectBid({bidId:bidId}),function(data){
+    		//拦截器，拦截判断。frontMain.html
+			if(checkIntercepterResult(data)){
+				return;
+			}
+    		var arr=eval(data);
+			var result = arr.error.msg;
+			alert(result);
+    	})
+    
+    }
+    
+   
+    
+  
+</script>

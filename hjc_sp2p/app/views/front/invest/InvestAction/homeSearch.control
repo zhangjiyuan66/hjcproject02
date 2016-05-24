@@ -1,0 +1,215 @@
+ <div class="p_lc_box01 mt20">
+  #{form @investHome(),method:'GET',id :'bidsSearch'}
+    <div class="p_lc_b1top clr">
+        <div class="p_lc_b1left">
+            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+            <div class="p_lc_ssbox">
+           
+                <input type="text" title="请输入标题或编号"  id="keywords" name="keywords" value="${pageBean?.conditions?.keywords}"/> 
+                <a onclick="showHomeBids();" class="p_lc_ssbtn p_op" title="搜索"></a>
+                <input type="hidden" id="currPage" name="currPage"/>
+		        <input type="hidden" id="pageSize" name="pageSize"/>
+		        <input type="hidden" id="aprtemp" name="apr" value="${pageBean?.conditions?.apr}"/>
+		        <input type="hidden" id="amounttemp" name="amount" value="${pageBean?.conditions?.amount}"/>
+		        <input type="hidden" id="loanScheduletemp" name="loanSchedule" value="${pageBean?.conditions?.loanSchedule}" />
+		        <input type="hidden" id="orderType" name="orderType" value="${pageBean?.conditions?.orderType}"/>
+            </div>
+        </div>
+      </div>  
+      <div class="p_lc_b1bot">
+           <table class="p_lc_table01">
+                    <tbody>
+                        <tr id="apr">
+                            <th>利率：</th>
+                            <td><span value="0" #{if pageBean?.conditions?.apr == 0} class="click" #{/if}>全部</span></td>
+                            <td><span value="1" #{if pageBean?.conditions?.apr == 1} class="click" #{/if}>10%以下</span></td>
+                            <td><span value="2" #{if pageBean?.conditions?.apr == 2} class="click" #{/if}>10%-15%</span></td>
+                            <td><span value="3" #{if pageBean?.conditions?.apr == 3} class="click" #{/if}>15%-20%</span></td>
+                            <td><span>&nbsp;</span></td>
+                        </tr>
+                        <tr id="amount">
+                            <th>金额：</th>
+                            <td><span value="0" #{if pageBean?.conditions?.amount == 0} class="click" #{/if}>全部</span></td>
+                            <td><span value="1" #{if pageBean?.conditions?.amount == 1} class="click" #{/if}>10万以下</span></td>
+                            <td><span value="2" #{if pageBean?.conditions?.amount == 2} class="click" #{/if}>10—50万</span></td>
+                            <td><span value="3" #{if pageBean?.conditions?.amount == 3} class="click" #{/if}>50—100万</span></td>
+                            <td><span value="4" #{if pageBean?.conditions?.amount == 4} class="click" #{/if}>100—300万</span></td>
+                        </tr>
+                        <tr id="loanSchedule">
+                            <th>认购进度：</th>
+                            <td><span value="0" #{if pageBean?.conditions?.loanSchedule == 0} class="click" #{/if} class="click">全部</span></td>
+                            <td><span value="1" #{if pageBean?.conditions?.loanSchedule == 1} class="click" #{/if}>50%以下</span></td>
+                            <td><span value="2" #{if pageBean?.conditions?.loanSchedule == 2} class="click" #{/if}>50%-80%</span></td>
+                            <td><span value="3" #{if pageBean?.conditions?.loanSchedule == 3} class="click" #{/if}>80%以上</span></td>
+                            <td><span value="4" #{if pageBean?.conditions?.loanSchedule == 4} class="click" #{/if}>满标</span></td>
+                            <td><span>&nbsp;</span></td>
+                        </tr>
+                     <!--
+                        <tr>
+                            <th>借款标类型：</th>
+                            <td colspan="7">
+                              <select name="loanType" id="loanType" class="p_lc_sel01">
+		                            <option value="-1">请选择</option>
+									#{list items:list, as : 'product'}
+									    #{if product?.id != 7 }
+											<option value="${product?.id}"
+											#{if pageBean?.conditions?.loanType == product?.id} selected="selected"  #{/if}
+											>${product?.name}</option>
+										#{/if}
+									#{/list}
+                              </select>&nbsp;         
+                            </td>
+                        </tr>
+                       <!-- <tr>
+                            <th>信用等级：</th>
+                            <td colspan="7">
+                              <select name="minLevel" id="minLevel" class="p_lc_sel02">
+                                      <option value="-1">请选择</option>
+									   #{list items:creditLevels,as:'level'}
+										<option value="${level?.id}" 
+										#{if pageBean?.conditions?.minLevel == level?.id}
+										selected="selected"
+										#{/if}
+										>${level?.name}</option>
+									  #{/list}	
+			                  </select>&nbsp;
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+          <div class="xf_wylc_orderdesc clr">
+	           <div class="xf_wylc_orderdesc_l">
+				<ul class="clr">
+					<li class="xf_wylc_orderdesc_lione xf_wylc_orderdesc_last" onClick="conditonSearch(0)"><a id="div_0">默认排序</a>
+					</li>
+					<li class="xf_wylc_orderdesc_litwo" onClick="conditonSearch(1)"><a id="div_1" class="">金额</a>
+					</li>
+					<li class="xf_wylc_orderdesc_lithree" onClick="conditonSearch(3)"><a id="div_3" class="">利率</a>
+					</li>
+					<li class="xf_wylc_orderdesc_lifour" onClick="conditonSearch(5)"><a id="div_5" class="">进度</a>
+					</li>
+					<li class="xf_wylc_orderdesc_lifive" onClick="conditonSearch(7)"><a id="div_7" class="">还款期限</a>
+					</li>
+				</ul>
+			 </div>
+	         <div class="xf_wylc_orderdesc_r">
+	            <span class="xf_wylc_orderdesc_rl"  style="padding-right: 54px;">共计<span class="xf_wylc_orderdesc_span" id="bidTotle">${pageBean?.totalCount}</span>个标</span> 
+	         </div>
+        </div>
+#{/form}
+
+	
+<script src="@{'/public/javascripts/laydate/laydate.js'}"></script>
+<script>
+    var apr="";
+    var amount="";
+    var loanSchedule="";
+ 	var loanType = "";
+ 	var orderType = "";
+ 	var startDate = "";
+ 	var endDate = "";
+ 	
+ 	$(function(){
+	    $("#apr span").click(function(){ 
+	    	$("#apr span").removeClass("click");
+		    $(this).addClass("click");
+		      apr = $(this).attr("value"); 
+		      $("#aprtemp").val(apr);
+		      showHomeBids();
+	   });
+	   $("#amount span").click(function(){ 
+	    	$("#amount span").removeClass("click");
+		    $(this).addClass("click");
+	        amount = $(this).attr("value"); 
+	        $("#amounttemp").val(amount);
+		    showHomeBids();
+	   });
+	   $("#loanSchedule span").click(function(){ 
+	    	$("#loanSchedule span").removeClass("click");
+		    $(this).addClass("click");
+		     loanSchedule = $(this).attr("value");  
+		     $("#loanScheduletemp").val(loanSchedule);
+		     showHomeBids();
+	   });
+    });
+
+	$(function(){
+	   	 //条件查询控制样式
+	 	 var num= '${pageBean?.conditions?.orderType}';
+	
+		  if(num == 0){
+		  	$("#div_0").addClass("xf_wylc_orderdesc_nocheck");
+		    	return;
+		  }
+	
+		  var sum = num/2;
+		  if(sum.toString().indexOf('.') == -1){
+		    var sum2 = num -1;
+		    $("#div_"+sum2).removeClass("xf_wylc_orderdesc_ishot");
+		    $("#div_"+sum2).addClass("xf_wylc_orderdesc_up");
+		    return;
+		  }else{
+		   // $("#div_"+num).removeClass("xf_wylc_orderdesc_up");
+		    $("#div_"+num).addClass("xf_wylc_orderdesc_ishot");
+		  }
+     });
+	     
+	function conditonSearch(num){
+	
+	  var order= '${pageBean?.conditions?.orderType}';
+	  if(order == 0){
+	    $("#orderType").val(num);
+	    $("#bidsSearch").submit();
+	    return;
+	  }
+	  if(order == num){
+	    $("#orderType").val(num + 1);
+	    $("#bidsSearch").submit();
+	     return;
+	  }else{
+	    $("#orderType").val(num);
+	    $("#bidsSearch").submit();
+	     return;
+	  }
+	}
+	
+	    
+	  function showHomeBids(){
+	  
+	    var minLevel = $("#minLevel").val();
+	    
+	     $("#bidsSearch").submit();
+	}	
+	
+	function showCollect(){
+		var pageNum = 1;
+		var pageSize = 10;
+		showCollectBids(pageNum,pageSize);
+	}
+	
+	 function showCollectBids(pageNum,pageSize){
+		
+		$.ajax({
+		  url:"@{queryUserCollectBids()}",
+		  type:"POST",
+		  data:{"pageNum" : pageNum,"pageSize" : pageSize},
+		  success:function(data){
+		  	
+		  	//拦截器，拦截判断。frontMain.html
+			if(checkIntercepterResult(data)){
+				return;
+			}
+		  	
+		  	$("#bidList").html(data);
+		  },
+		  error:function(){alert("对不起，出现错误!");}
+		})
+	}
+	 function showPage(currPage, pageSize){
+	    $("#currPage").val(currPage);
+	    $("#pageSize").val(pageSize);
+	    $("#bidsSearch").submit();
+	}
+</script>

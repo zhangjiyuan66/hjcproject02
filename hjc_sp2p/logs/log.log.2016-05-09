@@ -1,0 +1,13 @@
+2016-05-09 19:09:20,165 INFO  ~ Starting G:\zhangjiyuan666\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-09 19:09:20,796 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 631
+2016-05-09 19:09:20,865 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 700
+2016-05-09 19:09:41,369 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 21204
+2016-05-09 19:10:51,035 INFO  ~ Starting G:\zhangjiyuan666\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-09 19:10:52,820 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 1785
+2016-05-09 19:10:52,873 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 1838
+2016-05-09 19:10:56,459 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 5424
+2016-05-09 19:11:04,843 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 13808
+2016-05-09 19:11:08,006 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 16971
+2016-05-09 19:11:09,198 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 18163
+2016-05-09 19:11:31,437 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasMobileExists  ~ play.Logger.debug(Logger.java:232) ~ play ~ 40402
+2016-05-09 19:11:31,438 DEBUG ~ 正在执行ation请求命令:front.account.LoginAndRegisterAction.hasMobileExists  ~ play.Logger.debug(Logger.java:232) ~ play ~ 40403

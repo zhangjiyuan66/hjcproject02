@@ -1,0 +1,74 @@
+ <div class="p_right_wordbox">
+            <div class="p_zh_rtword">
+                <h4 class="p_hp_title clr"><strong>实名认证</strong></h4>
+                #{form @front.account.BasicInformation.doCertification(), id:'form'}
+                <div class="l_smrz_table">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr height="62">
+                            <th width="32%">
+                                <span>真实姓名 :</span>
+                            </th>
+                            <td>
+                            #{if null != user?.realityName && user?.realityName != ""}
+							<input type="text" name="realName" id="realName" value="${user?.realityName}" class="xf_jbzl_input" disabled="disabled">
+							#{/if}
+							#{else}
+							<div>
+								<input type="text" name="realName" id="realName" value="${flash?.realName}" class="p_text">
+							</div>	
+							#{/else}
+			       	 		#{if flash.nameError}
+						        <span class="p_zctctishi" style="color:red">${flash?.nameError}</span>
+						    #{/if}
+                              
+                            </td>
+                        </tr>
+                        <tr height="62">
+                            <th>
+                                <span>身份证 :</span>
+                            </th>
+                            <td>
+                            #{if null != user?.idNumber && user?.idNumber != ""}
+									<input type="text" name="idNumber" id="idNumber" value="${user.idNumber.substring(0, 6)+"**********"+user.idNumber.substring(14)}" class="xf_jbzl_input" disabled="disabled">
+								#{/if}
+								#{else}
+									<input type="text"  class="p_text" name="idNumber" id="idNumber" maxlength="18" value="${flash?.idNumber}" onKeyUp="value=value.replace(/[\W|^_]/g,'')">
+								#{/else}
+						       	#{if flash.idNoError}
+							        <br/><span class="p_zctctishi" style="color:red">${flash?.idNoError}</span>
+							    #{/if}
+                                
+                            </td>
+                        </tr>
+                        <tr height="96">
+                            <th></th>
+                            <td>
+                            #{if null == user?.realityName || user?.realityName == "" || null == user?.idNumber || user?.idNumber == ""}	
+							<a class="l_smrz_btn p_op" id="confirm" onclick="saveInfo()">实名认证</a>
+
+						   #{/if}
+                               
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                #{/form}
+                %{		
+                  business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+                }%
+                <div class="l_smrz_notice">
+                    <h2 class="l_smrz_ntitle">温馨提示 :</h2>
+                    <div class="l_smrz_ncontent">
+                        <p>1、为了平台用户的资金安全，请先进行实名认证，如有问题请<a  target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=${currBackstageSet?.companyQQ1}&site=qq&menu=yes">联系客服人员</a></p>
+                        <p>2、每个身份证号码只能绑定一个账户，一经绑定，无法修改</p>
+                        <p>3、不支持港澳台身份证认证</p>
+                    </div>
+                </div>
+		
+		</div>
+	</div>			
+<script type="text/javascript">
+	function saveInfo(){
+		$("#form").submit();
+	}
+</script>

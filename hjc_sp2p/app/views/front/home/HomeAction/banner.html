@@ -1,0 +1,70 @@
+%{	business.User cuUser = business.User.currUser();}%
+#{if cuUser == null}
+
+<div class="p_loginbox">
+	<div class="l_loginbg"></div>
+    <div class="p_login">
+        <h4>预期年化收益率</h4>
+        <div class="p_lilvnum"><em>12.00</em>%</div>
+        <a href="javascript:void(0)" class="p_lobtn p_op">马上加入</a>
+        <div class="p_lolink">已有账户?<a href="javascript:void(0)" class="p_un">登录</a></div>
+    </div>
+</div>
+#{/if}
+<!-- banner start -->
+<div class="fullSlide" id="xf_b_idx_2_banner">
+    <div class="bd">
+        <ul id="xf_b_idx_2_banul">
+        
+        	#{list homeAds}	
+        	
+			<li _src="url(${_?.image_filename})">
+				<a 
+					#{if _?.is_link_enabled}
+						href = "${_?.url}" 
+						#{if _?.target == 1}
+							target = "_self"'
+						#{/if}
+						#{else}
+							target = "_blank"
+						#{/else}
+						
+						style="cursor: pointer;"
+					#{/if}
+					style="cursor: default;"
+				></a>
+			</li>
+		#{/list}
+        </ul>
+    </div>
+    <div class="hd">
+        <ul class="ul"></ul>
+    </div>
+    <div class="p_main">
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+</div>
+<script type="text/javascript" src="/public/javascripts/superslide.2.1.js"></script>
+<script type="text/javascript">
+    jQuery(".fullSlide").slide({
+        titCell: ".hd ul",
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        autoPage: true,
+        trigger: "mouseover",
+        startFun: function(i) {
+        var curLi = jQuery(".fullSlide .bd li").eq(i);
+            if ( !! curLi.attr("_src")) {
+                curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+            }
+        }
+    });
+    //上一页 下一页
+     $(".fullSlide").hover(function(){
+        $(".prev,.next").fadeTo("show",1);
+    },function(){
+        $(".prev,.next").hide();
+    }) 
+</script>

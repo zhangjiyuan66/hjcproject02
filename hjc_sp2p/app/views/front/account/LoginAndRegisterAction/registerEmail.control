@@ -1,0 +1,456 @@
+<!--注册弹窗-->
+<div class="popup l_zc_pop" style="height: 606px;"> 
+    <span class="popclose">×</span>
+    <div class="y_zcul clr">
+        <ul>
+            <li class="click" id="mobile_register">手机注册</li>
+            <li id="email_register">邮箱注册</li>
+        </ul>
+        <span>
+            已有账户？
+            <a href="javascript:void(0)" class="p_un p_cozhuse">登录</a>
+        </span>
+    </div>
+    <!-- tab1 -->
+    
+    <div class="y_zctab none" id="tab_mobile">
+        #{form @front.account.loginAndRegisterAction.registering(), id:'submit2'}
+            <table width="100%">        
+                <tbody>
+                    <tr>
+                        <td align="right" width="215">
+                            <span class="y_zcred">*</span>
+                            手机号：
+                        </td>
+                        <td width="300">
+                            <div class="y_dldiv y_zcdiv">
+                                <input class="p_pass" type="text" id="mobile" name="mobile" value="${flash?.mobile}" />
+                                <label>请输入手机号码</label>
+                                <div class="p_errortip none" id = "mobile_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" /> <span id="s_mobile"></span></span>
+                                </div>
+                                <div class="p_errortip1 none" id="mobile_right">
+                                    <span>
+                                     <img src="/public/images/DUI.png" alt="" />
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right">
+                            <span class="y_zcred">*</span>
+                            密码：
+                        </td>
+                        <td>
+                            <div class="y_dldiv y_zcdiv">
+                                <input class="p_pass" type="password" id="password1" name="password1"  value="${flash?.password}" />
+                                 <label>请设置6位以上密码</label>
+                                <div class="p_errortip none" id="password1_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" />  <span id="s_password1"></span></span>
+                                </div>
+                                 <div class="p_errortip1 none" id="password1_right">
+                                    <span>
+                                    <img src="/public/images/DUI.png" alt="" />
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <span class="y_zcred">*</span>
+                            确认密码：
+                        </td>
+                        <td>
+                            <div class="y_dldiv y_zcdiv">
+                                <input class="p_pass" type="password" id="password2" name="password2"  value="" />
+                                 <label>请设置6位以上密码</label>
+                                <div class="p_errortip none" id="password2_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" />  <span id="s_password2"></span></span>
+                                </div>
+                                 <div class="p_errortip1 none" id="password2_right">
+                                    <span>
+                                    <img src="/public/images/DUI.png" alt="" />
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">推荐人：</td>
+                        <td>
+                            <div class="y_dldiv y_zcdiv">
+                            #{if flash.recommendUserName != null && flash.recommendUserName != ''}
+						       <input class="p_pass" type="text" id="recommended1"  name="recommended1" value="${flash?.recommendUserName}" readonly="readonly"/>
+						    #{/if}
+					    	#{else}
+						      <input class="p_pass" type="text" id="recommendName1"  name="recommendName1"/>
+						        <label>推荐人的用户名/推广码</label>
+						   #{/else}
+                            <div class="p_errortip none" id="recommended1_error">
+                                <i class="p_erroricon"></i>
+                                <span><img src="/public/images/p_error.png" alt="" />
+                                <span  id="s_recommended1">
+                                 </span>
+                                <!--这里放错误提示信息字段--></span>
+                            </div>
+                            <div class="p_errortip1 none" id="recommended1_right">
+                                <span>
+                                <img src="/public/images/DUI.png" alt="" />
+                                </span>
+                            </div>
+                        </div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td align="right">
+                            <span class="y_zcred">*</span>
+                            验证码：
+                        </td>
+                       <td>
+                            <div class="y_dldiv y_zcdiv y_zcyzm">
+                                <input class="p_pass" type="text" type="text" id="code1" name="code1"  #{if !constants.Constants.CHECK_CODE}value="1234" readonly="readonly"#{/if}  />
+                                <label>请输入验证码</label>
+                                <input type="hidden" name="randomID1" id = "randomID1" />
+                                <div class="p_errortip none" id="code1_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" /> 
+                                    <span  id="s_code1">
+                                    </span><!--这里放错误提示信息字段--></span>
+                                </div>
+                            </div>
+                            <a href="#" class="y_yzimg">
+                                <img src="" onclick="mobilechange()"  id="img1" title="" width="100%" height="36" alt=""/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" width="180">
+                            <span class="y_zcred">*</span>
+                            短信验证码：
+                        </td>
+                        <td>
+                            <div class="y_dldiv y_zcdiv y_zcyzm">
+                                <input class="p_pass" type="text" id="smsCode" name="smsCode"#{if !constants.Constants.CHECK_MSG_CODE}value="1234" readonly="readonly"#{/if} />
+                                <label>短信验证码</label>
+                                <div class="p_errortip none" id="smsCode_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" /> 
+                                     <span  id="s_smsCode">
+                                     </span></span>
+                                </div>
+                            </div>
+                            <input type="button" onClick="sendCode_login()"  class="p_hqyanzm p_op" value="获取校验码" id='sendSmsCode'/>
+                             
+                        </td>
+                    </tr>
+                   
+                     <tr>
+                        <td colspan="2">
+                          
+                            <span style="padding-left:50px">
+                              <input type="checkbox" name = "check" checked="checked" id = "check1"/>
+                                我已经阅读并同意
+                                <a onclick="showProtocol()" class="y_zctaba">《${currBackstageSet?.platformName}用户注册协议》</a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> 
+		                      <div style="padding-left:50px">
+		                           <input type="hidden" name="regist_type" id="regist_type" value="1234" /> 
+		                            <a onclick="registerMobile()" id="registerMobile"  class="y_dlbto y_zcbto p_op" >注册</a>
+		                      </div>   
+                        </td>
+                    </tr>
+                </tbody>    
+            </table>
+             #{/form}
+    </div>
+<script>
+
+function mobilechange(){
+	var setCode = #{jsAction @front.account.loginAndRegisterAction.setCode()/}
+	$.post(setCode({}),function(data){
+	var arr=eval(data);
+	var img = arr.img;
+	
+	$("#img1").attr("src","@{front.account.loginAndRegisterAction.getImg()}?id="+img)	
+	$("#randomID1").val(img);
+	});
+}
+	
+   var bName = 0;
+   var bEmail = 0;
+   var bRecommendedName = 0;
+   var bRecommendedNameMsg = "";
+	
+   $(document).ready(function(){
+  
+	   $("form :input").blur(function(){ 
+   			
+		   if($(this).attr("id") == "mobile"){
+	    	  $.ajax({
+	    		  url : "@{front.account.LoginAndRegisterAction.hasMobileExists()}",
+	    		  type : "POST",
+	    		  data : {
+	    			  "mobile" : this.value
+	    		  },
+	    		  dataType:'json',
+	    		  success : function(data) {
+	    			  if(data.code < 0){
+	    			      $("#mobile_right").addClass("p_errortip1 none");
+	    				  $("#mobile_error").removeClass("p_errortip none");
+						  $("#mobile_error").addClass("p_errortip");
+				          $("#s_mobile").html(data.msg);  
+	    			  }else{
+	    				  $("#mobile_error").addClass("p_errortip none");
+	    				  $("#mobile_right").removeClass("p_errortip1 none");
+				          $("#mobile_right").addClass("p_errortip1");
+	    			  }
+	    			},
+	    		 });
+			 } 
+		   
+	   
+		 	 if($(this).attr("id")=="recommendName1"){
+		       var recomname = this.value;
+		       if(recomname == null || recomname.trim() == '' ){
+		           $("#recommended1_right").addClass("p_errortip1 none");
+		    	   $("#recommended1_error").addClass("p_errortip none");
+		    	   return;
+		       }
+	            var hasNameExist = #{jsAction @front.account.loginAndRegisterAction.checkRecommendName(':name')/}
+				  $.post(hasNameExist({name:encodeURI(recomname)}),function(data){
+
+				  if(data.code == -2){
+				       bRecommendedName = 0;
+				       $("#recommended1_error").addClass("p_errortip none");
+				       $("#recommended1_right").removeClass("p_errortip1 none");
+				       $("#recommended1_right").addClass("p_errortip1");
+				  }else if(data.code == 0){
+					  bRecommendedName = -1;
+				      bRecommendedNameMsg = "该推荐人不存在";
+				      $("#recommended1_right").addClass("p_errortip1 none");
+				      $("#recommended1_error").removeClass("p_errortip none");
+					  $("#recommended1_error").addClass("p_errortip");
+			          $("#s_recommended1").html(bRecommendedNameMsg);
+				  }else{
+			          bRecommendedName = -2;
+			          bRecommendedNameMsg = data.msg;
+			          $("#recommended1_right").addClass("p_errortip1 none");
+			          $("#recommended1_error").removeClass("p_errortip none");
+					  $("#recommended1_error").addClass("p_errortip");
+		              $("#s_recommended1").html(bRecommendedNameMsg);
+				    }
+		          });
+		    } 
+	   if($(this).attr("id") == "password1"){
+			 
+		     if(this.value == ""){
+		          $("#password1_right").addClass("p_errortip1 none");
+		    	  $("#password1_error").removeClass("p_errortip none");
+				  $("#password1_error").addClass("p_errortip");
+		          $("#s_password1").html("请设置密码");  
+		     }else if(this.value.length < 6 || this.value.length >20 ){
+		          $("#password1_right").addClass("p_errortip1 none");
+		    	  $("#password1_error").removeClass("p_errortip none");
+				  $("#password1_error").addClass("p_errortip");
+		          $("#s_password1").html("密码长度为6~20位"); 
+		     }else if(!/^([^\s'‘’]{6,20})$/.test(this.value)){
+		          $("#password1_right").addClass("p_errortip1 none");
+		    	  $("#password1_error").removeClass("p_errortip none");
+				  $("#password1_error").addClass("p_errortip");
+		     	  $("#s_password1").html("密码由6-20位字符组成不含敏感字符");
+		     }
+		     else{
+				  $("#password1_error").addClass("p_errortip none");
+				  $("#password1_right").removeClass("p_errortip1 none");
+		          $("#password1_right").addClass("p_errortip1");
+		     }
+		 }
+		 if($(this).attr("id") == "password2"){
+			 
+		     if(this.value == ""){
+		          $("#password2_right").addClass("p_errortip1 none");
+		    	  $("#password2_error").removeClass("p_errortip none");
+				  $("#password2_error").addClass("p_errortip");
+		          $("#s_password2").html("请确认密码");  
+		     }else if(this.value != $("#password1").val()){
+		          $("#password2_right").addClass("p_errortip1 none");
+		    	  $("#password2_error").removeClass("p_errortip none");
+				  $("#password2_error").addClass("p_errortip");
+		          $("#s_password2").html("两次输入密码不一致"); 
+		     }
+		     else{
+				  $("#password2_error").addClass("p_errortip none");
+				  $("#password2_right").removeClass("p_errortip1 none");
+		          $("#password2_right").addClass("p_errortip1");
+		     }
+		 }
+	   if($(this).attr("id") == "code1"){
+	   
+	      if(this.value == ""){
+	          $("#code1_error").removeClass("p_errortip none");
+			  $("#code1_error").addClass("p_errortip");
+	          $("#s_code1").html("请填写图形验证码");  
+       
+	      }else{
+	    	  $("#code1_error").addClass("p_errortip none");
+	      }
+        }
+	 
+	     }); 
+	  });   
+   function registerMobile(){
+   
+    if($('#tab_mobile').css('display')=='none'){
+			   return;
+     }
+  	 var mobile = $.trim($("#mobile").val());
+		 
+       if(mobile == ""){
+         $("#mobile_right").addClass("p_errortip1 none");
+    	 $("#mobile_error").removeClass("p_errortip none");
+	     $("#mobile_error").addClass("p_errortip");
+	     $("#s_mobile").html("请输入手机号码");
+         return false;
+       }else if(!(mobile).isMobileNum()){
+         $("#mobile_right").addClass("p_errortip1 none");
+	     $("#mobile_error").removeClass("p_errortip none");
+	     $("#mobile_error").addClass("p_errortip");
+         $("#s_mobile").html("手机号格式有误");
+    	 return false;
+       }
+  	 
+   
+	   
+	     var password = $("#password1").val();
+		   
+	      if(password == ""){
+	          $("#password1_right").addClass("p_errortip1 none");
+	    	  $("#password1_error").removeClass("p_errortip none");
+	          $("#password1_error").addClass("p_errortip");
+		      $("#s_password1").html("请设置您的密码!");
+	          return; 
+	      }else if(password.length < 6 || password.length >10 ){
+		          $("#password1_right").addClass("p_errortip1 none");
+		    	  $("#password1_error").removeClass("p_errortip none");
+				  $("#password1_error").addClass("p_errortip");
+		          $("#s_password1").html("密码长度为6-10个字符"); 
+	      }else if(!/^([^\s'‘’]{6,10})$/.test(password)){
+	          $("#password1_right").addClass("p_errortip1 none");
+	    	  $("#password1_error").removeClass("p_errortip none");
+	          $("#password1_error").addClass("p_errortip");
+		      $("#s_password1").html("密码由6-10位字符组成不含敏感字符");
+	     	  return;
+	      }
+		    
+	    if($("#code1").val() == '') {
+		       $("#code1_error").removeClass("p_errortip none");
+			   $("#code1_error").addClass("p_errortip");
+		       $("#s_code1").html("请填写图形验证码");
+	  		  return;
+	     }
+                 
+	     var smsCode = $("#smsCode").val();
+	
+	     if(smsCode == ""){
+	           $("#smsCode_error").removeClass("p_errortip none");
+			   $("#smsCode_error").addClass("p_errortip");
+		       $("#s_smsCode").html("请获取短信验证码");
+	        return;
+	     }
+	      
+	       var verifyMobile = #{jsAction @front.account.loginAndRegisterAction.verifySmsCodeForReg(':mobile',':smsCode')/}
+	    	$.post(verifyMobile({mobile:mobile,smsCode:smsCode}),function(data){
+	  	    if(data.code < 0){
+	           alert(data.msg);
+	  	    	mobilechange();
+	  	    	return false;
+	  	    }else{
+	  	    	$("#smsCode_error").addClass("p_errortip none");      	    	
+	  		}
+	  	});
+	  	
+	     
+	  if(!$("input[type='checkbox']").is(':checked')){
+	  		 alert("您没有阅读用户协议");
+	  		 return false;
+	  	}
+	   $("#submit2").submit();
+	       
+	   }	
+	 
+   function sendCode_login(){
+   	var mobile = $("#mobile").val().trim();
+   	var code = '';
+   	var randomId = '';
+   	if(mobile == ""){
+   		$("#mobile_error").removeClass("p_errortip none");
+	    $("#mobile_error").addClass("p_errortip");
+        $("#s_mobile").html("请输入手机号码");
+        return false;
+       }    
+	
+	     
+	  var password = $("#password1").val().trim();
+      if(password == ""){
+          $("#password1_right").addClass("p_errortip1 none");
+    	  $("#password1_error").removeClass("p_errortip none");
+          $("#password1_error").addClass("p_errortip");
+	      $("#s_password1").html("请设置您的密码");
+          return; 
+      }else if(password.length < 6 || password.length >10){
+          $("#password1_right").addClass("p_errortip1 none");
+    	  $("#password1_error").removeClass("p_errortip none");
+          $("#password1_error").addClass("p_errortip");
+	      $("#s_password1").html("密码长度为6-10个字符");
+         return;
+      }else if(!/^([^\s'‘’]{6,10})$/.test(password)){
+          $("#password1_right").addClass("p_errortip1 none");
+    	  $("#password1_error").removeClass("p_errortip none");
+          $("#password1_error").addClass("p_errortip");
+	      $("#s_password1").html("密码由6-10位字符组成（不含'）");
+     	  return;
+      }   
+        
+   	    var verifyMobile = #{jsAction  @front.account.LoginAndRegisterAction.verifyMobileForReg(':mobile',':code',':randomID') /}
+	  	$.post(verifyMobile({mobile:mobile,code:$("#code1").val(),randomID:$("#randomID1").val()}),function(data){
+		    if(data.code < 0){
+		     mobilechange();
+		     alert(data.msg);
+		    }else{
+		    
+		     teleCodeTimer_login("sendSmsCode");
+			}
+		},'json');  
+    
+ }
+//手机验证码调用时间定时器(当点击按钮是input标签时使用)
+function teleCodeTimer_login(id){
+	blug = id;
+	timer_login();
+}
+
+//手机验证码重新获取时间间隔
+function timer_login(){
+    $("#"+blug).attr("disabled", true);
+    $("#"+blug).attr("onclick", "void(0);");
+    time = time - 1;
+    $("#"+blug).val(time+"秒后获取");
+    if(time == 0){
+       mobilechange();
+       $("#"+blug).val("获取验证码");
+       time = 120;
+       $("#"+blug).attr("disabled", false);
+       $("#"+blug).attr("onclick", "sendCode_login();");
+    }else{
+       setTimeout('timer_login()',1000);
+    }
+}	 
+</script>

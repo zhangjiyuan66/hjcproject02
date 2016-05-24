@@ -1,0 +1,18 @@
+   <div class="l_hzhb">
+        	<div class="l_hzhb_title">
+            	<h3 id= "aboutUs1008"><a href="/front/help/partner?currPage=-1008">合作伙伴</a> </h3>
+            	<a href="/front/help/partner?currPage=-1008" title="" target="" class=" l_more_news hover-opacity" style="    margin-top: -19px">更多</a>
+            </div>
+		 <ul class="l_hzhb_list clr">
+				 #{list items:adsPartner,as:'adsPartner'}
+					<li><a href="${adsPartner?.url}" title="" target="_blank">
+					    <img src="${adsPartner?.imageFileName}" alt="" title="" />
+					</a></li>
+				 #{/list}	
+            </ul>
+	</div>
+	<script>
+	$(function(){
+		$("#aboutUs1008").addClass("click");
+	});
+	</script>

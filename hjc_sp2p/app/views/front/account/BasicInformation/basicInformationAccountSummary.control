@@ -1,0 +1,72 @@
+<!-- 右侧内容区域 -->
+ <div class="p_right_wordbox">
+<div class="p_zh_rtword">
+    <h4 class="p_hp_title clr"><strong>基本资料</strong></h4>
+ <div class="p_zh_rtbox01 clr">
+ 		 <div class="p_zh_b1left">
+		    <img src="${user?.photo}" id = "image" alt="头像" width="145" height="145" />
+		          <span style="padding-left:21px">(像素:145×145)</span>
+		    <div class="p_zh_changepic">
+		       <input type="file" name="imgFile" id="imgFile" onchange="upload('imgFile','image');">
+		        <a  title="" class="p_zh_changetx">更换头像</a>
+		    </div>
+		</div>
+  <ul class="p_zh_b1right">
+	     <li>
+	      <span>用户名：</span><strong class="p_zh_str01">${user?.name}</strong>
+	      体验金:<strong style="color:#ff8839">${bb2?.account?.format('###,##0.00')}</strong>元 , 
+		</li>
+	    <!--<li>注册时间：${user?.time?.format('yyyy-MM-dd')}</li>
+	    <li><span>信用积分：${user?.creditScore} 分</span><a href="@{front.account.FundsManage.myCredit()}" title="" class="p_zh_a01 p_un bold_font">积分明细</a></li>-->
+	    <li>理财统计：<strong style="color:#ff8839"> ${user?.investAmount?.invest_count}</strong>次投标 , 
+	    	#{if constants.Constants.DEBT_USE}
+	    	<strong style="color:#ff8839">${user?.investAmount?.transfer_count}</strong>次债权转让
+	    	#{/if}
+	    </li>
+	    <li> 理财盈利：<strong style="color:#ff8839">${sumInterest?.format('###,##0.00')}</strong>元 , 推广盈利：<strong style="color:#ff8839">${total?.format('###,##0.00')}</strong>元</li>
+	     <li>
+		         
+		       可用余额：<strong style="color:#ff8839">${(accountInfo?.user_account-accountInfo?.freeze+accountInfo?.user_account2)?.format('###,##0.00')}</strong>元 , 
+		       冻结金额：<strong style="color:#ff8839">${accountInfo?.freeze?.format('###,##0.00')}</strong>元    <strong><a href="@{front.account.FundsManage.recharge()}" class="xf_con_inputfbjk2" style="float:right;margin-right:47px">充值</a><a href="@{front.account.FundsManage.withdrawal()}" style="float:right;margin-right:10px" class="xf_con_inputfbjk2">提现</a></strong>
+		  
+		  
+		  </li>
+		   <li>
+		         
+		       投标总额：<strong style="color:#ff8839">${accountInfo?.invest_amount?.format('###,##0.00')}</strong>元 , 账户总额：<strong style="color:#ff8839">${accountInfo?.user_account?.format('###,##0.00')}</strong>元
+		  
+		  
+		  </li>
+	</ul>
+	</div>
+  </div>
+</div>
+<script type="text/javascript">
+    
+    function photo(){
+      $("#showOrHide2").hide();
+      $("#showOrHide").show();
+    }
+    
+	function upload() {
+		$.ajaxFileUpload({
+			url : '@{front.account.AccountHome.uploadPhoto()}',
+			secureuri : false,
+			fileElementId : 'imgFile',
+			dataType : 'text',
+			success : function(data) {
+				data = $.evalJSON(data);
+				if (data.code < 0) {
+					alert(data.msg);
+	
+					return;
+				}
+				$("#image").attr("src", data.filename);
+				$("#imgFile").val('');
+			},
+		error : function(data, status, e) {
+			alert("上传图片失败");
+		}
+	})
+  }
+</script>

@@ -1,0 +1,131 @@
+#{extends 'common/frontMain.html' /} 
+%{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{set title:currBackstageSet.seoTitle+'|财富工具箱' /}
+
+<!-- 内容区域 start -->
+<div class="p_bgf1_box pb30 pt30">
+  <div class="p_main clr">
+	<!-- 左边导航区域 -->
+	 <div class="p_left_navbox">
+            <h1><i class="p_cf_icon"></i><span>财富工具箱</span></h1>
+            <ul class="p_left_navul" id="wealthToolkit">
+			<!-- <li  >
+				<a  href="@{wealthToolkit(1)}"  id="w1">信用计算器</a>
+			</li> -->
+			<!--<li >
+				<a  href="@{wealthToolkit(2)}"   id="w2">还款计算器</a>
+			</li>
+		 	<li  >
+				<a  href="@{wealthToolkit(3)}"  id="w3">净值计算器</a>
+			</li> 
+			<li   >
+				<a  href="@{wealthToolkit(4)}"  id="w4">利率计算器</a>-->
+			</li>
+			<li>
+				<a  href="@{wealthToolkit(5)}"  id="w5">服务手续费</a>
+			</li>
+		<!-- 	<li>
+				<a  href="@{wealthToolkit(6)}"   id="w6">信用额度</a>
+			</li> -->
+		</ul>
+	</div>
+	
+	<!-- 右侧内容区域 -->
+	  <div class="p_right_wordbox">
+           <div class="p_zh_rtword" >
+            #{if key==5}
+           		<h4 class="p_hp_title clr"><strong>服务手续费</strong></h4>
+           	#{/if}
+           	<div class="p_zh_rtbox01 clr" id="content">
+           	
+           	</div>
+           </div>
+	</div>
+	
+	<!-- 清除浮动 -->
+	<div class="clear"></div>
+	
+
+</div>
+</div>
+<!-- 内容区域 end -->
+
+<script type="text/javascript">
+
+<!--
+	/* 信用借款器 */ 
+	function wealthToolkitCreditCalculator(){
+  		var listAction = #{jsAction @front.home.homeAction.wealthToolkitCreditCalculator() /};
+		$.get(listAction(), function(data) {
+			$("#content").html(data);
+		});
+  	}
+  	
+	/* 还款计算器 */
+	function wealthToolkitRepaymentCalculator(){
+  		var listAction = #{jsAction @front.home.homeAction.wealthToolkitRepaymentCalculator() /};
+		$.get(listAction(), function(data) {
+			$("#content").html(data);
+		});
+  	}
+  	
+	/* 净值计算器 */
+	function wealthToolkitNetValueCalculator(){
+  		var listAction = #{jsAction @front.home.homeAction.wealthToolkitNetValueCalculator() /};
+		$.get(listAction(), function(data) {
+			$("#content").html(data);
+		});
+  	}
+  	
+	/* 利率计算器 */
+	function wealthToolkitAPRCalculator(){
+  		var listAction = #{jsAction @front.home.homeAction.wealthToolkitAPRCalculator() /};
+		$.get(listAction(), function(data) {
+			$("#content").html(data);
+		});
+  	}
+  	
+	/* 服务手续费 */
+	function wealthToolkitServiceFee(){
+  		var listAction = #{jsAction @front.home.homeAction.wealthToolkitServiceFee() /};
+		$.get(listAction(), function(data) {
+			$("#content").html(data);
+		});
+  	}
+  	
+	/* 超额借款 */
+	function wealthToolkitOverLoad(){
+  		var listAction = #{jsAction @front.home.homeAction.wealthToolkitOverLoad() /};
+		$.get(listAction(), function(data) {
+			$("#content").html(data);
+		});
+  	}
+	
+	$(function(){
+		switch(${key}){ 
+			case 1: wealthToolkitCreditCalculator(); showBg(1); break; 
+			case 2: wealthToolkitRepaymentCalculator(); showBg(2); break; 
+			case 3: wealthToolkitNetValueCalculator(); showBg(3); break; 
+			case 4: wealthToolkitAPRCalculator(); showBg(4); break; 
+			case 5: wealthToolkitServiceFee(); showBg(5); break; 
+			case 6: wealthToolkitOverLoad(); showBg(6); break; 
+		} 
+		
+		$("#wealthToolkit li a").click(function(){
+			$("#wealthToolkit li").attr('class','');
+			$(this).parent().attr('class','xf_con_wyjk_leftliisshow');
+		});	
+	});
+
+	function showBg(id){
+		$("#wealthToolkit li").attr('class','');
+		$("#w"+id).attr('class','xf_con_wyjk_leftliisshow');
+	}
+//-->
+$(function(){
+	$("#w" + ${key}).addClass("click");
+});
+</script>
+<script type="text/javascript" src="@{'/public/javascripts/tab/tab_index.js'}"></script>

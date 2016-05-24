@@ -1,0 +1,185 @@
+				<!-- 借款标详情 -->
+         <div class="p_xq_xxkbox">
+            <ul class="p_xq_xxkul clr">
+                <li id="debtsdetail">转让标详情</li>
+                <li id="debtAuctionsRecord">竞拍记录</li>
+            </ul>
+        </div>
+         <div class="p_xq_tabox">
+            <div class="p_bd_tbox01" id="debtsDetails">
+                <table class="p_bd_table01">
+                    <tr>
+                        <td width="64" class="p_bd_td01">借款人资料</td>
+                        <td width="852">
+                            <table class="p_bd_table02">
+                                <tbody><tr>
+                                    <td width="84">真实姓名：</td>
+                                    <td width="188">${debt?.invest?.bid?.user?.realityName?.asterisk()}</td>
+                                    <td width="86">性别：</td>
+                                    <td width="129">${debt?.invest?.bid?.user?.sex}</td>
+                                    <td width="77">年龄：</td>
+                                    <td>${debt?.invest?.bid?.user?.age}岁</td>
+                                </tr>
+                                <tr>
+                                    <td>身份证号：</td>
+                                    <td>${debt?.invest.bid?.user?.idNumber?.asterisk()}</td>
+                                    <td>户口所在地：</td>
+                                    <td>${debt?.invest?.bid?.user?.provinceName}${debt?.invest?.bid?.user?.cityName}</td>
+                                    <td>文化程度：</td>
+                                    <td>${debt?.invest?.bid?.user?.educationName}</td>
+                                </tr>
+                                <tr>
+                                    <td>婚姻状况：</td>
+                                    <td>${debt?.invest?.bid?.user?.maritalName}</td>
+                                    <td>购房情况：</td>
+                                    <td>${debt?.invest?.bid?.user?.houseName}</td>
+                                    <td>购车情况：</td>
+                                    <td>${debt?.invest?.bid?.user?.carName}</td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                   <!-- <tr>
+                        <td class="p_bd_td01">借款详情对借款用途还款能力的详细说明</td>
+                        <td>${debt?.invest?.bid?.description}</td>
+                    </tr>
+                    <tr>
+                        <td class="p_bd_td01">必须资料审核科目</td>
+                        <td>
+                            <table class="p_bd_table03" width="850">
+                                <tbody><tr>
+                                    <th>序号</th>
+                                    <th>审核科目</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                    <th>CBO风控体系审核</th>
+                                </tr>
+                               #{list uItems}	
+									#{if _?.status == 2}
+									<tr>
+										<td align="center">
+											${_index}
+										</td>
+										<td align="center">
+											${_?.auditItem?.name}
+										</td>
+										<td align="center">
+											${_?.strStatus}
+										</td>
+										<td align="center" width="90">
+											#{if _?.isVisible}
+												<a onclick="showitemNow('${_?.mark}','${debt?.invest?.bid?.signUserId}');">查看</a>
+											#{/if}
+											#{else}
+												不可见
+											#{/else}
+										</td>
+										#{if _index == 1}
+										<td valign="top" rowspan="${uItems?.size}" class="xf_wylc_l_memhyA_zh">
+											${debt?.invest?.bid?.auditSuggest}
+										</td>
+										#{/if}
+									</tr>
+								#{/if}
+								#{/list}	
+                            </tbody></table>
+                        </td>
+                    </tr> -->
+                    <tr>
+                        
+                    </tr>
+                  <!--  <tr>
+                        <td class="p_bd_td01">投标奖励</td>
+                        <td>不设置奖励</td>
+                    </tr> -->
+                    <tr height="84">
+                        <td colspan="2">
+                            <strong class="p_xq_str01">认购状态：
+                            #{if debt?.status == 1}
+							认购中
+							#{/if}
+							#{if debt?.status == 2}
+								等待认购
+							#{/if}
+							#{if debt?.status == 3}
+								已成功
+							#{/if}
+							#{if debt?.status == -2}
+								流拍
+							#{/if}
+							#{if debt?.status == -3}
+								流拍
+							#{/if}
+							#{if debt?.status == -5}
+								流拍
+							#{/if}
+                            
+                             </strong>
+                            <strong class="p_xq_str02">本息合计：#{format money:debt.debtAmount}#{/format}元</strong>
+                            <strong class="p_xq_str03">拍卖底价：#{format money:debt.transferPrice}#{/format}元</strong>
+                            <strong class="p_xq_str04">目前拍价：<span class="xf_zqzr_jpjg">#{format money:debt.maxOfferPrice}#{/format}</span>元</strong>
+                        	#{if debt.status == 1 && new java.util.Date() < debt?.endTime}
+								<a  class="p_xq_btn" onclick="showDivDebt();">确认认购</a>
+							#{/if}
+                        </td>
+                    </tr>
+                </table>
+	       
+            </div>
+        </div>
+         <div class="p_xq_tabox none" id="debtAuctionsRecords">
+          
+    
+         </div>
+   <script>
+      
+        $(function(){
+  
+	      	$("#debtAuctionsRecord").click(function(){
+	             $("#debtAuctionsRecords").show();
+	      		 showDebtAuctionRecords(1,10);
+	      	})
+	      	
+      		$("#debtsDetail").click(function(){
+      	         $("#bidInvestRecords").hide();
+      	    })
+	     })
+
+ 	  function showDebtAuctionRecords(pageNum,pageSize){
+			var debtId = ${debt?.id};
+			$.ajax({
+				url:"@{viewDebtAllAuctionRecords()}",
+				type:"POST",
+				data: {"pageNum" : pageNum, "pageSize" : pageSize , "debtId":debtId},
+		    	success:function(data){$("#debtAuctionsRecords").html(data);},
+		    	error:function(){alert("对不起，出现错误!");}
+			})
+	  }
+	
+		
+		
+	function showitemNow(mark,signUserId){
+	  /** 检查用户是否激活, fronMain.html 中的拦截器*/
+	  var result = frontJSIntercepter();
+	  
+	  if(!result){
+      	 showitem(mark,signUserId); 
+	  }		  		
+	}
+	
+	/* 查看弹出层 */
+	function showitem(mark,signUserId){
+		var listAction = #{jsAction @front.invest.InvestAction.showitem(':mark',':signUserId') /};
+		$.post(listAction({mark:mark,signUserId:signUserId}), function(data) {
+			
+			//拦截器，拦截判断。frontMain.html
+			if(checkIntercepterResult(data)){
+				return;
+			}
+			
+			showDiv($("#itemImage").html(data));
+		});		
+	}
+</script>    
+			
+  

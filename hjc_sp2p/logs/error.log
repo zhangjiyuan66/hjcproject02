@@ -1,0 +1,38 @@
+2016-05-20 12:47:18,549 ERROR ~ 
+
+@7066blb7h
+Internal Server Error (500) for request GET /front/account/callbackRbAy
+
+Execution exception (In /app/controllers/front/account/FundsManage.java around line 979)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 610022
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.front.account.FundsManage.callbackRbAy(FundsManage.java:979)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+2016-05-20 12:49:01,627 ERROR ~ 
+
+@7066blb7i
+Internal Server Error (500) for request GET /front/account/callbackRbAy
+
+Execution exception (In /app/controllers/front/account/FundsManage.java around line 979)
+NullPointerException occured : null
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 713100
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.front.account.FundsManage.callbackRbAy(FundsManage.java:979)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more

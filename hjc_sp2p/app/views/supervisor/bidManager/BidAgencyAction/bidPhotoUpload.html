@@ -1,0 +1,128 @@
+<div class="xf_wyjkfb_4_windowInner xf_memjkzlshrz_window">
+	<div class="xf_jkzshrz_4_windowClose" onclick="closessubmititem();"></div>
+	<div class="xf_wyjkfb_4_windowColName">
+		上传图片
+	</div>
+	<div class="xf_wyjkfb_4_windowCot">
+		<div class="xf_wyjkfb_4_windowCol">
+			<div class="xf_memjkzlshrz_title">
+				上传图片：
+			</div>
+			<div class="xf_memjkzlshrz_4_windowText">
+			    <div class="xf_accout_cont_imgbj" style="position: relative;padding:0 0 0 0">
+					<input type='button' style="margin-left:0px;" class='upload_btn' value='上传' /> 
+					<input type="file" style="left:13px; top:2px;" class="upload_file" id="file" name="file" onchange="uploadFile();" />
+				</div>
+				<input type="hidden" id="fileType" name="fileType"/>
+				<div class="xf_memjkzlshrz_table">
+					<table class="xf_membill_acc_viewcpms2" width="450" id="itemList">
+						<tr id="itemTr-1">
+							<th>序号</th>
+							<th>资料类别</th>
+							<th>上传时间</th>
+							<th>大小</th>
+							<th>状态</th>
+							<th>预览</th>
+							<!-- <th>操作</th> -->
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="xf_wyjkfb_4_windowCol">
+			<div class="xf_memjkzlshrz_4_windowText" style="margin-left:86px">
+				<a class="xf_con_inputfbjk" id="xf_con_inputfbjk" onclick="createUserAuditItemSubmit();">确定</a>
+				<a class="xf_con_inputfbqux" id="xf_con_inputfbqux" onclick="closessubmititem();">取消</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<script>
+/**
+ * 上传文件 
+ */
+ var items = new Array();
+ var itemIndex = 0;
+ function uploadFile() {
+		var a = $("#file").val();
+		if($("#file").val() == "") {
+			alert("请选择上传的文件");
+			return;
+		}
+	   		
+		var d = new Date();
+		var date = d.getFullYear() + "-" + appendZero(d.getMonth() + 1) + "-" + appendZero(d.getDate()); 
+		
+		var type = 1;
+		$.ajaxFileUpload({
+			url : "@{FileUpload.uploadFile()}",
+			secureuri : false,
+			fileElementId : 'file',
+			dataType : 'text',
+			data: { 
+				"type": type
+			},
+			success : function(data) {
+				data = $.evalJSON(data);
+				if (data.code < 0) {
+					alert(data.msg);
+	   	
+					return;
+				}
+
+				var td = type==1 ? '<img src="'+data.fileName+'" width="35" height="35" />' : '---';
+				var html = '<tr id="itemTr'+itemIndex+'">'+
+				'<td>'+(itemIndex+1)+'</td>'+
+				'<td>'+data.fileType+'</td>'+
+				'<td>'+date+'</td>'+
+				'<td>'+data.size+'k'+'</td>'+
+				'<td>成功</td>'+
+				'<td>'+td+'</td>'+
+				'</tr>';
+	   				   	
+				$("#itemTr"+(itemIndex-1)).after(html);
+				items[itemIndex] = data.fileName;
+				$("#photos").val(items);
+				itemIndex++;
+				
+			},
+			error : function(data, status, e) {
+				$("#itemTr"+(itemIndex-1)).after(html);
+
+				//$("#showimg" + itemIndex).attr("src", path);
+				$("#size"+itemIndex).html('---');
+				$("#type"+itemIndex).html('---');
+	   				
+				$("#status"+itemIndex).html('失败');
+				itemIndex++;
+			}
+		});
+	}
+ 
+	function appendZero(s){return ("00"+ s).substr((s+"").length);} 
+	
+	function closessubmititem(){
+		$("#photoList").hide(300);
+		$("#photos").val('');
+		$("#photos1").val('');
+		//$("#hide").hide();
+	}
+	
+	
+	function createUserAuditItemSubmit(){
+		if($("#photos").val()==""){
+			alert("请上传图片！");
+			return;
+		}else{
+			$("#photos1").val("111");
+			alert("图片上传成功！");
+		}
+		$("#photoList").hide(300);
+		
+	}
+	
+	
+</script>  

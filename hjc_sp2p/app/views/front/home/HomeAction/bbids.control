@@ -1,0 +1,160 @@
+<!--担保项目-->
+        <div class="l_dbxm">
+            <h2 class="l_dbxm_titlearea clr">
+                <div class="l_dbxm_title">
+                	<i></i>
+                    <span class="deepblue_font">体验标</span><span class="xm">项目</span>
+                </div>
+                <a href="/front/invest/investRegular" target="" title="" class=" l_more_projects hover-opacity">更多<span class="font_songti">&gt;&gt;</span></a>
+            </h2>
+           <div class="tyb">
+           <div class="tyb_l">
+              <div class="tyb_l_p">
+                 <p>新手稳赚</p>
+                 <p>收益惊喜</p>
+              </div>
+              <a class="tyb_contLA" href="/front/invest/investRegular"> 更多体验项目 ></a>
+           </div>
+           <ul class="l_dbxm_detail tyb_r clr" id="af">
+                   	
+             #{list items:agencyBbids, as:'agencyBids'}
+            
+					*{***体验标***}*
+					 <li>
+                   <div class="l_border_rect">
+                    <div class="l_dbxm_detail_info clr">
+	                      <div class="l_dbxm_detail_titlearea clr">
+	                                <img src="/public/images/images2/ty1.png" alt="" title="" width="23" height="21">
+	                                <a href="@{front.invest.InvestAction.investBbin(agencyBids?.id)}" title="" target="" class="l_dbxm_detail_title">${agencyBids?.title}</a>
+	                      </div>
+	                      <div class="l_dbxm_detail_content">
+                            <div class="l_dbxm_details">
+                                
+                                <div class="mb20">
+                                 
+                                    <span>
+                                  		     还款方式：   #{if agencyBids?.repayment_type_id ==3 }
+			                                                                                                             按<span style="color:#48bee4;font-size:16px">天</span>返息，到期收本
+			                               #{/if}
+                                    </span>
+                                </div>
+                                <div class="mb20">
+                                    <span class="mr7">项目规模：<strong class="l_dbxm_sum ">${(agencyBids?.amount/10000)?.format('###,##0.00')}</strong>万</span>
+                                     &nbsp; &nbsp; 
+                                    
+                                </div>
+                                
+                                 <div class="clr">
+                                	<div class="fl" style="float:none;">投资进度：<span style="color:#48bee4; font-size:16px;">${agencyBids?.loan_schedule}%</span></div>
+                                    <span class="p_xq_qaprogres"><span style="width:${agencyBids?.loan_schedule}%;"></span></span>
+                                    
+                                </div>
+                                
+                                <!-- #{if agencyBids?.status == 4 || agencyBids?.status == 5}
+                                <div>
+                                	<span>投资人数：</span><span class="l_tzrs_num">${agencyBids?.invest_num}</span><span>人投资此项目</span>
+                                </div>
+                                #{/if}  
+                                #{else}
+                                 #{/else}-->
+                            </div>
+                        </div>
+                    </div>
+                      <div class="l_year_lincome">
+                      	<div class="tyb_contR1_c1 clr">
+                            <div class="pb4 fl">
+                                <div class="l_year_income_percent_grey l_year_income_percent_orange">${agencyBids?.apr}%</div>
+                            	<p class="">年化收益</p>
+                            </div>
+                            <i></i>
+                        </div>
+                            <div class="fl abc">
+                            	<strong class="l_dbxm_sum ">
+                                       ${agencyBids?.period}
+                                    </strong>
+                                    <span class="l_dbxm_sum">
+                                      #{if agencyBids?.period_unit ==-1}
+										年
+										#{/if}
+										#{if agencyBids?.period_unit ==0}
+										个月
+										#{/if}
+										#{if agencyBids?.period_unit ==1}
+										天
+										#{/if}
+                                     </span>
+                                     <p id="p">项目期限</p>
+                            </div>
+                        </div>
+                        
+                    <div class="l_year_income clr">
+                        #{if  agencyBids?.status > 0 && agencyBids?.status < 3 && agencyBids?.amount > agencyBids?.has_invested_amount}
+							 <input type="button" class="l_ljtz hover-opacity" value="立即投标"  onclick="javascript:window.open('@{front.invest.InvestAction.investBbin(agencyBids?.id)}', '_self')"/>
+						#{/if}
+					    #{else}
+                           <a onclick="javascript:window.open('@{front.invest.InvestAction.investBbin(agencyBids?.id)}', '_self')" target="" title="" class="l_know_details hover-opacity" id="l_know_details">了解详情</a>
+                        #{/else}                      
+                        </div>
+                    </div>
+                </li>
+           	
+           		#{/list}
+           		<p class="xian"></p>
+           		</ul>
+           	</div>
+        </div>
+        <!--担保项目end-->	
+			
+		<script>
+			$(function(){
+			
+				#{list items:bidList , as:'bid'}
+				
+				 $('#loanSchedule'+${bid_index}).css({"width":${bid?.loan_schedule}})
+				 
+				#{/list}
+			
+		   })	
+		   
+		   // 借款中的标切换
+			$(".xf_c_idx_4_items").eq(0).show();
+			$("#xf_wyjkview_xxkti").find(".xf_c_idx_4_title").click(function(){
+				var xxkli = $(this).index();
+				$(this).addClass("xf_c_idx_4_title_ishow").siblings().removeClass("xf_c_idx_4_title_ishow");
+				$(".xf_c_idx_4_items").eq(xxkli).show().siblings(".xf_c_idx_4_items").hide();
+
+			});
+			//敬请期待，新标在来的路上
+			var aF=document.getElementById('af');
+			var aBlank=document.querySelectorAll('#af li');
+			if(aBlank.length==1){
+				for(var i=0;i<3;i++){
+				var oLi=document.createElement('li');
+				oLi.innerHTML='<img src="public/images/blank.jpg"/>';
+				oLi.style.width=204+"px";
+				oLi.style.height=380+"px";
+				oLi.style.background="url(public/images/sx.png) right center no-repeat";
+				oLi.style.cssFloat="left";
+				aF.appendChild(oLi);
+				}
+			}else if(aBlank.length==2){
+				for(var i=0;i<2;i++){
+					var oLi=document.createElement('li');
+					oLi.innerHTML='<img src="public/images/blank.jpg"/>';
+					oLi.style.width=204+"px";
+					oLi.style.height=380+"px";
+					oLi.style.background="url(public/images/sx.png) right center no-repeat";
+					oLi.style.cssFloat="left";
+					aF.appendChild(oLi);
+				}
+			}else if(aBlank.length==3){
+				var oLi=document.createElement('li');
+				oLi.innerHTML='<img src="public/images/blank.jpg"/>';
+				oLi.style.width=204+"px";
+				oLi.style.height=380+"px";
+				oLi.style.background="url(public/images/sx.png) right center no-repeat";
+				oLi.style.cssFloat="left";
+				aF.appendChild(oLi);
+			}
+			
+		</script>

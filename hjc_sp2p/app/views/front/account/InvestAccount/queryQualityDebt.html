@@ -1,0 +1,99 @@
+ <ul class="p_zh_listul">
+		<!--foreach start：-->
+		#{list items:qualityDebts, as:'debt'}
+		
+		     <li class="clr">
+                      <div class="p_zh_lisleft">
+                          <table width="100%">
+                              <tbody><tr height="36">
+                                  <td colspan="2">
+                                      <img src="${debt?.small_image_filename}" alt="" width="23" height="22" class="fl">
+                                      <a href="@{front.debt.DebtAction.debtDetails(debt?.id)}" target="_blank" class="p_lc_listt">${debt?.title}</a>
+                                  </td>
+                              </tr>
+                              <tr height="37">
+                                  <td width="222">项目规模：<span class="p_lc_import co333">￥${debt?.bid_amount?.format('###,##0.00')}</span>元</td>
+                                  <td width="200">年利率：<span class="p_lc_import">${debt?.apr}%</span></td>
+                              </tr>
+                              <tr height="37">
+                                  <td>待收本金：￥#{format money:debt?.debt_amount}#{/format}元</td>
+                                   <td>
+                                  	<input id="hiddenTime${debt_index}" type="hidden" value="${debt?.end_time?.format('yyyy/MM/dd HH:mm:ss')}"></input>
+                                                                    剩余时间：<strong class="p_zq_str01" id="day${debt_index}"></strong>天<strong class="p_zq_str01" id="hours${debt_index}"></strong>小时<strong class="p_zq_str01" id="minutes${debt_index}"></strong>分<strong class="p_zq_str01" id="seconds${debt_index}"></strong>秒 
+                                  </td>
+                                  <!-- <td>信用等级：<img src="${debt?.creditLevel?.imageFilename}" alt="" height="20" class="p_vtmid"></td> -->
+                              </tr>
+                              <tr height="37">
+                                 
+                                  <td>
+                                      <span class="">转让说明：${debt?.transfer_reason}</span> 
+                                  </td>
+                              </tr>
+                          </tbody></table>
+                      </div>
+                      <div class="p_zh_lisright">
+                          <p>拍卖底价：#{format money:debt?.transfer_price}#{/format}元</p>
+                          <p>目前拍价：#{if debt?.max_price != null}
+												#{format money:debt?.max_price}#{/format}
+												#{/if}
+												#{else}
+												0
+												#{/else}
+											元</p>
+						 <a href="@{front.debt.debtAction.debtDetails(debt.id)}" target="_self" class="p_zh_btn01">我要认购</a>
+                      </div>
+                  </li>
+				#{/list}
+			</ul>
+		</div>
+<script type="text/javascript">
+showTime();
+function showTime(){
+	var listsize = ${qualityBids.size};
+
+	 for(var i = 1; i <= listsize; i++){
+		var time = $("#hiddenTime"+i).val();
+		
+		date = new Date(time);
+		var tt = date.getTime();
+		var now = new Date().getTime();
+		var cha = tt-now;
+		var SysSecond=parseInt(cha);
+	  
+	    if (SysSecond > 0) { 
+  	        int_day=Math.floor(SysSecond/86400000);
+           SysSecond-=int_day*86400000;
+           int_hour=Math.floor(SysSecond/3600000);
+           SysSecond-=int_hour*3600000;
+           int_minute=Math.floor(SysSecond/60000);
+           SysSecond-=int_minute*60000;
+           int_second=Math.floor(SysSecond/1000);
+           
+           if(int_hour<10){
+            	 int_hour="0"+int_hour;
+			 }
+			 
+           if(int_minute<10){
+          		int_minute="0"+int_minute;
+		     }
+		     
+      		if (int_second<10){
+           	int_second="0"+int_second;
+           }
+            
+ 			$("#day"+i).html(int_day);
+ 			$("#hours"+i).html(int_hour);
+ 			$("#minutes"+i).html(int_minute);
+ 			$("#seconds"+i).html(int_second);
+ 		}else{
+	        $("#day"+i).html("00");
+		    $("#hour"+i).html("00");
+		    $("#minutes"+i).html("00");
+		    $("#seconds"+i).html("00");
+       }
+	   }
+	    setTimeout('showTime()',1000);
+	 }
+</script>
+
+

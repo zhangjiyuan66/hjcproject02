@@ -1,0 +1,52 @@
+<div class="p_right_wordbox">
+        <div class="p_zh_rtword">
+        <h4 class="p_hp_title clr"><strong>财富工具箱</strong></h4>
+					<ul class="xf_wylc_cfgjContent xf_memsuba_cfgjContent">
+						<li>
+							<a href="@{front.home.homeAction.wealthToolkit(1)}" class="xf_c_idx_9_cfgjxItemsWrap" target="_blank">
+								<div class="xf_c_idx_9_cfgjxXyjs">	
+								</div>
+								<div class="xf_c_idx_9_cfgjxTitleWrap">
+									信用计算
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="@{front.home.homeAction.wealthToolkit(2)}" class="xf_c_idx_9_cfgjxItemsWrap" target="_blank">
+								<div class="xf_c_idx_9_cfgjxImglvjs">	
+								</div>
+								<div class="xf_c_idx_9_cfgjxTitlelvjs">
+									还款计算器
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="@{front.home.homeAction.wealthToolkit(3)}" class="xf_c_idx_9_cfgjxItemsWrap" target="_blank">
+								<div class="xf_c_idx_9_cfgjxImgWrap">	
+								</div>
+								<div class="xf_c_idx_9_cfgjxTitleWrap">
+									净值计算器
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="@{front.home.homeAction.wealthToolkit(4)}" class="xf_c_idx_9_cfgjxItemsWrap" target="_blank">
+								<div class="xf_c_idx_9_cfgjxImgjzjsq">	
+								</div>
+								<div class="xf_c_idx_9_cfgjxTitlejzjsq">
+									利率计算器
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="@{front.home.homeAction.wealthToolkit(5)}" class="xf_c_idx_9_cfgjxItemsWrap" target="_blank">
+								<div class="xf_c_idx_9_cfgjxSfrz">	
+								</div>
+								<div class="xf_c_idx_9_cfgjxTitleWrap">
+									服务手续费
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>

@@ -1,0 +1,37 @@
+ <h6 class="p_sy_title mt20 mb10"><span>借款产品</span></h6>
+  <ul class="p_jk_boxul clr">
+  #{list products}
+    <li>
+		  <dl class="p_jk_dl01 clr">
+		      <dt>
+		         <img src="${_?.nameImageFilename}"  style="width:153px;height:46px"  class="p_jk_imgc" />
+		      </dt>
+		       <dd>
+		        <p class="p_jk_p01"><strong>适合人群：</strong><span>${_?.fitCrowd}</span></p>
+		        <p class="p_jk_p01"><strong>申请条件：</strong></p>
+		        <p class="p_jk_p02">${_?.applicantCondition} </p>
+		       </dd>
+		  </dl>
+           <div class="p_jk_botbox clr">
+                <a href="@{applyNow(_?.id, 0, 1)}"  title="" class="p_jk_btn01 p_op">立即申请</a>
+                <a href="@{front.bid.bidAction.detail(_?.id)}" title="" class="p_jk_more">查看产品详细资料>></a>
+            </div>
+     </li>
+#{/list}
+%{int i=1;}%
+      <li>
+            <dl class="p_jk_dl02 clr">
+                <dt>借款须知</dt>
+                <dd>
+                 #{list pageBean?.page}
+	                <p> 
+	                   <a href="@{front.help.HelpCenterAction.detail(_?.id,'')}"  target="_blank">${i}、${_?.title}</a>
+	                </p>
+	                %{i++;}%
+                 #{/list}  
+                </dd>
+            </dl>
+       </li>
+</ul>
+
+

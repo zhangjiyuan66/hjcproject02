@@ -1,0 +1,21 @@
+<!--PART 2-->
+    <div class="l_circles">
+    	<div class="p_main">
+        	<div class="l_xs_liucbox clr" style="margin-left:2px">
+        	
+    			#{list items:adsEnsure,as:'ensure'}
+				#{if ensure?.isLinkEnabled}
+					<a href="${ensure?.url}" #{if ensure?.target == 2} target="_blank" #{/if} style="float: none;">
+						#{img class:"lazy", data_original:"${ensure?.imageFileName}", src:"/public/images/loading.gif",alt:"",width:"245",height:"115"}#{/img}
+					</a>
+				#{/if}
+				#{else}
+					#{img class:"lazy", data_original:"${ensure?.imageFileName}", src:"/public/images/loading.gif",alt:"",width:"245",height:"115"}#{/img}
+				#{/else}
+			#{/list}
+               
+            </div>
+        </div>
+    </div>
+    <!--PART 2 END-->
+

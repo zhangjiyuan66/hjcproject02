@@ -1,0 +1,444 @@
+ #{extends 'common/frontMain.html' /}
+ %{
+	business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}% 
+ #{set title:currBackstageSet.seoTitle + '--注册' /}
+ 
+<div class="p_zc_bggray">
+    <div class="y_zcmain1">
+        <div class="y_zcul clr">
+            <ul>
+                <li ><a href="@{front.account.loginAndRegisterAction.register()}">邮箱注册</a></li>
+                <li><a href="@{front.account.loginAndRegisterAction.registerMobile()}">手机注册</a></li>
+            </ul>
+            <span>
+                已有账户？
+                <a href="@{front.account.loginAndRegisterAction.login()}" class="p_un2 p_cozhuse">登录</a>
+            </span>
+        </div>
+         <!-- tab1 -->
+        <div class="y_zctab">
+        #{form @front.account.loginAndRegisterAction.registering(), id:'submit'}
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td align="right" width="138">
+                            <span class="y_zcred">*</span>
+                                              邮箱：
+                        </td>
+                        <td width="862">
+                            <div class="y_dldiv y_zcdiv">
+                                <input class="p_pass error" type="text" id="email" name="email" value="${flash?.email}" />
+                                <label>请输入邮箱</label>
+                                <div class="p_errortip none" id="email_error">
+                                    <i class="p_erroricon"></i>
+                                    <span>
+                                     <img src="/public/images/p_error.png" alt="" />
+                                     <span id="s_email">
+                                     </span><!--这里放错误提示信息字段--></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right">
+                        <span class="y_zcred">*</span>
+                                            密码：
+                        </td>
+                        <td>
+                            <div class="y_dldiv y_zcdiv">
+                                <input type="password" id="password" name="password" value="${flash?.password}" placeholder="请设置密码" />
+                                <!-- <label>请设置密码</label> -->
+                                <div class="p_errortip none" id="password_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" /> 
+                                     <span  id="s_password">
+                                     </span><!--这里放错误提示信息字段--></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">推荐人：</td>
+                        <td>
+                            ${flash.recommendUserName}
+                            <div class="y_dldiv y_zcdiv">
+                            #{if flash.recommendUserName != null && flash.recommendUserName != ''}
+						       <input class="p_pass" type="text" id="recommended"  name="recommended" value="${flash?.recommendUserName}" readonly="readonly"/>
+						    #{/if}
+					    	#{else}
+						      <input class="p_pass" type="text" id="recommendName"  name="recommendName"/>
+						   #{/else}
+                                <label>推荐人的用户名/手机号</label>
+                                <div class="p_errortip none" id="recommended_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" />
+                                    <span  id="s_recommended">
+                                     </span>
+                                    <!--这里放错误提示信息字段--></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                     <td align="right">
+                            <span class="y_zcred">*</span>
+                            验证码：
+                        </td>
+                        <td>
+                            <div class="y_dldiv y_zcdiv y_zcyzm">
+                                <input class="p_pass" type="text" type="text" id="code" name="code"  #{if !constants.Constants.CHECK_CODE}value="1234" readonly="readonly"#{/if} />
+                                <!-- <label>请输入验证码</label> -->
+                                <input type="hidden" name="randomID" id = "randomID" />
+                                <div class="p_errortip none" id="code_error">
+                                    <i class="p_erroricon"></i>
+                                    <span><img src="/public/images/p_error.png" alt="" /> 
+                                    <span  id="s_code">
+                                    </span><!--这里放错误提示信息字段--></span>
+                                </div>
+                            </div>
+                            <a href="#" class="y_yzimg">
+                                <img src="" onclick="change()"  id="img" title="" width="100%" height="36" alt=""/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <input type="checkbox" name = "check" checked="checked" id = "check"/>
+                            <span>
+                                我已经阅读并同意
+                                <a onclick="showProtocol()" class="y_zctaba">《${currBackstageSet?.platformName}用户注册协议》</a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a onclick="register()" id="register"  class="y_dlbto y_zcbto p_op">注册</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            #{/form}
+       </div>
+      
+        </div>
+  </div>
+ 
+#{include "front/account/LoginAndRegisterAction/register.control"/}
+
+<script type="text/javascript">
+	if('${flash.error}' !='') {
+	    alert('${flash?.error}');
+	}
+	$(function(){
+	
+	    var setCode = #{jsAction @front.account.loginAndRegisterAction.setCode()/}
+			$.post(setCode({}),function(data){
+				var arr=eval(data);
+				var img = arr.img;
+				$("#img").attr("src","@{front.account.loginAndRegisterAction.getImg()}?id="+img);	
+				$("#randomID").val(img);
+
+		});
+		    $(".xf_wyjkfb_4_windowClose").click(function(){
+			$(this).parents(".xf_zqzr_znx_window").hide(300);
+		}); 
+		
+		
+	});
+	
+	function showProtocol() {
+	
+		showDiv($("#xf_mem_zc_xytc"));
+	}
+	
+	function change(){
+		var setCode = #{jsAction @front.account.loginAndRegisterAction.setCode()/}
+		$.post(setCode({}),function(data){
+		var arr=eval(data);
+		var img = arr.img;
+		$("#randomID").val(img);
+		$("#img").attr("src","@{front.account.loginAndRegisterAction.getImg()}?id="+img)
+		});
+	}
+</script>
+
+<script type="text/javascript">
+       
+	   var bRecommendedName = 0;
+	   var bRecommendedNameMsg = "";
+	   var bName = 0;
+       var bEmail = 0;
+		
+       $(document).ready(function(){
+		   $("form :input").blur(function(){ 
+		   
+			   if($(this).attr("id")=="email"){
+			       var email = this.value;
+			        var result;
+			        
+			        if(this.value == ""){
+			        	$("#email_error").removeClass("p_errortip none");
+					    $("#email_error").addClass("p_errortip");
+					    $("#s_email").html("请填写邮箱地址");
+			        }else if(!(this.value).isEmail()){
+
+			        	$("#email_error").removeClass("p_errortip none");
+					    $("#email_error").addClass("p_errortip");
+				        $("#s_email").html("邮箱格式不正确");
+			        }else{
+			            var hasEmailExist = #{jsAction @front.account.loginAndRegisterAction.hasEmailExist(':email')/}
+				        $.post(hasEmailExist({email:email}),function(data){
+						    var arr=eval(data);
+						
+						    if(arr.error.code < 0){
+						        bEmail = -1;
+						        $("#email_error").removeClass("p_errortip none");
+							    $("#email_error").addClass("p_errortip");
+				                $("#s_email").html(arr.error.msg);
+						    }else{
+						    	bEmail = 0;
+						    	 $("#email_error").addClass("p_errortip none");
+						    /* 	$("#email_error").removeClass("p_errortip none");
+							    $("#email_error").addClass("p_errortip");
+				                $("#s_email").html("&nbsp;"); */
+						    }
+					    });
+			       }
+			          
+			    }
+		
+		    if($(this).attr("id") == "password"){
+			   
+			     if(this.value == ""){
+			          $("#password_error").removeClass("p_errortip none");
+					  $("#password_error").addClass("p_errortip");
+			          $("#s_password").html("请设置密码");  
+			     }else if(this.value.length < 6){
+			    	  $("#password_error").removeClass("p_errortip none");
+					  $("#password_error").addClass("p_errortip");
+			          $("#s_password").html("密码长度过短"); 
+			     }else if(this.value.length >20){
+			    	  $("#password_error").removeClass("p_errortip none");
+					  $("#password_error").addClass("p_errortip");
+			          $("#s_password").html("密码长度过长"); 
+			     }else if(!/^([^\s'‘’]{6,20})$/.test(this.value)){
+			    	  $("#password_error").removeClass("p_errortip none");
+					  $("#password_error").addClass("p_errortip");
+			     	  $("#s_password").html("密码含有敏感字符");
+			     }
+			     else{
+			    	 $("#password_error").addClass("p_errortip none");
+			     }
+			   }
+		   
+		    
+		    /*  if($(this).attr("id")=="recommendName"){
+		       var name = this.value;
+		       if(name == null || name.trim() == '' ){
+		    	   $("#recommended_error").addClass("p_errortip none");
+		    	   return;
+		       }
+	            var hasNameExist = #{jsAction @front.account.loginAndRegisterAction.checkRecommendName(':name')/}
+				  $.post(hasNameExist({name:encodeURI(name)}),function(data){
+
+				  if(data.code == -2){
+				       bRecommendedName = 0;
+				       $("#recommended_error").addClass("p_errortip none");
+				  }else if(data.code == 0){
+					  bRecommendedName = -1;
+				      bRecommendedNameMsg = "该推荐人不存在";
+				      $("#recommended_error").removeClass("p_errortip none");
+					  $("#recommended_error").addClass("p_errortip");
+			          $("#s_recommended").html(bRecommendedNameMsg);
+				  }else if(){
+			          bRecommendedName = -2;
+			          bRecommendedNameMsg = data.msg;
+			          $("#recommended_error").removeClass("p_errortip none");
+					  $("#recommended_error").addClass("p_errortip");
+		              $("#s_recommended").html(bRecommendedNameMsg);
+				    }
+		          });
+		    } */
+		    if($(this).attr("id") == "code"){
+				   
+			     if(this.value == ""){
+			          $("#code_error").removeClass("p_errortip none");
+					  $("#code_error").addClass("p_errortip");
+			          $("#s_code").html("请填写验证码");  
+	          
+			     }else{
+			    	  $("#code_error").addClass("p_errortip none");
+			     }
+
+			        /* var verifyMobile = #{jsAction @verifyEmailForReg(':code',':randomID')/}
+				  	$.post(verifyMobile({code:$("#code").val().trim(),randomID:$("#randomID").val().trim()}),function(data){
+					    if(data.code < 0){
+					    	$("#code_error").removeClass("p_errortip none");
+							$("#code_error").addClass("p_errortip");
+					    	$("#s_code").html(data.msg);
+					    	change();
+					    }else{
+					    	$("#s_code").addClass("p_errortip none");
+					    	
+						}
+					},'json'); */
+			   
+			   }
+		  
+	   });	 
+	 });
+       function sendCode(){
+    		var mobile = $("#mobile").val().trim();
+    		var code = '';
+    		var randomId = '';
+    		
+    		if(mobile == ""){
+    	   	 $("#s_mobile").removeClass("xf_register_intext");
+    	        $("#s_mobile").removeClass("xf_register_intext3");
+    			 $("#s_mobile").addClass("xf_register_intext1");
+    	        $("#s_mobile").html("请输入手机号码");
+    	     	return;
+    	    }else if(!(mobile).isMobileNum()){
+    	   	 $("#s_mobile").removeClass("xf_register_intext");
+    	        $("#s_mobile").removeClass("xf_register_intext3");
+    			 $("#s_mobile").addClass("xf_register_intext1");
+    	        $("#s_mobile").html("手机号格式有误");
+    	     	return;
+    	    }
+    		 
+    		
+    		code = $("#code").val().trim();
+    		randomID = $("#randomID").val().trim();
+    		
+    		if(code == '') {
+    	 	   	$("#s_code").removeClass("xf_register_intext");
+    		       $("#s_code").removeClass("xf_register_intext3");
+    			   $("#s_code").addClass("xf_register_intext1");
+    		       $("#s_code").html("请输入验证码");
+    	 		  return;
+    	    }
+    		
+    	    var verifyMobile = #{jsAction @verifyMobileForReg(':mobile',':code',':randomID')/}
+    		$.post(verifyMobile({mobile:mobile,code:code,randomID:randomID}),function(data){
+    		    if(data.code < 0){
+    			    $("#s_code").removeClass("xf_register_intext3");
+    				$("#s_code").addClass("xf_register_intext1");
+    		    	$("#s_code").html(data.msg);
+    		    	change();
+    		    }else{
+    		    	$("#s_code").removeClass("xf_register_intext1");
+    		    	$("#s_code").html("");
+    				countDown();
+    				$("#sendSmsCode").attr("onclick", "void(0);");
+    				$("#sendSmsCode").attr("style", "cursor: default");
+    			}
+    		},'json');
+    	}	
+       
+       function keyLogin(ev){  
+      	   if (ev.keyCode)                         
+	      	   //按Enter键的键值为13  
+	      	   if(ev.keyCode==13){
+	      		 register();
+      	   }else{
+      		   if(ev.which==13){
+      			 register();
+      		   }
+      	   }
+      	 
+        }   
+     function register(){
+    	 
+    	 var email = $("#email").val();
+		 
+         if(email == ""){
+        	$("#email_error").removeClass("p_errortip none");
+			$("#email_error").addClass("p_errortip");
+  	        $("#s_email").html("请输入邮箱地址!"); 
+          	return;
+         }else if(!(email).isEmail()){
+        	$("#email_error").removeClass("p_errortip none");
+ 			$("#email_error").addClass("p_errortip");
+  	        $("#s_email").html("请填写正确的邮箱地址!"); 
+          	return;
+         }else if(bEmail < 0){
+        	$("#email_error").removeClass("p_errortip none");
+ 			$("#email_error").addClass("p_errortip");
+  	        $("#s_email").html("对不起，该邮箱已存在!"); 
+              return;
+         }else{
+        	 $("#email_error").addClass("p_errortip none");
+         }
+    	 
+     	
+       var password = $("#password").val();
+		   
+      if(password == ""){
+    	$("#password_error").removeClass("p_errortip none");
+	    $("#password_error").addClass("p_errortip");
+	    $("#s_password").html("请设置您的密码!");
+          return; 
+      }else if(password.length < 6){
+    	$("#password_error").removeClass("p_errortip none");
+  	    $("#password_error").addClass("p_errortip");
+  	    $("#s_password").html("密码长度为6-20个字符!");
+         return;
+      }else if(password.length >20){
+    	    $("#password_error").removeClass("p_errortip none");
+  	        $("#password_error").addClass("p_errortip");
+    	    $("#s_password").html("密码长度为6-20个字符!");
+          return;
+      }else if(!/^([^\s'‘’]{6,20})$/.test(password)){
+    	 $("#password_error").removeClass("p_errortip none");
+  	     $("#password_error").addClass("p_errortip");
+  	     $("#s_password").html("密码由6-20位字符组成（不含'）!");
+     	  return;
+      }else{
+    	  $("#password_error").addClass("p_errortip none");
+
+      }
+      
+     /*  var recommendName = $("#recommendName").val();
+     
+      if(recommendName != null && recommendName.trim() !="" && bRecommendedName < 0){
+	    	$("#s_recommended").removeClass("xf_register_intext");
+	        $("#s_recommended").removeClass("xf_register_intext3");
+			$("#s_recommended").addClass("xf_register_intext1");
+	        $("#s_recommended").html(bRecommendedNameMsg); 
+		      return;
+	  } */
+      if(!$("input[type='checkbox']").is(':checked')){
+   		 alert("您没有阅读用户协议");
+   		 return false;
+   	  }
+      if($("#code").val() == "") {
+    	  $("#code_error").removeClass("p_errortip none");
+    	  $("#code_error").addClass("p_errortip");
+    	  $("#s_code").html("请输入验证码!");
+   		  return;
+      }
+
+        var verifyMobile = #{jsAction @verifyEmailForReg(':code',':randomID')/}
+	  	$.post(verifyMobile({code:$("#code").val().trim(),randomID:$("#randomID").val()}),function(data){
+		    if(data.code < 0){
+		    	$("#code_error").removeClass("p_errortip none");
+		    	$("#code_error").addClass("p_errortip");
+		    	$("#s_code").html(data.msg);
+		    	change();
+		    }else{
+
+		    	$("#code_error").addClass("p_errortip none");
+			    $("#submit").submit();
+			}
+		},'json');
+	
+   }
+   
+   function focusError(){
+	$(".xf_register_intext1").first().parent().find('input').first().focus();
+	}
+   
+</script>

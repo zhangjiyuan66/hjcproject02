@@ -1,0 +1,76 @@
+%{
+	business.BackstageSet currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+}%
+#{extends 'common/frontMain.html' /}
+#{set title:'我的账户 | 我的邀请码 | 我邀请的会员'/}
+
+<div class="p_bgf1_box pb30 pt30">
+  <div class="p_main clr">
+	<!-- 左边导航区域 -->
+	#{include "front/account/AccountHome/homeLeft.control"/}
+	<!-- 右侧内容区域 -->
+	<div class="p_right_wordbox">
+      <div class="p_zh_rtword">
+       <h4 class="p_hp_title clr"><strong>财富圈邀请流程</strong></h4>
+    	<div class="invitation_process">
+            <div class="process_show">
+                <img src="@{'/public/images/circle_lclc.png'}" alt="邀请流程" />
+            </div>
+               	#{include "front/account/WealthCircle/memberInfo.control"/}
+             </div>
+          
+        </div>
+        </div>    
+   
+      
+        #{include "front/account/WealthCircle/myInvitationUser.control"/}  
+
+	<div class="clear"></div>
+</div>
+</div>
+<!--返佣明细-->
+<div class="s_nomoney s_tixiantab s_txtabone" style="display:none;" id="inviteIncomeDetails">
+</div>
+
+<script src="@{'/public/javascripts/laydate/laydate.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/tab/tab_usr.js'}"></script>
+<script type="text/javascript">
+$(function(){
+	/* 高亮显示 */
+	showHighLightFront(43);
+	showHighLightFront2(7, 7);
+});
+
+function inviteIncomeDetails(invitedUserSign) {
+	$.ajax({
+	  url : "@{front.account.WealthCircle.myInvitationUserDetails()}",
+	  type : "GET",
+	  async : false,
+	  data : {
+	    "currPage" : 1,
+	    "pageSize" : 5,
+	    "beginTime" : "",
+	    "endTime" : "",
+	    "invitedUserSign" : invitedUserSign
+	  },
+	  success : function(data) {
+	    if (data.code < 0) {
+	      alert(data.msg);
+	      return;
+	    }
+	    $("#inviteIncomeDetails").html(data);
+	  },
+	  error : function() {
+	    alert(data.msg);
+	  }
+	});
+	  
+	showDiv($("#inviteIncomeDetails"));
+}
+
+function showPage(currPage, pageSize){
+   $("#currPage").val(currPage);
+   $("#pageSize").val(pageSize);
+   $("#submits").submit();
+ }
+</script>

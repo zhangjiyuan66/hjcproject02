@@ -1,0 +1,3 @@
+2016-05-04 11:27:09,325 INFO  ~ Starting D:\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-04 11:27:25,824 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 16499
+2016-05-04 11:27:26,872 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 17547

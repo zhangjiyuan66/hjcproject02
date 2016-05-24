@@ -1,0 +1,70 @@
+2016-05-17 11:37:03,951 ERROR ~ Table 'homebackup123.t_bbin' doesn't exist  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 198501
+2016-05-17 11:37:04,823 ERROR ~ 
+
+@705a7a6oa
+Internal Server Error (500) for request POST /front/account/register
+
+Execution exception (In /app/business/Bbin.java around line 51)
+PersistenceException occured : org.hibernate.exception.SQLGrammarException: could not insert: [models.t_bbin]
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 199373
+play.exceptions.JavaExecutionException: org.hibernate.exception.SQLGrammarException: could not insert: [models.t_bbin]
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not insert: [models.t_bbin]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1389)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1317)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1323)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:845)
+	at play.db.jpa.JPABase._save(JPABase.java:31)
+	at play.db.jpa.GenericModel.save(GenericModel.java:215)
+	at business.Bbin.presentedBbin(Bbin.java:51)
+	at controllers.front.account.LoginAndRegisterAction.registering(LoginAndRegisterAction.java:712)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+Caused by: org.hibernate.exception.SQLGrammarException: could not insert: [models.t_bbin]
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:63)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2346)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2853)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:71)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:201)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:147)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:71)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:839)
+	... 10 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'homebackup123.t_bbin' doesn't exist
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2683)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2144)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2444)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2362)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2347)
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.executeAndExtract(IdentityGenerator.java:93)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:56)
+	... 25 more
+2016-05-17 11:38:57,480 ERROR ~ The user specified as a definer ('root'@'%') does not exist  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 312030
+2016-05-17 11:38:57,480 ERROR ~ org.hibernate.exception.GenericJDBCException: could not execute query  ~ play.Logger.error(Logger.java:399) ~ play ~ 312030
+2016-05-17 11:39:25,230 ERROR ~ The user specified as a definer ('root'@'%') does not exist  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 339780
+2016-05-17 11:39:25,230 ERROR ~ org.hibernate.exception.GenericJDBCException: could not execute query  ~ play.Logger.error(Logger.java:399) ~ play ~ 339780
+2016-05-17 18:40:35,484 ERROR ~ 账户资金出现异常变动  ~ play.Logger.error(Logger.java:399) ~ play ~ 1116687
+2016-05-17 18:44:21,880 ERROR ~ 账户资金出现异常变动  ~ play.Logger.error(Logger.java:399) ~ play ~ 1343083
+2016-05-17 18:44:30,426 ERROR ~ 账户资金出现异常变动  ~ play.Logger.error(Logger.java:399) ~ play ~ 1351629

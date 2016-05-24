@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/queren.css'}" />	
+<title>确认注册</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+
+<script type="text/javascript">
+	window.onload=function(){
+	document.documentElement.style.fontSize = document.documentElement.clientWidth/375*20+'px';
+	window.onresize = function(){
+		document.documentElement.style.fontSize = document.documentElement.clientWidth/375*20+'px';
+	};
+};
+
+</script>
+</head>
+<body>
+   #{form @front.account.LoginAndRegisterAction.appRegMobile(), id:'appReg'}
+   <input type="hidden" name="mobile" id="mobile" value="${mobile}"/>
+	<div class="cont">
+		
+		<div class="phone1">
+			<input type="password" placeholder="请输入密码" class="phone_text" name="password" onblur="passwordtrue()" id="password"/>
+			<img src="/public/images/img/2.png" />
+		</div>
+		<div class="phone1 phone2">
+			<input type="password" placeholder="请确认密码" class="phone_text phone_text2" name="password2"  id="password2" />
+			<img src="/public/images/img/2.png" />
+		</div>
+		<div class="btn" id="reg">注册</div>
+		<img src="/public/images/img/logo.png" class="logo" />
+	</div>
+	#{/form}
+	<script type="text/javascript" src="@{'/public/javascripts/jquery-2.0.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/common.js'}"></script>
+</body>
+<script type="text/javascript">
+
+function passwordtrue(){
+	var password =$("#password").val();
+	  if(password == ""){
+    	 alert("请设置密码");
+     }else if(password.length < 6){
+    	 alert("密码长度过短");
+     }else if(password.length >20){
+    	 alert("密码长度过长");
+     }else if(!/^([^\s'‘’]{6,20})$/.test(password)){
+    	 alert("密码中含有敏感字符");
+     }
+	  
+}
+	
+//注册
+$(function(){
+	
+	
+	$('#reg').click(function(){
+		if($("#password").val() != $("#password2").val()){
+			alert("两次输入的密码不相同");
+			return;
+		}
+		if($(this).attr('disabled') == 'disabled'){
+			return;
+		}
+		$(this).attr('disabled','disabled');
+		
+		$.ajax({
+			  url : "@{front.account.LoginAndRegisterAction.appRegMobile2()}",
+			  type : "POST",
+			  data : $('#appReg').serialize(),
+			  dataType:'json',
+			  success : function(data) {
+				  if(data.code < 0){
+					  alert(data.msg);
+					  $('#reg').removeAttr('disabled');
+				  }else{
+					  location.href = "@{front.account.LoginAndRegisterAction.zccg()}";
+				  }
+				},
+			 
+			 });
+		
+	});
+	
+	
+	//导航js
+	$('.p_hebtn').click(function(){
+		if ($('.p_nav').is(':hidden')) {
+			$(this).children('span').children('i').animate({'top': '17px'},100, function() {
+				$('.p_hebtn').children('span').addClass('click');
+				$('.p_nav').slideDown();
+			});
+		}else{
+			$(this).children('.p_hxtop').children('i').animate({'top': '13px'}, 500);
+			$(this).children('.p_hxbot').children('i').animate({'top': '21px'}, 500);
+			$('.p_hebtn').children('span').removeClass('click');
+			$('.p_nav').slideUp();
+		};
+	});
+	
+	//边距处理
+	$('.p_ft_link div:last a').css('border-right', 'none');
+	//最小高度处理
+	var heit = $(window).height();
+	$('.p_minheight').css('min-height', heit-201+'px');
+	
+	//注册 按钮  js
+	$('.p_zc_icon').click(function() {
+		var ico = $(this).children('i'),
+			num = ico.position().left;
+		if (num==23) {
+			$('#password').attr('type','password');
+			ico.animate({left: 0},180, function() {
+				$(this).addClass('clicked');
+				$('.p_zc_icon').addClass('clicked');
+			});
+		}else{
+			$('#password').attr('type','text');
+			$('.p_zc_icon').removeClass('clicked');
+			ico.animate({left: '23px'},180, function() {
+				$(this).removeClass('clicked');
+			});
+		};
+	});
+	//通用选项卡 xxk
+	function tab(li,tabox,name){
+		li.eq(0).addClass(name);
+		tabox.eq(0).show();
+		li.click(function(){
+			$(this).addClass(name).siblings().removeClass(name);
+			tabox.hide().eq($(this).index()).show();
+		})
+	}
+	tab($(".p_lctop div"),$(".p_lctabox"),"on");
+
+})
+</script>
+</html>

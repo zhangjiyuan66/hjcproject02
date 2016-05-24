@@ -1,0 +1,351 @@
+		<!-- 右侧内容区域 -->
+				 <div class="p_right_wordbox">
+            <div class="p_zh_rtword">
+                <h4 class="p_hp_title clr"><strong>投标机器人</strong></h4>		
+					<div class="xf_mem_tbjqr_cont">
+					
+					#{form @saveOrUpdateRobot(),method:'POST',id:'saveRobot'}
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" class="xf_mem_tbjqr_table">
+							<tr>
+								<td width="200" height="33" align="right" valign="middle">投标机器人状态：</td>
+								<td>
+								#{if robot != null}
+								#{if robot?.status == false}
+								关闭状态
+								#{/if}
+								#{if robot?.status == true}
+								开启状态
+								#{/if}
+								#{/if}
+								#{else}
+								关闭状态
+								#{/else}
+								</td>
+							</tr>
+							<tr>
+								<td width="200" height="33" align="right" valign="middle">您的账户余额：</td>
+								<td><span class="xf_mem_tbjqr_jq">${balance?.format('###,##0.00')}</span>&nbsp;元</td>
+							</tr>
+							<tr>
+								<td width="200" height="33" align="right" valign="middle"><span class="xf_mem_tbjqr_yz">*</span>有效期类型：</td>
+								<td>
+								#{if robot?.valid_type == 0 || robot == null}
+									<input type="radio" name="validType" id="validTypeDay" value="0" checked="checked"/>&nbsp天&nbsp&nbsp
+								#{/if}
+								<!--#{else}
+									<input type="radio" name="validType" id="validTypeDay" value="0" />&nbsp天&nbsp&nbsp
+									<input type="radio" name="validType" id="validTypeMonth" value="1" checked="checked"/>&nbsp月
+								#{/else}-->	
+								</td>
+							</tr>
+							<tr>
+								<td width="200" height="33" align="right" valign="middle"><span class="xf_mem_tbjqr_yz">*</span>有效期：</td>
+								<td>
+									<input type="hidden" name="validDate" id="validDate" class="xf_mem_tbjqr_yzinput" style="width:40px" readonly value="7" >7  天
+									</input>
+									<span class="xf_mem_tbjqr_yz" id="validDate_errormsg"></span>
+								</td>
+							</tr>
+							<!--<tr>
+								<td width="200" height="50" align="right" valign="middle" ><span class="xf_mem_tbjqr_yz">*</span>每次投标金额：</td>
+								<td><input type="text" class="xf_mem_tbjqr_yzinput" id="investAmount" name="bidAmount" value="${robot?.amount?.format('0')}"/>&nbsp;元<span class="xf_mem_tbjqr_yz" id="invest_errormsg"></span></td>
+							</tr>-->
+							<input type="hidden" class="xf_mem_tbjqr_yzinput" id="investAmount" name="bidAmount" value="0.00"/>
+							<tr>
+								<td width="200" height="50" align="right" valign="middle"><span class="xf_mem_tbjqr_yz">*</span>利率范围：</td>
+								<td><input type="text" class="xf_mem_tbjqr_yzinput" id="minInterestRate" name="rateStart" #{if robot!=null && robot?.status} value="${robot?.min_interest_rate}" #{/if} />% 
+								-- <input type="text" class="xf_mem_tbjqr_yzinput" id="maxInterestRate" name = "rateEnd" #{if robot!=null && robot?.status} value="${robot?.max_interest_rate}" #{/if}/> %<span class="xf_mem_tbjqr_yz" id="rate_errormsg"></span>
+								
+								</td>
+							</tr>
+							<tr>
+								<td width="200" height="50" align="right" valign="middle"><span class="xf_mem_tbjqr_yz">*</span>借款期限：</td>
+								<td>
+								     <input type="text" class="xf_mem_tbjqr_yzinput" id="minPeriod" name="deadlineStart" value="${robot?.min_period}" />天 
+								     -- <input type="text" class="xf_mem_tbjqr_yzinput" id="maxPeriod" name = "deadlineEnd" value="${robot?.max_period}"/>天 <span class="xf_mem_tbjqr_yz" id="period_errormsg"></span>
+								</td>
+								<!--<td>
+									<select name="deadlineStart" class="xf_tbjqr_selectAge" id="minPeriod"> 
+										<option value="0" >请选择</option> 
+										<option value="1" #{if robot?.min_period == 1} selected ="true" #{/if}>1月</option>
+										<option value="2" #{if robot?.min_period == 2} selected ="true" #{/if}>2月</option>
+										<option value="3" #{if robot?.min_period == 3} selected ="true" #{/if}>3月</option>
+										<option value="4" #{if robot?.min_period == 4} selected ="true" #{/if}>4月</option>
+										<option value="5" #{if robot?.min_period == 5} selected ="true" #{/if}>5月</option>
+										<option value="6" #{if robot?.min_period == 6} selected ="true" #{/if}>6月</option>
+										<option value="7" #{if robot?.min_period == 7} selected ="true" #{/if}>7月</option>
+										<option value="8" #{if robot?.min_period == 8} selected ="true" #{/if}>8月</option>
+										<option value="9" #{if robot?.min_period == 9} selected ="true" #{/if}>9月</option>
+										<option value="10" #{if robot?.min_period == 10} selected ="true" #{/if}>10月</option>
+										<option value="11" #{if robot?.min_period == 11} selected ="true" #{/if}>11月</option> 
+								       <option value="12" #{if robot?.min_period == 12} selected ="true" #{/if}>12月</option>   
+								       <option value="24" #{if robot?.min_period == 24} selected ="true" #{/if}>24月</option>
+									</select>
+									--
+									<select name="deadlineEnd" class="xf_tbjqr_selectAge" id="maxPeriod" > 
+									 <option value="0">请选择</option>  
+								        <option value="1" #{if robot?.max_period == 1} selected ="true" #{/if}>1月</option>
+										<option value="2" #{if robot?.max_period == 2} selected ="true" #{/if}>2月</option>
+										<option value="3" #{if robot?.max_period == 3} selected ="true" #{/if}>3月</option>
+										<option value="4" #{if robot?.max_period == 4} selected ="true" #{/if}>4月</option>
+										<option value="5" #{if robot?.max_period == 5} selected ="true" #{/if}>5月</option>
+										<option value="6" #{if robot?.max_period == 6} selected ="true" #{/if}>6月</option>
+										<option value="7" #{if robot?.max_period == 7} selected ="true" #{/if}>7月</option>
+										<option value="8" #{if robot?.max_period == 8} selected ="true" #{/if}>8月</option>
+										<option value="9" #{if robot?.max_period == 9} selected ="true" #{/if}>9月</option>
+										<option value="10" #{if robot?.max_period == 10} selected ="true" #{/if}>10月</option>
+										<option value="11" #{if robot?.max_period == 11} selected ="true" #{/if}>11月</option> 
+								       <option value="12" #{if robot?.max_period == 12} selected ="true" #{/if}>12月</option>    
+								       <option value="24" #{if robot?.max_period == 24} selected ="true" #{/if}>24月</option>
+									</select>
+									<span class="xf_mem_tbjqr_yz" id="period_errormsg"></span>
+									</td> -->
+								</tr>
+							<tr>
+								<td width="200" height="50" align="right" valign="middle"><span class="xf_mem_tbjqr_yz">*</span>自动投资金额：</td>
+								<td><input type="text" class="xf_mem_tbjqr_yzinput" name="remandAmount" id="retentionAmount" value="${robot?.amount?.format('0')}"/>&nbsp;元<span class="xf_mem_tbjqr_yz" id="retentionAmount_errormsg"></span>
+								</td>
+								
+							</tr>
+							<!--<tr>
+								<td width="200" height="50" align="right" valign="middle"><span class="xf_mem_tbjqr_yz">*</span>借款类型：</td>
+								<td>
+								
+									<input type="checkbox" class="xf_mem_tbjqr_jzinput" name="loanType" value="0" id="type_0"  checked="checked"><span class="xf_mem_tbjqr_jzinputr" >散标</span>
+									<input type="checkbox" class="xf_mem_tbjqr_jzinput" name="loanType"  value="7" id="type_7" checked="checked"><span class="xf_mem_tbjqr_jzinputr" >活标</span>
+									<span class="xf_mem_tbjqr_yz" id="loanType_errormsg"></span>
+								
+								</td>
+							</tr>-->
+							<tr>
+								<td width="200" height="50" align="right" valign="middle">&nbsp;</td>
+								<td class="xf_con_input_kaiqi">
+								
+								#{if robot !=null}
+									#{if robot?.status}
+										<a class="p_zh_btn02" href="@{front.account.InvestAccount.closeRobot(robot?.id)}">关闭投标机器人</a>
+									#{/if}
+									#{else}
+										<a class="p_zh_btn02" onclick="saveRobot();" >开启投标机器人</a>
+									#{/else}
+								#{/if}
+								#{else}
+									<a class="p_zh_btn02" onclick="saveRobot();" >开启投标机器人</a>
+								#{/else}
+									<!--<span style="padding-right:269px;float:right"><a class="p_zh_btn03" onclick="changeText()" id="changeValue">一键完成</a></span>-->
+								</td>
+							</tr>
+						</table>
+					#{/form}
+					</div>
+					<div class="xf_mem_tbjqr_cont_b">
+						<h3 class="xf_mem_tbjqr_cont_h3">投标机器人工具说明</h3>
+						<div class="xf_mem_tbjqr_conttent_nr">
+							1、贷款进入招标中十五分钟后，才会启动自动投标。<br />
+							2、投标进度达到95%时停止自动投标。若投标后投标进度超过95%，则按照投标进度达到95%的金额向下取50的倍数金额值投标。<br />
+							3、单笔投标金额若超过该标贷款总额的20%，则按照20%比例的金额向下取50的倍数金额值投标。<br />
+							4、贷款用户在获得贷款时会自动关闭自动投标，以避免借款被用作自动投标资金。<br />
+							5、投标排序规则如下：<br />
+							     a）投标序列按照开启自动投标的时间先后进行排序。<br />
+							     b）每个用户每个标仅自动投标一次。<br />
+						</div>
+					</div>
+				</div>
+				</div>
+			
+			
+			<script>
+			
+            $(function() {
+            
+                if('${robot}'=='' || '${robot?.status}'=='false'){
+                
+                  $("#minInterestRate").val("7");
+                  $("#maxInterestRate").val("15");
+                }
+                
+			});
+			
+			function updateValidDate() {
+				var validType = $("input[name=validType]:checked").attr("id");
+				var validDate = $("#validDate");
+				if (validType=="validTypeDay") {
+					var html = '<option value="7"  selected="selected">7天</option>';
+					validDate.html(html);
+				} else {
+					for ( var i = 1; i <= 12; i++) {
+						html += '<option value="'+i+'" >'+i+'月</option>';
+					}
+					validDate.html(html);
+				}
+			}
+			
+			function saveRobot(){
+				$("#validDate_errormsg").html("");
+				$("#invest_errormsg").html("");
+				$("#amount_errormsg").html("");
+				$("#rate_errormsg").html("");
+				$("#period_errormsg").html("");
+				$("#level_errormsg").html("");
+				$("#invest_errormsg").html("");
+				$("#retentionAmount_errormsg").html("");
+					
+				if ($("#validDate").val() == "0") {
+					$("#validDate_errormsg").html("请选择有效期");
+					return;
+				}
+				
+				if($("#minInterestRate").val()==""){
+					$("#rate_errormsg").html("最低利率不能为空");
+					return;
+				}
+				
+				if($("#minInterestRate").val() < 0){
+					$("#rate_errormsg").html("最低利率不能小于零");
+					return;
+				}
+				
+				if(isNaN($("#minInterestRate").val())){
+					$("#rate_errormsg").html("请输入数字");
+					return;
+				}
+				
+				if($("#maxInterestRate").val()==""){
+					$("#rate_errormsg").html("最高利率不能为空");
+					return;
+				}
+				
+				if($("#maxInterestRate").val() < 0){
+					$("#rate_errormsg").html("最高利率不能小于零");
+					return;
+				}
+				
+				if(isNaN($("#maxInterestRate").val())){
+					$("#rate_errormsg").html("请输入数字");
+					return;
+				}
+				
+				var maxInterestRate = $("#maxInterestRate").val()*1;
+				var minInterestRate = $("#minInterestRate").val()*1;
+				var minPeriod =  $("#minPeriod").val()*1;
+				var maxPeriod =  $("#maxPeriod").val()*1;
+				
+				if(minInterestRate < 0 || minInterestRate > 100){
+					$("#rate_errormsg").html("最低利率需在0~100之间");
+					return;
+				}
+				
+				if(maxInterestRate < 0 || maxInterestRate > 100){
+					$("#rate_errormsg").html("最低利率需在0~100之间");
+					return;
+				}
+				
+				if(maxInterestRate <= minInterestRate){
+					$("#rate_errormsg").html("最高利率不能小于最低利率");
+					return;
+				}
+				
+				if(minPeriod >0 && maxPeriod ==0){
+					$("#period_errormsg").html("请正确设置借款期限");
+					return;
+				}
+				
+				if(minPeriod ==0 && maxPeriod >0){
+					$("#period_errormsg").html("请正确设置借款期限");
+					return;
+				}
+				
+				if(minPeriod >= maxPeriod){
+				   $("#period_errormsg").html("请正确设置借款期限");
+				   return;
+				}
+				
+				if($("#retentionAmount").val() > ${balance}){
+					$("#retentionAmount_errormsg").html("可投金额不能大于可用余额");
+					return;
+				}
+				
+				if($("#retentionAmount").val() =="" ){
+					$("#retentionAmount_errormsg").html("请正确设置可投金额");
+					return;
+				}
+				
+				var retentionAmount = parseInt($("#retentionAmount").val());
+				if( retentionAmount < 0 ){
+					$("#retentionAmount_errormsg").html("请正确设置可投金额");
+					return;
+				}
+				
+				$("#saveRobot").submit();
+				
+			}
+			
+			#{if result < 0}
+				alert("${msg}");
+			#{/if}
+			
+			#{if result > 0}
+				alert("${msg}");
+			#{/if}
+			
+			function changeText(){
+				
+				if($("#changeValue").html()=='一键完成'){
+					$("#validDate").val(2);
+					$("#investAmount").val(200);
+					$("#minAmount").val(100);
+					$("#maxAmount").val(1000);
+					$("#minInterestRate").val(8);
+					$("#maxInterestRate").val(24);
+					$("#minPeriod").val(30);
+					$("#maxPeriod").val(60);
+					
+					var maxIndex=$("#maxCreditLevel option:last").attr("value");  
+					var minIndex = $("#minCreditLevel option:eq(1)").attr("value");
+					
+					$("#minCreditLevel").val(minIndex);
+					$("#maxCreditLevel").val(maxIndex);
+						
+					$("#retentionAmount").val(200);
+					$('input:checkbox').each(function(){ 
+                      $(this).attr('checked','checked'); 
+                    }); 
+					
+					$("#changeValue").html('一键清空')
+				    }else{
+					   if($("#changeValue").html()=='一键清空'){
+						$("#validDate").val("0");
+						$("#investAmount").val("");
+						$("#minAmount").val("");
+						$("#maxAmount").val("");
+						$("#minInterestRate").val("");
+						$("#maxInterestRate").val("");
+						$("#minPeriod").val(0);
+						$("#maxPeriod").val(0);
+						$("#minCreditLevel").val(0);
+						$("#maxCreditLevel").val(0);
+						$("#retentionAmount").val("");
+						$('input:checkbox').each(function(){ 
+                        $(this).attr('checked',false); 
+                         }); 
+						
+						$("#changeValue").html('一键完成')
+				}
+			}
+				
+		}
+			
+			</script>
+			
+			#{if robot !=null}
+			<script>
+				function closeRobot(){
+					var robotId = ${robot?.id};
+					var reportUser = #{jsAction @front.account.InvestAccount.closeRobot(':robotId')/}
+		          $.post(reportUser({robotId : robotId}), function(data) {
+		        	alert(data.error.msg);
+		        	window.location.reload();
+	        });
+				}
+			#{/if}
+			</script>

@@ -1,0 +1,517 @@
+2016-05-03 13:20:15,779 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 13:20:23,054 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 7275
+2016-05-03 13:20:23,804 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 8025
+2016-05-03 13:20:49,991 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 34212
+2016-05-03 13:29:59,452 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 583673
+2016-05-03 13:30:33,534 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 617755
+2016-05-03 13:30:39,093 ERROR ~ 
+
+@701d18na3
+Error during job execution (jobs.Bootstrap)
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 623314
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:244)
+	at play.jobs.Job.onException(Job.java:124)
+	at play.jobs.Job.call(Job.java:163)
+	at Invocation.Job(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-03 13:30:47,796 ERROR ~ 
+
+@701d18na4
+Internal Server Error (500) for request GET /
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 632017
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.JobsPlugin.afterApplicationStart(JobsPlugin.java:131)
+	at play.plugins.PluginCollection.afterApplicationStart(PluginCollection.java:531)
+	at play.Play.start(Play.java:554)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	at Invocation.Job(Play!)
+2016-05-03 14:06:45,936 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 14:06:52,413 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 6477
+2016-05-03 14:06:53,173 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 7237
+2016-05-03 14:07:23,644 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 37708
+2016-05-03 14:07:31,890 ERROR ~ 
+
+@701d64d79
+Internal Server Error (500) for request GET /
+
+Oops: UnsupportedClassVersionError
+An unexpected error occured caused by exception UnsupportedClassVersionError: DocViewerPlugin : Unsupported major.minor version 51.0
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 45954
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:244)
+	at play.Invoker$Invocation.run(Invoker.java:286)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.UnsupportedClassVersionError: DocViewerPlugin : Unsupported major.minor version 51.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:154)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at play.plugins.PluginCollection.reloadApplicationPlugins(PluginCollection.java:206)
+	at play.Play.start(Play.java:478)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	... 1 more
+2016-05-03 14:10:18,622 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 14:10:24,817 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 6195
+2016-05-03 14:10:25,456 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 6834
+2016-05-03 14:10:53,248 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 34626
+2016-05-03 14:12:11,159 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 112537
+2016-05-03 14:12:47,403 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 148781
+2016-05-03 14:12:52,689 ERROR ~ 
+
+@701d6n181
+Error during job execution (jobs.Bootstrap)
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 154067
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:244)
+	at play.jobs.Job.onException(Job.java:124)
+	at play.jobs.Job.call(Job.java:163)
+	at Invocation.Job(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-03 14:12:54,415 ERROR ~ 
+
+@701d6n182
+Internal Server Error (500) for request GET /
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 155793
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.JobsPlugin.afterApplicationStart(JobsPlugin.java:131)
+	at play.plugins.PluginCollection.afterApplicationStart(PluginCollection.java:531)
+	at play.Play.start(Play.java:554)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	at Invocation.Job(Play!)
+2016-05-03 14:25:00,790 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 14:25:05,653 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 4863
+2016-05-03 14:25:06,278 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 5488
+2016-05-03 14:25:25,504 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 24714
+2016-05-03 14:26:48,423 ERROR ~ 
+
+@701d8hnji
+Internal Server Error (500) for request GET /
+
+Oops: DuplicateMemberException
+An unexpected error occured caused by exception DuplicateMemberException: duplicate method: count in models.v_bill_department_haspayed
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 107633
+play.exceptions.UnexpectedException: While applying play.db.jpa.JPAPlugin@42a4441e on models.v_bill_department_haspayed
+	at play.plugins.PluginCollection.enhance(PluginCollection.java:556)
+	at play.classloading.ApplicationClasses$ApplicationClass.enhance(ApplicationClasses.java:235)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:167)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:431)
+	at play.Play.start(Play.java:523)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: javassist.bytecode.DuplicateMemberException: duplicate method: count in models.v_bill_department_haspayed
+	at javassist.bytecode.ClassFile.testExistingMethod(ClassFile.java:593)
+	at javassist.bytecode.ClassFile.addMethod(ClassFile.java:577)
+	at javassist.CtClassType.addMethod(CtClassType.java:1235)
+	at play.db.jpa.JPAEnhancer.enhanceThisClass(JPAEnhancer.java:29)
+	at play.db.jpa.JPAPlugin.enhance(JPAPlugin.java:102)
+	at play.plugins.PluginCollection.enhance(PluginCollection.java:551)
+	... 7 more
+2016-05-03 14:30:29,964 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 14:30:38,247 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 8283
+2016-05-03 14:30:38,981 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 9017
+2016-05-03 14:31:22,692 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 52728
+2016-05-03 14:32:39,306 ERROR ~ 
+
+@701d9c5ce
+Internal Server Error (500) for request GET /
+
+Oops: DuplicateMemberException
+An unexpected error occured caused by exception DuplicateMemberException: duplicate method: count in models.v_bill_department_haspayed
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 129342
+play.exceptions.UnexpectedException: While applying play.db.jpa.JPAPlugin@7eceb95b on models.v_bill_department_haspayed
+	at play.plugins.PluginCollection.enhance(PluginCollection.java:556)
+	at play.classloading.ApplicationClasses$ApplicationClass.enhance(ApplicationClasses.java:235)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:167)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:431)
+	at play.Play.start(Play.java:523)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: javassist.bytecode.DuplicateMemberException: duplicate method: count in models.v_bill_department_haspayed
+	at javassist.bytecode.ClassFile.testExistingMethod(ClassFile.java:593)
+	at javassist.bytecode.ClassFile.addMethod(ClassFile.java:577)
+	at javassist.CtClassType.addMethod(CtClassType.java:1235)
+	at play.db.jpa.JPAEnhancer.enhanceThisClass(JPAEnhancer.java:29)
+	at play.db.jpa.JPAPlugin.enhance(JPAPlugin.java:102)
+	at play.plugins.PluginCollection.enhance(PluginCollection.java:551)
+	... 7 more
+2016-05-03 14:45:44,584 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 14:45:51,225 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 6641
+2016-05-03 14:45:52,010 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 7426
+2016-05-03 14:46:33,770 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 49186
+2016-05-03 14:47:48,908 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 124324
+2016-05-03 14:48:25,012 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 160428
+2016-05-03 14:48:33,537 ERROR ~ 
+
+@701dbem6a
+Error during job execution (jobs.Bootstrap)
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 168953
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:244)
+	at play.jobs.Job.onException(Job.java:124)
+	at play.jobs.Job.call(Job.java:163)
+	at Invocation.Job(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-03 14:48:45,174 ERROR ~ 
+
+@701dbem6b
+Internal Server Error (500) for request GET /
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 180590
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.JobsPlugin.afterApplicationStart(JobsPlugin.java:131)
+	at play.plugins.PluginCollection.afterApplicationStart(PluginCollection.java:531)
+	at play.Play.start(Play.java:554)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	at Invocation.Job(Play!)
+2016-05-03 15:11:43,719 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 15:11:48,903 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 5184
+2016-05-03 15:11:49,582 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 5863
+2016-05-03 15:12:07,945 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 24226
+2016-05-03 15:13:27,518 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 103799
+2016-05-03 15:14:01,377 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 137658
+2016-05-03 15:14:08,949 ERROR ~ 
+
+@701deo5ei
+Error during job execution (jobs.Bootstrap)
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 145230
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:244)
+	at play.jobs.Job.onException(Job.java:124)
+	at play.jobs.Job.call(Job.java:163)
+	at Invocation.Job(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-03 15:14:10,259 ERROR ~ 
+
+@701deo5ej
+Internal Server Error (500) for request GET /
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 146540
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.JobsPlugin.afterApplicationStart(JobsPlugin.java:131)
+	at play.plugins.PluginCollection.afterApplicationStart(PluginCollection.java:531)
+	at play.Play.start(Play.java:554)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	at Invocation.Job(Play!)
+2016-05-03 15:14:37,357 INFO  ~ Starting D:\Users\lian\workspace\hjc_sp2p  ~ play.Logger.info(Logger.java:289) ~ play ~ 0
+2016-05-03 15:14:43,012 WARN  ~ You're running Play! in DEV mode  ~ play.Logger.warn(Logger.java:344) ~ play ~ 5655
+2016-05-03 15:14:43,701 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...  ~ play.Logger.info(Logger.java:289) ~ play ~ 6344
+2016-05-03 15:14:50,286 WARN  ~ Ignoring wechat.service.InvestAction.queryAllBid (static params must be specified as key:'value',...)  ~ play.Logger.warn(Logger.java:344) ~ play ~ 12929
+2016-05-03 15:16:06,373 INFO  ~ Connected to jdbc:mysql://localhost/homebackup123?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci  ~ play.Logger.info(Logger.java:289) ~ play ~ 89016
+2016-05-03 15:16:42,760 INFO  ~ Application 'hjc_sp2p' is now started !  ~ play.Logger.info(Logger.java:289) ~ play ~ 125403
+2016-05-03 15:16:52,911 DEBUG ~ 正在执行ation请求命令:front.home.HomeAction.home  ~ play.Logger.debug(Logger.java:232) ~ play ~ 135554

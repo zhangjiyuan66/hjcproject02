@@ -1,0 +1,93 @@
+<!--登录弹窗-->
+<div class="popup y_dlmain" id="tab_login" style="display:none"> 
+    <span class="popclose">×</span>
+    <h2 class="y_dlh2">
+        <span class="fl">用户登录</span>
+	                <a href="@{front.account.loginAndRegisterAction.resetPasswordByEmail()}" title="" class="p_un">忘记密码？</a>
+    </h2>
+	            <div class="y_dldiv">
+	                <input type="text" class="p_pass" name="name" id="login_name" value="${flash?.name}" />
+	                #{if flash?.name==null}
+	                <label>用户名/邮箱/手机号</label>
+	                #{/if}
+	            </div>
+	            <div class="y_dldiv">
+	                <input type="password" name="password4" id="password4" class="p_pass" value="${flash?.password}"/>
+	               #{if flash?.password==null}
+	                <label>请输入密码</label>
+	               #{/if}
+	            </div>
+	          
+			            <table width="100%">        
+			                <tbody>
+			                    <tr>
+			                        <td align="right" width="215"  height="36">
+					                   <div class="y_dldiv  y_zcyzm">
+			                                <input class="p_pass" type="text" type="text" id="code_login" name="code_login" #{if !constants.Constants.CHECK_MSG_CODE}value="1234" readonly="readonly"#{/if}  />
+			                                <label>请输入验证码</label>
+			                                <input type="hidden" name="randomID_login" id = "randomID_login" />
+		                                </div>
+		                               <a href="#" class="y_yzimg_1">
+		                                  <img src="" onclick="changeLogin()"  id="img5" title="" width="100%" height="36" alt=""/></a>
+			                        </td>
+			                        
+			                    </tr>
+                            </tbody>
+                         </table>
+				<div class="y_dldiv">
+	                <a onclick="loginnow()"  class="y_dlbto p_op">登录</a>
+	            </div>
+	            <div class="y_dlpp">还没有账户？<a href="javascript:void(0)" title="" class="p_un1">注册</a></div>
+</div>
+<!--登录弹窗end-->
+<!--1110新增弹窗end-->
+<script type="text/javascript">
+	 function changeLogin(){
+	    var setCode = #{jsAction @front.account.LoginAndRegisterAction.setCode()/}
+		$.post(setCode({}),function(data){
+		  var arr=eval(data);
+		  var img = arr.img;
+		  $("#img5").attr("src","@{front.account.LoginAndRegisterAction.getImg()}?id="+img);
+		  $("#randomID_login").val(img);	
+		});
+	 };
+	   
+		function loginnow(){
+			if($('#tab_login').css('display')=='none'){
+			   return;
+			}
+		    var name = $("#login_name").val();
+		    if(name == ''){
+		      alert("请输入用户名或邮箱");
+		      return;
+		    }
+		    var password = $("#password4").val();
+		    if(password == ''){
+		      alert("请输入密码");
+		      return;
+		    }
+		    var code="";
+		    var randomID = $("#randomID_login").val();
+	    	var code = $("#code_login").val();
+	    	
+		    if(code == ''){
+		    
+		      alert("请输入验证码");
+		      return;
+		    } 
+		
+		    var loginRightNow = #{jsAction  @front.account.LoginAndRegisterAction.loginNow(':name',':password',':code',':randomID')/}
+	        $.post(loginRightNow({name:name,password:password,code:code,randomID:randomID}),function(data){
+			    var arr=eval(data);
+			   
+			    if(arr.error.code < 0){
+			       alert(arr.error.msg);
+			       changeLogin();
+			       return false;
+			    }else{
+			    	 window.location.href="/front/account/home";
+			    }
+		    });
+		    
+		  }
+</script>

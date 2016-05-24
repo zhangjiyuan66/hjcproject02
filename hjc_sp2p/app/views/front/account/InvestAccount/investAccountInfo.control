@@ -1,0 +1,11 @@
+ <ul class="p_zh_b1right">
+    <li><span>用户名：</span><strong class="p_zh_str01">${user?.name}</strong>
+	</li>
+    <!--<li>注册时间：${user?.time?.format('yyyy-MM-dd')}</li>
+    <li><span>信用积分：${user?.creditScore} 分</span><a href="@{front.account.FundsManage.myCredit()}" title="" class="p_zh_a01 p_un bold_font">积分明细</a></li>-->
+    <li>理财统计： ${user?.investAmount?.invest_count}次投标 , 
+    	#{if constants.Constants.DEBT_USE}
+    	${user?.investAmount?.transfer_count}次债权转让
+    	#{/if}
+    </li>
+</ul>

@@ -1,0 +1,39 @@
+ <ul class="p_zh_b1right">
+    <li><span>用户名：</span><strong class="p_zh_str01">${user?.name}</strong>
+    	<strong>
+    	#{if bb2 == null}
+    	 
+    	#{/if}</strong>
+    	#{else}
+           	体验金余额：<strong style="color:#ff8839">${bb2?.account?.format('###,##0.00')}</strong>元 , 
+     	#{/else}  
+	</li>
+    <!-- <li>
+       <span>信用等级：</span>
+        <img src="${user?.myCredit?.imageFilename}" alt=""  class="p_vtmid" /> 
+       
+    </li>
+    <li>注册时间：${user?.time?.format('yyyy-MM-dd')}</li>
+    <li><span>信用积分：${user?.creditScore} 分</span><a href="@{front.account.FundsManage.myCredit()}" title="" class="p_zh_a01 p_un ">积分明细</a></li>
+    <li><span>信用额度：${user?.creditLine?.format('###,##0.00')}元</span><a onclick="applyForOverBorrowInit();" title="" class="p_zh_a01 p_un">提高信用额度</a></li>-->
+    <li>理财统计：<strong style="color:#ff8839"> ${user?.investAmount?.invest_count}</strong>次投标 , 
+    	#{if constants.Constants.DEBT_USE}
+    	<strong style="color:#ff8839">${user?.investAmount?.transfer_count}</strong>次债权转让
+    	#{/if}
+    </li>
+    <li> 理财盈利：<strong style="color:#ff8839">${sumInterest?.format('###,##0.00')}</strong>元 , 推广盈利：<strong style="color:#ff8839">${total?.format('###,##0.00')}</strong>元</li>
+  <li>
+		         
+       可用余额：<strong style="color:#ff8839">${(accountInfo?.user_account-accountInfo?.freeze+accountInfo?.user_account2)?.format('###,##0.00')}</strong>元 , 
+       冻结金额：<strong style="color:#ff8839">${accountInfo?.freeze?.format('###,##0.00')}</strong>元    <strong><a href="@{front.account.FundsManage.recharge()}" class="xf_con_inputfbjk2" style="float:right;margin-right:47px">充值</a><a href="@{front.account.FundsManage.withdrawal()}" style="float:right;margin-right:10px" class="xf_con_inputfbjk2">提现</a></strong>
+  
+  
+  </li>
+   <li>
+         
+       投标总额：<strong style="color:#ff8839">${accountInfo?.invest_amount?.format('###,##0.00')}</strong>元 , 账户总额：<strong style="color:#ff8839">${(accountInfo?.user_account+accountInfo?.invest_amount).format('###,##0.00')}</strong>元
+  
+  
+  </li>
+</ul>
+

@@ -1,0 +1,63 @@
+ <ul class="p_zh_listul">
+<!--foreach start：-->
+#{if qualityBids?.size()!=0}
+   #{list items:qualityBids,as:'qualityBids'}
+   <li class="clr">
+      <div class="p_zh_lisleft">
+          <table width="100%">
+              <tr height="36">
+                  <td colspan="2">
+                 <!--   #{img src:"${qualityBids?.bid_image_filename}",alt:"",align:"absmiddle",width:"100px",height:"100px"}#{/img}-->
+                      <img src="${qualityBids?.small_image_filename}" alt="" width="23" height="22" class="fl">
+                      #{if qualityBids.title.contains('体验')}
+                      	<a class="p_lc_listt" href="@{front.invest.InvestAction.investBbin(qualityBids?.id)}">${qualityBids?.title}</a>
+                      #{/if}
+                      #{else}
+                      	<a class="p_lc_listt" href="@{front.invest.InvestAction.invest(qualityBids?.id)}">${qualityBids?.title}</a>
+                      #{/else}
+                      
+                  </td>
+              </tr>
+              <tr height="37">
+                  <td width="228">项目规模：<span class="p_lc_import co333">￥${qualityBids?.amount?.format('###,##0.00')}元</span>元</td>
+                  <td width="168">年化收益：<span class="p_lc_import">${qualityBids?.apr}%</span></td>
+              </tr>
+              <tr height="37">
+                  <td>还款方式：${qualityBids?.repayment_type_name}</td>
+<!--                   <td>信用等级：<img src="${qualityBids?.creditLevel?.imageFilename}" alt="" height="20" class="p_vtmid"></td>
+ -->              </tr>
+              <tr height="28">
+                  <td colspan="2">
+                      <span>进度：</span>
+                      <span class="p_zh_progres"><span style="width:${qualityBids?.loan_schedule}%"></span></span>
+                            <span>${qualityBids?.loan_schedule}%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="p_zh_lisright">
+                <p>项目期限：${qualityBids?.period}  
+   									#{if qualityBids.period_unit == 1}
+   										天
+   									#{/if}
+   									#{elseif qualityBids.period_unit == 0}
+   										月
+   									#{/elseif}
+   									#{else}
+   										年
+   									#{/else}</p>
+                <p>还需金额：￥${(qualityBids?.amount - qualityBids?.has_invested_amount)?.format('###,##0.00')}元</p>
+   				
+   				#{if qualityBids.title.contains('体验')}
+   					<a href="@{front.invest.investAction.investBbin(qualityBids?.id)}" class="p_zh_btn01" target="_self">查看详细</a>
+   				#{/if}
+   				#{else}
+   					<a href="@{front.invest.investAction.invest(qualityBids?.id)}" class="p_zh_btn01" target="_self">查看详细</a>
+   				#{/else}
+   				
+            </div>
+        </li>
+         
+	#{/list}
+	#{/if}
+</ul>

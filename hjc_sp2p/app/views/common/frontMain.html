@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	%{
+		business.User currUser = business.User.currUser();
+		business.BackstageSet  currBackstageSet = business.BackstageSet.getCurrentBackstageSet();
+		String platUrl = constants.Constants.BASE_URL;
+		java.util.Map<String,java.util.List<business.BottomLinks>> bottomLinks = business.BottomLinks.currentBottomlinks();
+		java.lang.String type1Name = business.NewsType.queryName(1);
+		java.lang.String type2Name = business.NewsType.queryName(2);
+		java.lang.String type4Name = business.NewsType.queryName(4);
+		boolean ipsEnable = constants.Constants.IPS_ENABLE;
+		boolean debtUse = constants.Constants.DEBT_USE;
+	}%
+		<title>#{get 'title' /}</title>
+		<meta name="keywords" content="${currBackstageSet?.seoKeywords}" />
+		<meta name="description" content="${currBackstageSet?.seoDescription}" />
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta property="qc:admins" content="133011667666155146375" />
+		<meta property="wb:webmaster" content="6582954f8f7d9e1d" />
+		<meta name="baidu-site-verification" content="eTgucCRUHt" />
+		
+		<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.ico'}" />	
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/temp.css'}" />	
+		<link  rel="stylesheet" type="text/css"  href="@{'/public/stylesheets/reset.css'}"  />
+		<link  rel="stylesheet" type="text/css"  href="@{'/public/stylesheets/css2/style.css'}"  />
+		<link  rel="stylesheet" type="text/css"  href="@{'/public/stylesheets/css2/base.css'}"  />
+		<link rel="stylesheet"  type="text/css"  href="@{'/public/stylesheets/site.css'}"   />
+		<link type="text/css" href="/public/stylesheets/fancybox.css" rel="stylesheet" />
+		<link type="text/css" href="/public/stylesheets/fancybox-buttons.css" rel="stylesheet" />
+		<script type="text/javascript" src="@{'/public/javascripts/koala.min.1.5.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.11.2.min.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery-2.0.js'}"></script> 
+	
+		<script type="text/javascript" src="@{'/public/javascripts/jquery.json-2.4.min.js'}"></script>
+	    <script type="text/javascript" src="@{'/public/javascripts/jquery.lazyload.min.js'}"></script>	
+		<script charset="utf-8" src="@{'public/javascripts/ajaxfileupload.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/xf_front.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/common.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/ppcommon.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery.fancybox.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery.fancybox-buttons.js'}"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "//hm.baidu.com/hm.js?9f8bfc2a2f2d1b13848907af029739f3";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+<body onkeydown="keyLogin(event);">
+<!--    top     -->
+	<div class="p_header">
+			<!--头部 start -->
+		 <div class="p_topbox">
+	        <div class="p_top clr">
+	          <div class="p_top_left" >
+	                  #{if currUser == null}
+		                <!--登录前-->
+		                <span class="p_top_helo"><i></i>您好，欢迎来到${currBackstageSet?.platformName}!</span>
+		                
+	                  #{/if}
+	                  #{else}
+	                    <!--登录后-->
+                        <span class="p_top_helo"><i></i><a href="@{front.account.AccountHome.home()}">您好，${currUser?.name}</a></span>
+		                <!--登录后 end-->
+	                  #{/else}
+	                  <span class="l_top_tel"><img src="/public/images/tel_icon.png" style="margin-bottom: 4px;"  width="25" height="25"/>&nbsp;${currBackstageSet.platformTelephone}</span>
+	               
+	            </div>
+	            <div class="p_top_right">  
+	            		<a class="p_top_kef left" href='http://wpa.qq.com/msgrd?v=3&uin=${currBackstageSet?.companyQQ1}&site=qq&menu=yes' target='_blank'><i></i>在线客服 </a>
+                     <a href="@{front.help.HelpCenterAction.index(13)}" title=""  class="l_top_help left" >
+	                    <i class="l_top_ihelp"></i>
+	                                                       帮助中心
+                      </a> 
+                     #{if currUser != null}
+                      <a href="@{front.account.Message.systemMsgs()}" title=""  class="l_top_help left" >
+	                                                      系统消息<span id="unreadSystemMsgCount">#{if unreadSystemMsgCount > -1}【${unreadSystemMsgCount}】#{/if}</span>
+                      </a> 
+                      #{/if}
+                      <a  style="width:4px">&nbsp;&nbsp;&nbsp;</a>
+	                 #{if currUser == null}
+		                <a href="javascript:void(0)"  title=""  class="l_top_reg" style="color:#ff8839;">注册</a>|
+		                <a href="javascript:void(0)" title=""  class="l_top_log" style="color:#ff8839;">登录</a>
+	                 #{/if}
+	                 #{else}
+	                  <a href="@{front.account.loginAndRegisterAction.logout()}" class="ml20">安全退出</a>	                    
+	                 #{/else}
+	               
+	            </div>
+	        </div>
+	    </div>
+	    <script>
+	    $(function(){
+	      if('${currUser}'!='' ){
+	    	  var countMessage = #{jsAction @front.account.Message.countMessage()/}
+				$.post(countMessage(),function(data){
+					var unreadSystemMsgCount = data.unreadSystemMsgCount;
+					if(typeof(unreadSystemMsgCount) != "undefined"){
+						$("#unreadSystemMsgCount").html("【"+unreadSystemMsgCount+"】");
+					}
+					
+		        })
+	    	}
+			
+		});
+	    </script>
+		<!--顶栏 end-->
+      <div class="p_headbox">
+          
+        <div class="p_head clr">
+            <a href="@{front.home.HomeAction.home}"  class="p_logobox">
+              <img src="/public/images/images2/logo.png" alt="" width="410" class="l_logo1" />
+              
+            </a>
+            <div class="p_navbox">
+            
+                <ul class="p_navul clr">
+                    <li id="index"><a href="@{front.home.HomeAction.home()}"  title="">首页<i></i></a></li>
+                    <li id="bid"><a href="@{front.bid.bidAction.index()}" title="">新手指南<i></i></a></li>
+                    <li id="invests">
+                        <a href="@{front.invest.InvestAction.investHome()}"  title="">我要理财<span class="p_navul_sign"></span><i></i></a>
+                        <ul>
+                            <li class="p_navul_tri"></li>
+                           
+                            <li>
+                                <a href="@{front.invest.InvestAction.investRegular()}" title="">体验理财</a>
+                            </li>
+                             <li>
+                                <a href="@{front.invest.InvestAction.investHome()}" title="">散标投资</a>
+                            </li>
+                            <li>
+                                <a href="@{front.debt.debtAction.debtHome()}" title="">债权转让</a>
+                            </li>
+                              <li>
+                                <a href="@{front.account.InvestAccount.auditmaticInvest()}" title="">自动投标</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="usr"><a href="@{front.account.accountHome.home()}"  title="" class="sss">我的账户<i></i></a></li>
+                    <li id="wealth" ><a href="@{front.wealthinfomation.WealthInfomationAction.newsList(7)}"  title="">财富资讯<i></i></a></li>
+                    <li id="about"><a href="/front/home/aboutUs?id=16" title=""  >关于我们<i></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>	
+</div>
+     #{doLayout /}
+         
+         
+   <div class="p_footerbox">
+   <i class="top"></i>
+    <div class="p_ft_box01">
+        <div class="p_main p_footcon01 clr">
+            <dl class="p_ft_dl01">
+                <dt>新手入门</dt>
+                	#{list items:bottomLinks?.get("1")}
+					#{if _?.target == 2}
+					<dd>#{a href:"${_?.url}",target:"_blank"}${_?.title}#{/a}</dd>
+					#{/if}
+					#{else}
+					<dd>#{a href:"${_?.url}"}${_?.title}#{/a}</dd>
+					#{/else}
+					#{/list}
+             
+            </dl>
+            <dl class="p_ft_dl02">
+                <dt>我要借款</dt>
+              #{list items:bottomLinks?.get("2")}
+					#{if _?.target == 2}
+					<dd>#{a href:"${_?.url}",target:"_blank"}${_?.title}#{/a}</dd>
+					#{/if}
+					#{else}
+					<dd>#{a href:"${_?.url}"}${_?.title}#{/a}</dd>
+					#{/else}
+					#{/list}
+            </dl>
+            <dl class="p_ft_dl03">
+                <dt>我要理财</dt>
+                #{list items:bottomLinks?.get("3")}
+					#{if _?.target == 2}
+					<dd>
+					 #{if _?.title.contains('活标')}
+						 #{a href:"${_?.url}",target:"_blank"}体验理财#{/a}
+					 #{/if}
+					 #{else}
+					  	#{a href:"${_?.url}",target:"_blank"}${_?.title}#{/a}
+					 #{/else}
+					</dd>
+					
+					#{/if}
+					#{else}
+					<dd>#{a href:"${_?.url}"}${_?.title}#{/a}</dd>
+					#{/else}
+					#{/list}
+            </dl>
+            <dl class="p_ft_dl04">
+                <dt>关于我们</dt>
+                #{list items:bottomLinks?.get("4")}
+					#{if _?.target == 2}
+					<dd>#{a href:"${_?.url}",target:"_blank"}${_?.title}#{/a}</dd>
+					#{/if}
+					#{else}
+					<dd>#{a href:"${_?.url}"}${_?.title}#{/a}</dd>
+					#{/else}
+					#{/list}
+            </dl>
+            <dl class="p_ft_dl05">
+                <dt>帮助中心</dt>
+               #{list items:bottomLinks?.get("5")}
+					#{if _?.target == 2}
+					<dd>#{a href:"${_?.url}",target:"_blank"}${_?.title}#{/a}</dd>
+					#{/if}
+					#{else}
+					<dd>#{a href:"${_?.url}"}${_?.title}#{/a}</dd>
+					#{/else}
+					#{/list}
+            </dl>
+            <dl class="p_ft_dl06">
+                <dt>客服与支持</dt>
+                 #{if currBackstageSet.platformTelephone}
+					<dd>客服电话：${currBackstageSet.platformTelephone}</dd>
+					#{/if}
+					#{if currBackstageSet.platformTelephone2}
+					<dd>客服电话：${currBackstageSet.platformTelephone2}</dd>
+					#{/if}
+					#{if currBackstageSet.companyFax}
+					<dd>传真（FAX）：${currBackstageSet.companyFax}</dd>
+					#{/if}
+					#{if currBackstageSet.companyEmail}
+					<dd>客服邮箱：${currBackstageSet.companyEmail}</dd>
+				 #{/if}
+               <!--  <dd>客服电话：010-6369 1719 (晚上)</dd>
+                <dd>客服电话：010-6369 1719 (白天)</dd>
+                <dd>传真（FAX）：0755-2788 8009 </dd>
+                <dd>客服邮箱：kf@hjc.com</dd> -->
+            </dl>
+        </div>
+    </div>
+	 <div class="p_ft_box02">
+        <div class="p_main clr">
+            <div class="p_ft_2left">
+                <div class="p_ft_word">
+                   <p>${currBackstageSet?.companyName} </p>
+                   <p>总部地址：${currBackstageSet?.companyAddress}</p>
+					<p>
+					<a href="http://www.miitbeian.gov.cn" target="_blank" style="color: #6d747b">
+					${currBackstageSet?.siteIcpNumber}
+					</a>
+					</p>
+                   <!--  <p>好借存投资管理有限公司</p>
+                    <p>总部地址：北京市西城区广内大街315号信息大厦B座1206</p>
+                    <p>粤ICP备13005843号</p> -->
+                </div>
+                <div class="p_ft_icon clr">
+                    <a href="http://cn.norton.com" class="p_ft_a01"></a>
+                    <a href="http://webscan.360.cn" class="p_ft_a02"></a>
+<!--                      <a href="http://webscan.360.cn/index/checkwebsite/url/www.haojiecun.com"><img border="0" style="height: 36px;" src="http://img.webscan.360.cn/status/pai/hash/8a57e10dbe8ad37a73af866e186ad844"/></a> 
+ -->                    <a href="http://www.anquan.org" class="p_ft_a03"></a>
+                    <a href="https://www.icann.org" class="p_ft_a04"></a>
+                    <a href="http://t.knet.cn" class="p_ft_a05"></a>
+                </div>
+            </div>
+          <!--   <div class="p_ft_2right clr">
+                <dl>
+                    <dt><img src="/public/images/p_erwm.png" alt="" /></dt>
+                    <dd>安卓手机APP下载</dd>
+                </dl><dl>
+                    <dt><img src="/public/images/p_erwm.png" alt="" /></dt>
+                    <dd>苹果手机APP下载</dd>
+                </dl>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!--1105新增弹窗-->
+<div class="popupbg" id="showlr"></div>
+#{include "front/account/LoginAndRegisterAction/registerEmail.control"/}
+#{include "front/account/LoginAndRegisterAction/registerMobile.control"/}
+#{include "front/account/LoginAndRegisterAction/login.control"/}
+#{include "front/account/LoginAndRegisterAction/register.control"/}
+#{include "front/account/AccountHome/overBorrowIps.control"/}
+#{include "common/homeVipApply2.control"/}
+</body>
+    
+<script type="text/javascript">
+
+$(function(){
+	var speed=2000;
+	var h=document.body.scrollHeight;
+	$('.top').click(function(){
+		$('html,body').animate({
+			scrollTop:'0px'	
+		},speed)	
+	})	
+});
+
+	 if('${flash?.parms}' !=''){
+	  if('${flash?.parms}' ==0){
+		  $(".popupbg").show(); 
+		  changeLogin()
+	   	  popcenter($(".y_dlmain"));
+	   
+	  }else{
+		  $(".popupbg").show(); 
+		  change()
+	   	  popcenter($(".l_zc_pop"));
+	  }
+	
+	 }
+	$(document).ready(function(){  
+		  
+		 $("#usr").click(function(){ 
+	    	  if('${currUser?.id}' ==''){
+	    	   	  $(".popupbg").show(); 
+	    	   	  changeLogin()
+	    	   	  popcenter($(".y_dlmain"));
+	    	   	  return false;
+	    	   	}  
+	    	
+	    });  
+		$("#mobile_register").click(function(){ 
+			  mobilechange();
+	    	
+	    }); 
+		$("#email_register").click(function(){ 
+			  change();
+	    	
+	    }); 
+	  
+	}); 
+	
+	
+ /* 所有继承页面flash.error的值弹框,被继承页面则无需再写 */
+   if('${flash.error}' !='') {
+      alert('${flash?.error}');
+   
+   }
+ 	
+	 $(document).keydown(function(event){
+	   if(event.keyCode == 13){
+	     if(document.activeElement.id == 'name' || document.activeElement.id == 'code' || document.activeElement.id == 'password'){
+	    	 loginnow();
+	     }
+	   }
+	 }); 
+	
+	 $(function(){
+	    
+		 $('img.lazy').lazyload({ 
+		  //effect:'fadeIn' 
+		}); 
+	    $("#xf_h_idx_1_hydjfdgdf").limit(); 
+	   
+	  
+	   if('${flash?.emailUrl}' !='') {
+	       window.open('${flash?.emailUrl}');
+	     }
+		//与重复提交冲突，注释，如功能发生冲突，请更改其他处
+		  /*  if('${flash.success}' != ''){
+		     alert('${flash?.success}');
+		   }
+			 	 */
+	
+	  //获取图片验证码
+	  if('${currUser?.name}' == '' && '${loginOrRegister}' == '' && '${flash?.loginCount}' !=0)  {
+	     $(".popupbg").show(); 
+	     popcenter($(".y_dlmain"));  
+	     var setCode = #{jsAction @front.account.LoginAndRegisterAction.setCode()/}
+	     $.post(setCode({}),function(data){
+		       var arr=eval(data);
+		       var img = arr.img;
+		       $("#img5").attr("src","@{front.account.LoginAndRegisterAction.getImg()}?id="+img)	
+			$("#randomID_login").val(img);
+	     });
+	   }
+	 });
+	 $(function(){
+		 var setCode = #{jsAction @front.account.loginAndRegisterAction.setCode()/}
+			$.post(setCode({}),function(data){
+				var arr=eval(data);
+				var img = arr.img;
+				$("#img").attr("src","@{front.account.loginAndRegisterAction.getImg()}?id="+img);
+				$("#randomID").val(img);
+				$("#img1").attr("src","@{front.account.loginAndRegisterAction.getImg()}?id="+img);
+				$("#randomID1").val(img);
+				$("#img5").attr("src","@{front.account.loginAndRegisterAction.getImg()}?id="+img);
+				$("#randomID_login").val(img);
+		    });
+	}); 
+   function change(){
+		var setCode = #{jsAction @front.account.LoginAndRegisterAction.setCode()/}
+		$.post(setCode({}),function(data){
+		  var arr=eval(data);
+		  var img = arr.img;
+		  $("#img").attr("src","@{front.account.LoginAndRegisterAction.getImg()}?id="+img);
+		  $("#randomID").val(img);	
+		});
+    };
+    function changeAll(){
+		var setCode = #{jsAction @front.account.LoginAndRegisterAction.setCode()/}
+		$.post(setCode({}),function(data){
+		  var arr=eval(data);
+		  var img = arr.img;
+		  $("#img").attr("src","@{front.account.LoginAndRegisterAction.getImg()}?id="+img);
+		  $("#randomID").val(img);	
+		  $("#img1").attr("src","@{front.account.LoginAndRegisterAction.getImg()}?id="+img);
+		  $("#randomID1").val(img);
+		});
+    };
+	//弹窗居中 
+	function popcenter(popup){ 
+		var width = popup.width(), 
+		  height = popup.height(); 
+		  popup.css({ 
+		  "margin-left" : -width/2, 
+		  "margin-top" : -height/2 
+		  }).show(); 
+		}
+	
+	$(".popclose").click(function(){
+	  $(".l_zc_pop").hide(); 
+	  $(".y_dlmain").hide(); 
+	  $(".popupbg").hide(); 
+	}) 
+	
+   function keyLogin(ev){  
+		
+     if($('#showlr').css('display') =='none'){
+    	 return false;
+      }else{
+    	  
+    	  if($('#tab_login').css('display') =='block'){
+	        	    //按Enter键的键值为13  
+	        	 if(ev.keyCode==13){
+	        		 loginnow();
+	       	     }else{
+	       		    if(ev.which==13){
+	       		 	 loginnow();
+	       		    }
+	       	     }
+			 
+  	      }else  if($('#tab_register').css('display') =='block'){
+  	  	 
+	  		    if(ev.keyCode==13){
+		  		     register();
+		   	     }else{
+		   		    if(ev.which==13){
+		   			  register();
+		   	        }
+		        }
+	  		 
+	  	 }else{
+	  		 
+	  		if(ev.keyCode==13){
+	 		     registerMobile();
+	  	     }else{
+	  		    if(ev.which==13){
+	  		    	registerMobile();
+	  	        }
+	         }
+		} 
+     }
+    
+  }	  
+	
+/* 	 function vipApply(){
+	  
+	  /** 检查用户是否激活
+	  var result = frontJSIntercepter();
+	  
+	  if(!result){
+	     	 showDiv($("#xf_mem_acc_sjvip_tcc")); 
+	  }
+	 };  */
+	 
+	function AddFavorite(url,title) {
+	  var ua = navigator.userAgent.toLowerCase();
+	  if(ua.indexOf("msie 8")>-1){
+	    external.AddToFavoritesBar(url,title,'');//IE8
+	  }else{
+	    try {
+	      window.external.addFavorite(url, title);
+	    } catch(e) {
+	      try {
+	        window.sidebar.addPanel(title, url, "");//firefox
+	      } catch(e) {
+	        alert("加入收藏失败，请使用Ctrl+D进行添加");
+	      }
+	    }
+	  }
+	}
+  
+  /** 前台，拦截器 ，拦截内容：登陆拦截，资金托管开户拦截，已被拦截返回true */
+  function frontJSIntercepter(){
+	  //未登录 
+	  if('${currUser?.name}' == ''){  
+		  changeLogin();
+		  $(".popupbg").show(); 
+	   	  popcenter($(".y_dlmain"));
+	   	  return true;
+	  }
+	  
+	  /* //托管未开户 
+	  if('${ipsEnable}'=='true' && '${currUser?.ipsAcctNo}'==''){
+		  
+		  window.location.href=http_path+"/front/account/trustAccount";
+	  	  return true;
+	  } */
+
+	  //用户未激活
+	  if('${ipsEnable}'=='false' && '${currUser?.isEmailVerified}'=='false' && '${currUser?.isMobileVerified}'=='false'){  //邮箱和手机都未激活，则用户未激活
+		 
+		  window.location.href=http_path+"/front/account/inactiveUser";
+		  return true;
+	  }
+	  
+	  if('${currUser?.realityName}' == ''){
+	  		
+	  		window.location.href=http_path+"/front/account/certification";
+	  		return true;
+	  }
+	  
+	  return false;
+	  
+  }
+  
+  
+  function showProtocol() {
+	
+	  var registerContent = #{jsAction @front.account.loginAndRegisterAction.registerContent()/}
+      $.post(registerContent({}),function(data){
+		    var arr=eval(data);
+		    
+		    if(arr.error.code < 0){
+               alert(arr.error.msg);
+               
+		    }else{
+		       showDiv($("#xf_mem_zc_xytc"));
+		       $("#registerService").html(arr.content);
+		    }
+	    });
+		
+  }
+
+  
+  /**
+   * 拦截器拦截后，跳转到相应的页面（AJAX）
+   */
+  function checkIntercepterResult(data){
+  	
+  	if('UnLogin' == data){
+  	    changeLogin();
+  		$(".popupbg").show(); 
+   	    popcenter($(".y_dlmain"));
+   	    return true;
+  	}
+  	
+  	if('NullIpsAccount' == data){
+  		
+  		window.location.href=http_path+"/front/account/trustAccount";
+  		return true;
+  	}
+  	
+  	if('InactiveUser' == data){
+  		
+  		window.location.href=http_path+"/front/account/inactiveUser";
+  		return true;
+  	}
+  	
+  	if('NullRealName' == data){
+  		
+  		window.location.href=http_path+"/front/account/certification";
+  		return true;
+  	}
+  	
+  	return false;
+  	
+ }
+
+</script>
+
+
+</html>
