@@ -40,6 +40,7 @@ import utils.Security;
 import annotation.InactiveUserCheck;
 import annotation.IpsAccountCheck;
 import annotation.RealNameCheck;
+import business.Bbin;
 import business.Bid;
 import business.BidQuestions;
 import business.CreditLevel;
@@ -617,6 +618,12 @@ public class InvestAction extends BaseController{
 				investBbin(bidId, "");
 			}
 			int investAmount = Integer.parseInt(investAmountStr);
+			Bbin bb = new Bbin();
+		    boolean flag = bb.queryid(user.id);
+		    if(flag == false){
+		    	flash.error("尊敬的用户,此标的仅供体验金购买!");
+		    	investBbin(bidId, "");
+		    }else{
 			// 确认投资
 			Invest.investBbin(user.id, bidId, investAmount, dealpwd, false,
 					Constants.CLIENT_PC, error);
@@ -664,6 +671,7 @@ public class InvestAction extends BaseController{
 				flash.error(error.msg);
 				investBbin(bidId, "");
 			}
+		    }
 		}
 
 	/**
